@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.test {
+  width: 60%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  text-align: left;
+}
+.App div{
+  width: 60%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  text-align: left;
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+.header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: salmon;
+}
+
+.link {
+  color: #61dafb;
+}
+
+.paragraph{
+  color: white;
+  font-size: 24px;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
