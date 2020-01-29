@@ -1,24 +1,17 @@
 import React from 'react';
 import classes from './App.module.css';
 import Aux from '../hoc/Aux';
-import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image'
+import imagge from '../assets/Whiskey.jpg';
 
 function App() {
 
   return (
     <Aux>
-    <Button variant="light" className= {classes.test}>
-      Old Fashion
-    </Button>
-    <div className= {classes.test}>
-      Mohito
-    </div>
-    
-
-  <Button variant="light">Light</Button>
-  <Button variant="dark">Dark</Button>
-
-
+      <div className={classes.test}>
+        <Image src={imagge} alt="Smiley face" rounded className={classes.img}/>
+      Whiskey
+      </div>
     </Aux>
     
   );
