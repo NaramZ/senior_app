@@ -11,10 +11,10 @@ function App() {
     <Aux>
       <Navigation/>
       <navigationbar></navigationbar>
-      <div className={classes.test}>
-        <Image src={imagge} alt="Smiley face" rounded className={classes.img}/>
-      Whiskey
-      </div>
+      <div className={classes.drinkbox}>
+        <Image src={imagge} rounded className={classes.img}/> Whiskey </div>
+        <div className={classes.drinkbox}>
+        <Image src={imagge} rounded className={classes.img}/> Tequila  </div>
     </Aux>
     
   );
