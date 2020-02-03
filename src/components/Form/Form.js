@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Navbar from 'react-bootstrap/Navbar'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -20,7 +19,7 @@ render(){
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
   <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
+    <Form.Check type="checkbox" label="Check Me" />
   </Form.Group>
   <Button variant="primary" type="submit">
     Submit

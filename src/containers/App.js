@@ -12,7 +12,6 @@ function App() {
   return (
     <Aux>
       <Navigation/>
-      <navigationbar></navigationbar>
       <div className={classes.drinkbox}>
         <Image src={wImage} rounded className={classes.img}/> Whiskey </div>
         <div className={classes.drinkbox}>
