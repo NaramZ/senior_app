@@ -2,8 +2,10 @@ import React from 'react';
 import classes from './App.module.css';
 import Aux from '../hoc/Aux';
 import Image from 'react-bootstrap/Image'
-import imagge from '../assets/Whiskey.jpg';
+import wImage from '../assets/Whiskey.jpg';
+import tImage from '../assets/Tequila.png';
 import Navigation from '../components/NavBar/NavBar';
+import FormFinal from '../components/Form/Form';
 
 function App() {
 
@@ -12,9 +14,9 @@ function App() {
       <Navigation/>
       <navigationbar></navigationbar>
       <div className={classes.drinkbox}>
-        <Image src={imagge} rounded className={classes.img}/> Whiskey </div>
+        <Image src={wImage} rounded className={classes.img}/> Whiskey </div>
         <div className={classes.drinkbox}>
-        <Image src={imagge} rounded className={classes.img}/> Tequila  </div>
+        <Image src={tImage} rounded className={classes.img}/> Tequila  </div>
     </Aux>
     
   );
