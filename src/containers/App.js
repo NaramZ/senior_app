@@ -10,13 +10,13 @@ import FormFinal from '../components/Form/Form';
 function App() {
 
   return (
-    <Aux>
+    <div>
       <Navigation/>
       <div className={classes.drinkbox}>
         <Image src={wImage} rounded className={classes.img}/> Whiskey </div>
         <div className={classes.drinkbox}>
         <Image src={tImage} rounded className={classes.img}/> Tequila  </div>
-    </Aux>
+    </div>
     
   );
 }
