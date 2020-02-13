@@ -1,21 +1,19 @@
 import React from 'react';
-
 import classes from './App.module.css'
 import Image from 'react-bootstrap/Image'
 import Aux from '../hoc/Aux';
 import wImage from '../assets/Whiskey.jpg';
 import tImage from '../assets/Tequila.png';
 import Navigation from '../components/NavBar/NavBar';
-import TestimonialsPage from '../components/Test';
-
+import SimplePaper from '../components/Utilities/Paper'
+import RecipeReviewCard from '../components/Utilities/Card/Card';
 function App() {
 
   return (
     <Aux>
       <Navigation/>
-      <TestimonialsPage>
-
-      </TestimonialsPage>
+      <SimplePaper></SimplePaper>
+      <RecipeReviewCard></RecipeReviewCard>
       <div className={classes.drinkbox}>
         <Image src={wImage} rounded className={classes.img}/> Whiskey </div>
         <div className={classes.drinkbox}>
