@@ -67,7 +67,7 @@ const RecipeReviewCard = (props) => {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          A whikey so good that god loves it
+          {props.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

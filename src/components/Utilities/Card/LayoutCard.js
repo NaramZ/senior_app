@@ -9,12 +9,14 @@ const CardLayout = (props) => (
     <RecipeReviewCard 
     mediaimage = {WhiskeyImg} 
     title = 'Whiskey'
-    titledescription = 'Whiskey Drink'/>
+    titledescription = 'Whiskey Drink'
+    description = 'A whiskey so fine, you will wish it never ends'/>
 
     <RecipeReviewCard 
     mediaimage = {Tequilaimg}
     title = 'Tequila'
-    titledescription = 'Tequila Drink'/>
+    titledescription = 'Tequila Drink'
+    description = 'A tequila so fine, you will wish it never ends'/>
     </Aux>
 )
 
