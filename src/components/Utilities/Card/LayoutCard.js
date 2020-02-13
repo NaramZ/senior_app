@@ -29,7 +29,6 @@ const CardsLayout = (props) => (
                     titledescription = 'Tequila Drink'
                     description = 'A tequila so fine, you will wish it never ends'/>
             </Grid>
-            
         </Grid>
     </Aux>
     
