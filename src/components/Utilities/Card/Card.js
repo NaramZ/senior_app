@@ -17,8 +17,13 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import WhiskeyImg from '../../../assets/Whiskey.jpg';
 
 const useStyles = makeStyles(theme => ({
+  test: {
+    
+  },
   root: {
-    maxWidth: 300
+    maxWidth: 300,
+    marginTop: '30px',
+    marginLeft: '30px'
   },
   media: {
     height: 6,
@@ -49,7 +54,8 @@ function RecipeReviewCard() {
   };
 
   return (
-    <Card className={classes.root}>
+    
+    <Card className={classes.root} elevation={3}>
       <CardHeader
         action={
           <IconButton aria-label="settings">
@@ -118,6 +124,9 @@ function RecipeReviewCard() {
         </CardContent>
       </Collapse>
     </Card>
+
+    
+    
   );
 }
 

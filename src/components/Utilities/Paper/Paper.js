@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -19,7 +18,9 @@ function SimplePaper() {
 
   return (
     <div className={classes.root}>
-      <Paper elevation={3} />
+      <Paper elevation={3}>
+      
+      </Paper>
     </div>
   );
 }

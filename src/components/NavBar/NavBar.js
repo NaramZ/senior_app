@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav';
 import NavLink from 'react-bootstrap/NavLink';
-import Image from 'react-bootstrap/Image';
-import profilePic from '../../assets/profilePic.jpg'
-import classes from './NavBar.module.css';
 class Navigation extends Component{
 render(){
     return (
