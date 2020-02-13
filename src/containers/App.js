@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './App.module.css'
 import Aux from '../hoc/Aux';
 import Navigation from '../components/NavBar/NavBar';
-import RecipeReviewCard from '../components/Utilities/Card/Card';
 import CardLayout from '../components/Utilities/Card/LayoutCard';
 function App() {
 

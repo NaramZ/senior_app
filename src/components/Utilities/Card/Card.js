@@ -14,16 +14,15 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import WhiskeyImg from '../../../assets/Whiskey.jpg';
 
 const useStyles = makeStyles(theme => ({
-  test: {
-    
-  },
   root: {
     maxWidth: 300,
     marginTop: '30px',
-    marginLeft: '30px'
+    marginLeft: '30px',
+    marginRight: '30px',
+    marginBottom: '30px'
+
   },
   media: {
     height: 6,
@@ -39,13 +38,10 @@ const useStyles = makeStyles(theme => ({
   },
   expandOpen: {
     transform: "rotate(180deg)"
-  },
-  avatar: {
-    backgroundColor: red[500]
   }
 }));
 
-function RecipeReviewCard() {
+const RecipeReviewCard = (props) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -59,15 +55,15 @@ function RecipeReviewCard() {
       <CardHeader
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <MoreVertIcon/>
           </IconButton>
         }
-        title="Whiskey"
+        title= {props.title}
       />
       <CardMedia
         className={classes.media}
-        image= {WhiskeyImg}
-        title="Whiskey Drink"
+        image= {props.mediaimage}
+        title= {props.titledescription}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
