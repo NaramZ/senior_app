@@ -21,7 +21,7 @@ transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
@@ -31,7 +31,7 @@ transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
     transition: color 0.3s linear;
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: center;
     }
 

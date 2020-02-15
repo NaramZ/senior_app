@@ -20,17 +20,20 @@ function App() {
   useOnClickOutside(node, () => setOpen(false)) //react hooks, when click outside menu anywhere it closes menu
 
   return (
+    <Aux>
+    <Navigation></Navigation>
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
-      <Aux>
+      
           <CardsLayout/>
-        </Aux>
+        
       
     <div ref={node}>
     <Burger open={open} setOpen={setOpen} />
     <Menu open={open} setOpen={setOpen} />
     </div>
     </ThemeProvider>
+    </Aux>
   );
 }
 export default App;
