@@ -12,19 +12,20 @@ import Menu from '../components/Menu';
 
 
 function App() { 
-  const [open, setOpen] = useState(false);
-  const node = useRef(); 
-  useOnClickOutside(node, () => setOpen(false))
+
+  const [open, setOpen] = useState(false); //state of burger false by default
+
+  const node = useRef(); //refrence to open burger
+
+  useOnClickOutside(node, () => setOpen(false)) //react hooks, when click outside menu anywhere it closes menu
+
   return (
-    
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <Aux>
-          <Navigation></Navigation>
-          
-      <img src="https://image.flaticon.com/icons/svg/2016/2016012.svg" alt="burger icon" />
+          <CardsLayout/>
         </Aux>
-      {/*<CardsLayout/> */}
+      
     <div ref={node}>
     <Burger open={open} setOpen={setOpen} />
     <Menu open={open} setOpen={setOpen} />

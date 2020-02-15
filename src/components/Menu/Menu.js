@@ -10,11 +10,11 @@ const Menu = ({ open }) => {
         Menu
       </a>
       <a href="/">
-        <span role="img" aria-label="price">&#x1f4b8;</span>
+        <span role="img" aria-label="price">💸</span>
         Pricing
         </a>
       <a href="/">
-        <span role="img" aria-label="contact">&#x1f4e9;</span>
+        <span role="img" aria-label="contact">📧</span>
         Contact
         </a>
     </StyledMenu>
