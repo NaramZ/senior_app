@@ -12,12 +12,12 @@ class Navigation extends Component{
 render(){
     return (
         <Navbar>
-            <IconButton aria-label="add to favorites">
+            <IconButton>
                 <MenuIcon/>
             </IconButton>
             
-            <Navbar.Toggle aria-controls = 'basic-navbar-nav'/>
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Toggle/>
+            <Navbar.Collapse>
                 <Nav> 
                     <Navbar.Text> Naram Ziady</Navbar.Text>
                 </Nav>
