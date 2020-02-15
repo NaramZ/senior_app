@@ -3,7 +3,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav';
 import IconButton from "@material-ui/core/IconButton";
 import PersonIcon from "@material-ui/icons/PersonOutline";
-import MenuIcon from "@material-ui/icons/MenuOutlined";
 
 
 class Navigation extends Component{
@@ -15,7 +14,7 @@ render(){
         
         <Navbar>
             <Navbar.Toggle/>
-            <Navbar.Collapse className="justify-content-start">
+            <Navbar.Collapse>
                 <Nav> 
                     <Navbar.Text style={mystyle}> Naram Ziady</Navbar.Text>
                 </Nav>
