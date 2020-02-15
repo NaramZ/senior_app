@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'; //HAVE TO CHANGE THIS WHOLE THING TO CREATE A CARD IN CSS
 export const StyledCard= styled.card`
 
   position: absolute;
