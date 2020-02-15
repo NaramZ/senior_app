@@ -4,7 +4,6 @@ import Aux from '../../../hoc/Aux';
 import WhiskeyImg from '../../../assets/Whiskey.jpg';
 import TequilaImg from '../../../assets/Tequila.png';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
 
 // const useStyles = makeStyles(theme => ({
 //     root: {
