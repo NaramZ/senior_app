@@ -16,14 +16,11 @@ render(){
     return (
         
         <Navbar>
-
-            <Navbar.Collapse className="justify-content-start">
-                <IconButton>
-                    <MenuIcon style={mystyle} />
-                </IconButton>
-            </Navbar.Collapse>
             <Navbar.Toggle/>
             <Navbar.Collapse className="justify-content-start">
+            <IconButton>
+                    <MenuIcon style={mystyle} />
+                </IconButton>
                 <Nav> 
                     <Navbar.Text style={mystyle}> Naram Ziady</Navbar.Text>
                 </Nav>
