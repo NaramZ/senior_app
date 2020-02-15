@@ -10,24 +10,28 @@ import Button from '@material-ui/core/Button/Button';
 
 class Navigation extends Component{
 render(){
+    const mystyle = {
+        color: "black"
+    };
     return (
+        
         <Navbar>
-            <IconButton>
-                <MenuIcon/>
-            </IconButton>
-            
+
+            <Navbar.Collapse className="justify-content-start">
+                <IconButton>
+                    <MenuIcon style={mystyle} />
+                </IconButton>
+            </Navbar.Collapse>
             <Navbar.Toggle/>
-            <Navbar.Collapse>
+            <Navbar.Collapse className="justify-content-start">
                 <Nav> 
-                    <Navbar.Text> Naram Ziady</Navbar.Text>
+                    <Navbar.Text style={mystyle}> Naram Ziady</Navbar.Text>
                 </Nav>
             </Navbar.Collapse>
             <Navbar.Collapse className="justify-content-end">
                 <IconButton>
-                    <PersonIcon/>
+                    <PersonIcon style={mystyle} />
                 </IconButton>
-                    
-                
             </Navbar.Collapse>
         </Navbar>
     )
