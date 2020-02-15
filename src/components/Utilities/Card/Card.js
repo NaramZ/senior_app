@@ -13,10 +13,11 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import classes from './Card.module.css'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: 30
+    marginTop: 30,
   },
   media: {
     height: 6,
@@ -60,7 +61,7 @@ const RecipeReviewCard = (props) => {
         title= {props.titledescription}
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="black" component="p">
           {props.description}
         </Typography>
       </CardContent>
@@ -82,7 +83,7 @@ const RecipeReviewCard = (props) => {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expanded} timeout="auto">
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
