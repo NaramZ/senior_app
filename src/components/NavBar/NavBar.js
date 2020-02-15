@@ -2,26 +2,32 @@ import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav';
 import NavLink from 'react-bootstrap/NavLink';
+import IconButton from "@material-ui/core/IconButton";
+import PersonIcon from "@material-ui/icons/PersonOutline";
+import MenuIcon from "@material-ui/icons/MenuOutlined";
+import Button from '@material-ui/core/Button/Button';
+
+
 class Navigation extends Component{
 render(){
     return (
-        <Navbar bg= 'white' expand ='lg'>
-            <Navbar.Brand href="#home">Poison Picker</Navbar.Brand>
+        <Navbar>
+            <IconButton aria-label="add to favorites">
+                <MenuIcon/>
+            </IconButton>
+            
             <Navbar.Toggle aria-controls = 'basic-navbar-nav'/>
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav>
-                    <NavLink className = 'd-inline p-2 bg-white text-black'
-                    to = '/Home'>Home</NavLink>
-                    <NavLink className = 'd-inline p-2 bg-white text-black'
-                    to = '/Favorites'>Favorites</NavLink>
-                    
+                <Nav> 
+                    <Navbar.Text> Naram Ziady</Navbar.Text>
                 </Nav>
             </Navbar.Collapse>
             <Navbar.Collapse className="justify-content-end">
-                 <Navbar.Text>
-                        {/* <Image src={profilePic}  className= {classes.image}/>  */}
-                        <a href="#login">Naram Ziady</a>
-                </Navbar.Text>
+                <IconButton>
+                    <PersonIcon/>
+                </IconButton>
+                    
+                
             </Navbar.Collapse>
         </Navbar>
     )

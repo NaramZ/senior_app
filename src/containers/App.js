@@ -3,6 +3,7 @@ import classes from './App.module.css'
 import Aux from '../hoc/Aux';
 import Navigation from '../components/NavBar/NavBar';
 import CardsLayout from '../components/Utilities/Card/LayoutCard';
+
 function App() {
 
   return (
@@ -13,5 +14,4 @@ function App() {
     
   );
 }
-
 export default App;
