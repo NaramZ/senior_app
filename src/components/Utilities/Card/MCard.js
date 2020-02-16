@@ -8,9 +8,12 @@ const Card = (props) => {
     <Aux>
         <StyledCard>
             <div>
-            <img src= {props.Image} alt='Item'/>
+              <ui>
+                <img src= {props.Image} alt='Item'/>
+              </ui>
             </div>
         </StyledCard>
+        
         
     </Aux>
   )
