@@ -6,9 +6,12 @@ import Aux from '../../../hoc/Aux';
 const Card = (props) => {
   return (
     <Aux>
-        <StyledCard >
-            <img src= {props.Image}/>
+        <StyledCard>
+            <div>
+            <img src= {props.Image} alt='Item'/>
+            </div>
         </StyledCard>
+        
     </Aux>
   )
 }

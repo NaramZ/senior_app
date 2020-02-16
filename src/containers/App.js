@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hook';
 import Aux from '../hoc/Aux';
-import Navigation from '../components/NavBar/NavBar';
 import CardLayout from '../components/Utilities/Card/LayoutCard';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../Global';
@@ -24,11 +23,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
         <CardLayout></CardLayout>
+
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </div>
       </ThemeProvider>
+      
     </Aux>
   );
 }
