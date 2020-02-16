@@ -8,14 +8,12 @@ import Grid from '@material-ui/core/Grid';
 const CardsLayout = (props) => (
     <Aux>
         <Grid>
-            <Grid container
-                direction="row"
-                justify="center"
-                alignItems="center">
+            <Grid>
                 <Grid>
                     <Card 
                         Image = {WhiskeyImg}/>
                 </Grid>
+                
             </Grid>
         </Grid>
     </Aux>

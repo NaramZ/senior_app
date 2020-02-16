@@ -2,7 +2,8 @@ import styled from 'styled-components';
 export const StyledCard= styled.div`
 
 
-position: relative;
+position: fixed;
+bottom: 10%;
 left: 5%;
 display: flex;
 flex-grow: 1;
