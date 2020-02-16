@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hook';
 import Aux from '../hoc/Aux';
 import Navigation from '../components/NavBar/NavBar';
-import CardsLayout from '../components/Utilities/Card/LayoutCard';
+import CardLayout from '../components/Utilities/Card/LayoutCard';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../Global';
 import { theme } from '../theme';
@@ -21,18 +21,14 @@ function App() {
 
   return (
     <Aux>
-    <Navigation></Navigation>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles/>
-      
-          <CardsLayout/>
-        
-      
-    <div ref={node}>
-    <Burger open={open} setOpen={setOpen} />
-    <Menu open={open} setOpen={setOpen} />
-    </div>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles/>
+        <CardLayout></CardLayout>
+        <div ref={node}>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </div>
+      </ThemeProvider>
     </Aux>
   );
 }

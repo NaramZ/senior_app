@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    display: flex;
+    display:inline;
     justify-content: center;
     align-items: center;
     background: ${({ theme }) => theme.primaryDark};

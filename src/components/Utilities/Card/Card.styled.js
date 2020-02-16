@@ -1,44 +1,29 @@
-import styled from 'styled-components'; //HAVE TO CHANGE THIS WHOLE THING TO CREATE A CARD IN CSS
-export const StyledCard= styled.card`
+import styled from 'styled-components'; 
+export const StyledCard= styled.div`
 
-  position: absolute;
-  top: 5%;
-  left: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
+position: relative;
+left: 5%;
+top: 20%;
+display: inline-block;
+width: 25rem;
+height: 15rem;
+background : ${({theme}) => theme.primaryDark};
+color: ${({ theme }) => theme.primaryDark};
+border: none;
+border-radius:25px;
+cursor: pointer;
+padding: 0;
+z-index: 10;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
-  &:focus {
-    outline: none;
-  }
+img {
+  height:100%;
+  width: 100%;
+}
 
-  div {
-    width: 2rem;
-    height: 0.25rem;
-    background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryColor};
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
 
-    :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
-    }
-
-    :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
-    }
-
-    :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
-    }
-  }
+:hover {
+  box-shadow: 1px 5px 20px ${({theme}) => theme.primaryHover};
+}
 `;

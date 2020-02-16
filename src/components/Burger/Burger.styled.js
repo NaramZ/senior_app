@@ -9,7 +9,7 @@ export const StyledBurger = styled.button`
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
-  background: transparent;
+  background:transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -17,6 +17,10 @@ export const StyledBurger = styled.button`
 
   &:focus {
     outline: none;
+  }
+  h1 {
+    display: flex;
+    justify-content:end;
   }
 
   div {
