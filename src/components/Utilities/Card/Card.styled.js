@@ -16,8 +16,8 @@ export const StyledCard= styled.div`
   
   
 div {
-    width: 25rem;
-    height: 15rem;
+    width: 22rem;
+    height: 12rem;
     border-radius: 25px;
     position: relative;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12);
@@ -34,15 +34,30 @@ div {
   height: 100%;
   border-radius:25px;
   }
-  p{
-    margin: 15px;
+  h3{
+    left: 0;
+    margin: 10px;
     position: absolute;
     font-family: 'Averta Bold';
     font-size: 30px;
     font-weight: 500;
   }
 
-  
+  p{
+    left: 0;
+    padding: 50px;
+    position: absolute;
+    font-size: 15px;
+    font-family:  Helvetica;
+    color: #bebebe;
+  }
+  span {
+    font-size: 15px;
+    font-family: 'Averta Bold';
+    color : black;
+    font-weight: 500;
+  }
+
 }
 `;
 
