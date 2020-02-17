@@ -11,15 +11,18 @@ const CardsLayout = (props) => (
         <Grid>
                 <Grid>
                     <Card
-                        Image1 = {WhiskeyImg}/>
+                        Image1 = {WhiskeyImg}
+                        ItemTitle1 = 'Whiskey'/>
                 </Grid>
                 <Grid>
                     <Card
-                        Image2 = {TequilaImg}/>
+                        Image2 = {TequilaImg}
+                        ItemTitle2 = 'Tequila'/>
                 </Grid>
                 <Grid>
                     <Card
-                        Image3 = {MohitoImg}/>
+                        Image3 = {MohitoImg}
+                        ItemTitle3 = 'Mohito'/>
                 </Grid>
         </Grid>
     </Aux>

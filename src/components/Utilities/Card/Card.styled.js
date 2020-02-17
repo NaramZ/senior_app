@@ -3,11 +3,11 @@ export const StyledCard= styled.div`
 
 
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 5%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: transparent;
   border-radius:25px;
   margin:20px;
@@ -15,31 +15,38 @@ export const StyledCard= styled.div`
   height: 15rem;
   
   
-  
 div {
     width: 25rem;
     height: 15rem;
     border-radius: 25px;
     position: relative;
-    transform-origin: 1px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12);
     padding: 0;
     z-index: 0;
     border: none;
-
     cursor: pointer;
 
   :hover {
   box-shadow: 1px 5px 20px ${({theme}) => theme.primaryHover};
   }
-}
-img {
+  img {
   width:100%;
   height: 100%;
+  border-radius:25px;
+  }
+  p{
+    margin: 15px;
+    position: absolute;
+    font-family: 'Averta Bold';
+    font-size: 30px;
+    font-weight: 500;
+  }
 
-
+  
 }
 `;
+
+//image is displaying twice, when you remove border-radius on img it will show, FIX
 
 
 
