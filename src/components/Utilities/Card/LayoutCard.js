@@ -20,7 +20,7 @@ const CardsLayout = (props) => (
                     <Card
                         Image2 = {TequilaImg}
                         ItemTitle2 = 'Tequila Shot'
-                        Rating2 = '5'
+                        Rating2 = '4.8'
                         Category2 = 'Tequila · Drinks · 8$'/>
                 </Grid>
                 <Grid>

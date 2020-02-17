@@ -44,24 +44,33 @@ div {
   }
 
   p{
-    left: 0;
+    left: 20px;
     padding: 50px;
     position: absolute;
-    font-size: 15px;
+    font-size: 20px;
     font-family:  Helvetica;
     color: #bebebe;
   }
   span {
-    font-size: 15px;
+    left: 15px;
+    position: absolute;
+    font-size: 20px;
     font-family: 'Averta Bold';
     color : black;
     font-weight: 500;
   }
-
+ul{
+    left: -55px;
+    top: 46px;
+    border: none;
+    position: absolute;
+    color : black;
+    
+  }
 }
 `;
 
-//image is displaying twice, when you remove border-radius on img it will show, FIX
+//EVERYTHING is being duplicated such as image, when you remove border-radius on img it will show, FIX, or add right: 10px;
 
 
 
