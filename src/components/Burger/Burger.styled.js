@@ -19,9 +19,16 @@ export const StyledBurger = styled.button`
     outline: none;
     
   }
-  h1 {
+  h2 {
     display: flex;
-    justify-content:end;
+    position: absolute;
+    left: 6rem;
+    font-family: Helvetica;
+    z-index:0;
+    font-weight: 400;
+    opacity: ${({ open }) => open ? '0' : '1'};
+    transition: all 0.3s linear;
+    
   }
   
   div {
@@ -35,8 +42,8 @@ export const StyledBurger = styled.button`
     
 
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
-      
+      transform: ${({ open }) => open ? 'rotate(45deg)': 'rotate(0)'};
+
     }
     
 

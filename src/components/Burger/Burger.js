@@ -8,10 +8,11 @@ const Burger = ({ open, setOpen }) => {
     <Aux>
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
+      <div/>
       <div />
-      <div />
+      <h2>Naram</h2>
+      
     </StyledBurger>
-    
     </Aux>
   )
 }
