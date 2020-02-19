@@ -10,9 +10,10 @@ const Burger = ({ open, setOpen }) => {
       <div />
       <div/>
       <div />
-      <h2>Naram</h2>
-      
     </StyledBurger>
+    
+    
+
     </Aux>
   )
 }

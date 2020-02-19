@@ -7,7 +7,7 @@ import { GlobalStyles } from '../Global';
 import { theme } from '../theme';
 import Burger from '../components/Burger';
 import Menu from '../components/Menu';
-
+import Navigation from '../components/NavBar';
 
 
 function App() { 
@@ -22,6 +22,7 @@ function App() {
     <Aux>
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
+        <Navigation/>
         <CardLayout></CardLayout>
 
         <div ref={node}>

@@ -30,6 +30,19 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     
   }
+
+  ul {
+    width: 3rem;
+    height: 2rem;
+    border-radius: 25px;
+    position: absolute;
+    left: 25rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+    padding: 0;
+    z-index: 0;
+    border: none;
+    cursor: pointer;
+  }
   
   div {
     width: 2rem;
