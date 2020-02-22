@@ -1,30 +1,20 @@
 import styled from 'styled-components'; 
-export const StyledCard= styled.ul`
+export const StyledCard= styled.div`
 
 
   position: absolute;
-  bottom: 10%;
-  left: 5%;
-  display: flex;
-  flex-direction: row;
+  margin-top: 600px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: inline-block;
+  width: 22rem;
   justify-content: space-evenly;
-  background: transparent;
-  border-radius:25px;
-  margin:20px;
-  width:100rem;
-  height: 15rem;
-  
-  
-div {
-    width: 22rem;
-    height: 12rem;
-    border-radius: 25px;
-    position: relative;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12);
-    padding: 0;
-    z-index: 0;
-    border: none;
-    cursor: pointer;
+  height: 12rem;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+  z-index: 0;
+  cursor: pointer;
+  border-radius: 25px;
 
   :hover {
   box-shadow: 1px 5px 20px ${({theme}) => theme.primaryHover};
@@ -32,8 +22,10 @@ div {
   img {
   width:100%;
   height: 100%;
-  border-radius:25px;
+  border-radius: 25px;
+
   }
+  
   h3{
     left: 0;
     margin: 10px;
@@ -44,34 +36,33 @@ div {
   }
 
   p{
-    left: 20px;
-    padding: 50px;
+    left: 0;
     position: absolute;
     font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
     font-family:  Helvetica;
-    color: #bebebe;
+    color: black;
+    justify-content: space-evenly;
+    /* color: #bebebe; */
   }
   span {
-    left: 15px;
-    position: absolute;
-    font-size: 20px;
-    font-family: 'Averta Bold';
-    color : black;
+    color: #bebebe;
     font-weight: 500;
   }
 ul{
-    left: -55px;
-    top: 46px;
-    border: none;
     position: absolute;
+    left: 0; 
+    margin-left: -45px;    
+    bottom: 36px;
+    align-items: center;
     color : black;
     
   }
-}
+
 `;
 
-//EVERYTHING is being duplicated such as image, when you remove border-radius on img it will show, FIX, or add right: 10px;
-
+// Fixed DUPLICATION BUT NOW I NEED TO FIGURE OUT HOW TO REMOVE MARGINS
 
 
 

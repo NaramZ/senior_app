@@ -4,33 +4,25 @@ import Aux from '../../../hoc/Aux';
 import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../../assets/TequilaT.png';
 import MohitoImg from '../../../assets/mojito.jpg';
-import Grid from '@material-ui/core/Grid';
 
 const CardsLayout = (props) => (
     <Aux>
-        <Grid>
-                <Grid>
                     <Card
-                        Image1 = {WhiskeyImg}
-                        ItemTitle1 = 'Old Fashioned'
-                        Rating1 = '4.6'
-                        Category1 = 'Whiskey · Drinks · 8$'/>
-                </Grid>
-                <Grid>
+                        Image = {WhiskeyImg}
+                        ItemTitle = 'Old Fashioned'
+                        Rating = '&emsp;4.6 '
+                        Category = ' · Whiskey · Drinks · 8$'
+                        />
                     <Card
-                        Image2 = {TequilaImg}
-                        ItemTitle2 = 'Tequila Shot'
-                        Rating2 = '4.8'
-                        Category2 = 'Tequila · Drinks · 8$'/>
-                </Grid>
-                <Grid>
+                        Image = {TequilaImg}
+                        ItemTitle = 'Tequila Shot'
+                        Rating = '&emsp;4.8'
+                        Category = ' · Tequila · Drinks · 8$'/>
                     <Card
-                        Image3 = {MohitoImg}
-                        ItemTitle3 = 'Mojito'
-                        Rating3 = '4.9'
-                        Category3 = 'Cocktail · Drinks · 10$'/>
-                </Grid>
-        </Grid>
+                        Image = {MohitoImg}
+                        ItemTitle = 'Mojito'
+                        Rating = '&emsp;4.9'
+                        Category = ' · Cocktail · Drinks · 10$'/>
     </Aux>
 )
 
