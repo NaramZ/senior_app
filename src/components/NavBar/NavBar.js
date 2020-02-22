@@ -9,12 +9,7 @@ const Navigation = () => {
     <Aux>
     <StyledNavBar>
       <h2>Naram</h2>
-      <ul><PersonIcon  style={{ fontSize: 35 }}/></ul>
-      <p>3</p>
     </StyledNavBar>
-    
-    
-
     </Aux>
   )
 }
