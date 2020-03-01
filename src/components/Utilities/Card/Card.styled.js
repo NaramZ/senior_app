@@ -3,9 +3,6 @@ export const StyledCard= styled.div`
 
 
   position: absolute;
-  margin-top: 600px;
-  margin-left: 100px;
-  margin-right: 100px;
   display: inline-block;
   width: 22rem;
   justify-content: space-evenly;
