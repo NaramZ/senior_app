@@ -1,4 +1,3 @@
-import PersonIcon from "@material-ui/icons/PersonOutline";
 import React from 'react';
 import { StyledNavBar } from './NavBar.styled';
 import Aux from '../../hoc/Aux';
