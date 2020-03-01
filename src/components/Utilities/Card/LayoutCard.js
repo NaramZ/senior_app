@@ -23,6 +23,7 @@ const CardsLayout = (props) => (
                         ItemTitle = 'Mojito'
                         Rating = '&emsp;4.9'
                         Category = ' · Cocktail · Drinks · 10$'/>
+                        
     </Aux>
 )
 
