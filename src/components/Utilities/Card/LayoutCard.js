@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Card from './MCard';
 import Aux from '../../../hoc/Aux';
 import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
@@ -6,6 +6,7 @@ import TequilaImg from '../../../assets/TequilaT.png';
 import MohitoImg from '../../../assets/mojito.jpg';
 
 const CardsLayout = (props) => (
+    const [Images, setImage] = useState(0);
     <Aux>
                     <Card
                         Image = {WhiskeyImg}
@@ -23,7 +24,6 @@ const CardsLayout = (props) => (
                         ItemTitle = 'Mojito'
                         Rating = '&emsp;4.9'
                         Category = ' · Cocktail · Drinks · 10$'/>
-                        
     </Aux>
 )
 
