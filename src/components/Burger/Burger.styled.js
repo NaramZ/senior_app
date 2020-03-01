@@ -19,6 +19,8 @@ export const StyledBurger = styled.button`
     outline: none;
     
   }
+
+  
   h2 {
     display: flex;
     position: absolute;

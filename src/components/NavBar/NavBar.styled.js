@@ -4,15 +4,20 @@ export const StyledNavBar = styled.nav`
   position: absolute;
   display: flex;
   z-index: 0;
-  top: 0;
-  left: 0;
+  top: 5%;
   width: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background:transparent;
+  border: none;
+
 
 
 h2 {
     font-size: 2rem;
     left: 10rem;
-    top: 2.6rem;
     position: absolute;
     font-family: Helvetica;
     z-index:0;

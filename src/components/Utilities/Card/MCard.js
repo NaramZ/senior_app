@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledCard } from './Card.styled';
 import Aux from '../../../hoc/Aux';
-import Staricon from '@material-ui/icons/StarBorderOutlined'
+import { FiStar } from "react-icons/fi";
 const Card = (props) => {
   return (
             
@@ -10,7 +10,7 @@ const Card = (props) => {
                   <img src = {props.Image} alt = {props.Alt} />
                   <h3>{props.ItemTitle}</h3>
                   <p>
-                    <Staricon/>
+                    <FiStar/>
                     {props.Rating}
                     {props.Category}
                     </p>
