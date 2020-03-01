@@ -1,16 +1,14 @@
 import styled from 'styled-components'; 
 export const StyledCard= styled.div`
 
-
-  position: absolute;
-  margin-top: 600px;
-  margin-left: 100px;
-  margin-right: 100px;
+  position: relative;
   display: inline-block;
+  margin-top: 30%;
+  margin-right: 5%;
+  margin-left: 5%;
   width: 22rem;
   justify-content: space-evenly;
   height: 12rem;
-  position: relative;
   box-shadow: 0 1px 1px rgba(0,0,0,0.12);
   z-index: 0;
   cursor: pointer;
@@ -19,6 +17,8 @@ export const StyledCard= styled.div`
   :hover {
   box-shadow: 1px 5px 20px ${({theme}) => theme.primaryHover};
   }
+
+
   img {
   width:100%;
   height: 100%;
@@ -57,6 +57,9 @@ ul{
     bottom: 36px;
     align-items: center;
     color : black;
+    
+  }
+  @media screen and (min-width: 620px) {
     
   }
 
