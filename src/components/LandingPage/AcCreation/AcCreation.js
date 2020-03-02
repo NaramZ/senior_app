@@ -13,9 +13,7 @@ const AcCreation = () => {
                     </li>
                     <li>
                         <a href= '#SignUp'>
-                            <button>
-                            SignUp
-                            </button>
+                                <h5><button>SignUp</button></h5>
                         </a>
                     </li>
                 </ul>

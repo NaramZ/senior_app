@@ -10,13 +10,16 @@ export const StyledAc = styled.nav`
     
     ul{
     list-style-type: none;
+    display: inline-block;
+    flex-direction: space-between;
+
     }
     li {
-    float: left;
+    display: inline;
     }
 
     li a {
-    display: flex;
+    display: inline-flex;
     padding: 6px 10px;
     color: black;
     text-decoration: none;
@@ -25,18 +28,20 @@ export const StyledAc = styled.nav`
         }
 }
  h5{
+     display: inline-block;
      font-family: 'Roboto Light';
      
  }
  button {
     font-family: 'Roboto Light';
     border-radius: 24px;
-    background: #FCD561;
-    border: 10px #FCD561;
-    width: 100%;
-    height: 100%;
+    background: none;
+    border: 2px solid #FCD561;
+    padding: 6px 12px;
     text-align: center;
-    cursor: pointer;
+    :hover {
+        background: #FCD561;
+    }
     }
 
 
