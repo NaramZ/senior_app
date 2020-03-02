@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const StyledBar = styled.nav`
 
+
     position: absolute;
     display: inline-block;
     top: 5%;
