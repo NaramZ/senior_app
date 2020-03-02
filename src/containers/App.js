@@ -25,7 +25,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
         <Navigation/>
-        <CardLayout></CardLayout>
+        <CardLayout/>
 
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />

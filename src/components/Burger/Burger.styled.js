@@ -63,8 +63,9 @@ export const StyledBurger = styled.button`
     
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      /* opacity: ${({ open }) => open ? '0' : '1'}; */
+      transform: ${({ open }) => open ? 'rotate(-45deg) translateX(1px) translateY(0)' : 'rotate(0) translateX(0) translateY(0)'};
+      /* transform: ${({ open }) => open ? 'translateY(2px)' : 'translateX(0)'}; */
     }
 
     :nth-child(3) {
@@ -72,3 +73,6 @@ export const StyledBurger = styled.button`
     }
   }
 `;
+
+
+//FIX THE X
