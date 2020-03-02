@@ -3,7 +3,8 @@ export const StyledAc = styled.nav`
 
 
     position: absolute;
-    display: flex;
+    display: inline-flex;
+    justify-content: space-between;
     top: 5%;
     right: 0;
     height: 2rem;
@@ -18,7 +19,7 @@ export const StyledAc = styled.nav`
     display: inline;
     }
 
-    li a {
+    a {
     display: inline-flex;
     padding: 6px 10px;
     color: black;
@@ -34,6 +35,7 @@ export const StyledAc = styled.nav`
  }
  button {
     font-family: 'Roboto Light';
+    display: inline-block; 
     border-radius: 24px;
     background: none;
     border: 2px solid #FCD561;

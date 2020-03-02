@@ -23,13 +23,14 @@ export const StyledBar = styled.nav`
     flex-direction: space-between;
     color: black;
     text-decoration: none;
+    padding: 6px 10px;
+
     
     
 }
     h5{
         font-family: 'Roboto Light';
-        
-        display: inline-block; 
+        display: inline-block;
         :hover {
             text-shadow: 0px 3px 0px #FCD561;
         }
