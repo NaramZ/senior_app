@@ -1,12 +1,13 @@
 import React from 'react';
 import Aux from '../../../hoc/Aux';
 import LandingImg from '../../../assets/LandingImage.png';
-import './PageOne.module.css';
+import {StyledPgOne} from './PageOne.styled';
 const PgOne = () => {
     return (
         <Aux>
+            <StyledPgOne>
                     <img src ={LandingImg}/>
-            
+            </StyledPgOne>
         </Aux>
     )
 }

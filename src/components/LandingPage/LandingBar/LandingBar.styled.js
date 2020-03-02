@@ -4,18 +4,16 @@ export const StyledBar = styled.nav`
 
     position: absolute;
     display: inline-flex;
-    justify-content: space-between;
     top: 5%;
-    height: 2rem;
-    
+    z-index: 10;
+
     ul{
-    list-style-type: none;
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     flex-direction: space-between;
     gap: 32px;
     margin: 0;
-    padding: 0px;
+    padding: 0;
     
     li {
     display: inline;
