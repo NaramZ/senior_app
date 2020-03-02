@@ -3,41 +3,43 @@ export const StyledBar = styled.nav`
 
 
     position: absolute;
-    display: flex;
+    display: inline-flex;
+    justify-content: space-between;
     top: 5%;
-    width: 100%;
+    left: 0;
     height: 2rem;
     
     ul{
     list-style-type: none;
+    display: inline-block;
+    flex-direction: space-between;
     }
     li {
-    float: left;
-    
-    
+    display: inline;
     }
 
-    li a {
+    a {
+    display: inline-flex;
     flex-direction: space-between;
-    display: flex;
-    vertical-align: baseline;
-    width: 100%;
     color: black;
     text-decoration: none;
-    :hover {
-            text-shadow: 0px 3px 0px #FCD561;
-        }
+    
     
 }
     h5{
         font-family: 'Roboto Light';
-        padding: 6px 3rem; 
+        
+        display: inline-block; 
+        :hover {
+            text-shadow: 0px 3px 0px #FCD561;
+        }
     }
 
     h3 {
+        display: inline-block; 
         font-family: 'Roboto Condensed';
-        padding: 0 5rem;
-        padding-right: 8rem;
-        
+        :hover {
+            text-shadow: 0px 3px 0px #FCD561;
+        }
     }
 `;
