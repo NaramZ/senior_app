@@ -13,7 +13,7 @@ export const StyledBar = styled.nav`
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     flex-direction: space-between;
-    gap: 34px;
+    gap: 32px;
     margin: 0;
     padding: 0px;
     
@@ -29,6 +29,7 @@ export const StyledBar = styled.nav`
         grid-column: 6/7;
         }
     :nth-child(7) {
+        justify-self:end;
         grid-column: 12/13;
         }
     }
