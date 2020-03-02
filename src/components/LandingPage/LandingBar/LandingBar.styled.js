@@ -6,12 +6,18 @@ export const StyledBar = styled.nav`
     display: inline-block;
     top: 5%;
     width: 100vh;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2rem;
+    width: 100%;
     height: 2rem;
 
     h3 {
-        font-family: 'Roboto Condensed'
+        position: absolute;
+        left: 10rem;
+        align-items: center;
+        font-family: 'Roboto';
+    }
+    h4{
+        position: absolute;
+        left:40rem;
+        font-family: 'Roboto';
     }
 `;

@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Medium') url('./Fonts/Roboto/Roboto-Medium.ttf');
 }

@@ -8,6 +8,7 @@ const LandingNav = () => {
         <Aux>
             <StyledBar>
                 <h3>Poison Picker</h3>
+                <h4>Menu</h4>
             </StyledBar>
         </Aux>
     )
