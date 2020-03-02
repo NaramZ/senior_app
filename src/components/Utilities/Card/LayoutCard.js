@@ -6,7 +6,6 @@ import TequilaImg from '../../../assets/TequilaT.png';
 import MohitoImg from '../../../assets/mojito.jpg';
 
 const CardsLayout = (props) => (
-    const [Images, setImage] = useState(0);
     <Aux>
                     <Card
                         Image = {WhiskeyImg}

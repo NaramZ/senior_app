@@ -30,7 +30,7 @@ export const StyledCard= styled.div`
     left: 0;
     margin: 10px;
     position: absolute;
-    font-family: 'Averta Bold';
+    font-family: 'Roboto Mono';
     font-size: 30px;
     font-weight: 500;
   }
