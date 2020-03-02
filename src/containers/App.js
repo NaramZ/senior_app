@@ -8,7 +8,6 @@ import { theme } from '../theme';
 import Burger from '../components/Burger';
 import Menu from '../components/Menu';
 import Navigation from '../components/NavBar';
-import {BrowserRouter} from 'react-router-dom';
 
 
 function App() { 
@@ -20,20 +19,17 @@ function App() {
   useOnClickOutside(node, () => setOpen(false)) //react hooks, when click outside menu anywhere it closes menu
 
   return (
-    <BrowserRouter>
     <Aux>
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
         <Navigation/>
         <CardLayout/>
-
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </div>
       </ThemeProvider>
     </Aux>
-  </BrowserRouter>
   );
 }
 export default App;

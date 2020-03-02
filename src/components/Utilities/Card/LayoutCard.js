@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Card from './MCard';
 import Aux from '../../../hoc/Aux';
 import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
