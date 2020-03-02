@@ -38,6 +38,18 @@ const LandingNav = () => {
                             <h5>Contact Us</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="#Login">
+                            <h5>Log in</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#SignUp">
+                            <h5>
+                                <button>Sign Up</button>
+                            </h5>
+                        </a>
+                    </li>
                 </ul>
                 
                 
