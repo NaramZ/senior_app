@@ -11,20 +11,24 @@ export const StyledAc = styled.nav`
     
     ul{
     list-style-type: none;
-    right: 0;
     }
     li {
     float: left;
     }
 
     li a {
-    flex-direction: space-between;
     display: flex;
-    padding: 0 30px;
+    padding: 6px 10px;
     color: black;
     text-decoration: none;
+    :hover {
+            text-shadow: 0px 3px 0px #FCD561;
+        }
 }
- h4{
+ h5{
      font-family: 'Roboto Light';
  }
+
+
+
 `;

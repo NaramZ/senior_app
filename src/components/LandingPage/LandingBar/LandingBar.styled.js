@@ -14,6 +14,7 @@ export const StyledBar = styled.nav`
     li {
     float: left;
     
+    
     }
 
     li a {
@@ -21,15 +22,22 @@ export const StyledBar = styled.nav`
     display: flex;
     vertical-align: baseline;
     width: 100%;
-    padding: 0 50px;
     color: black;
     text-decoration: none;
-}
-    h4{
-        font-family: 'Roboto Light';
-        padding: 0 10px;
-        :hover {
-        text-shadow: 1px 5px 20px ${({theme}) => theme.primaryHover};
+    :hover {
+            text-shadow: 0px 3px 0px #FCD561;
         }
+    
+}
+    h5{
+        font-family: 'Roboto Light';
+        padding: 6px 3rem; 
+    }
+
+    h3 {
+        font-family: 'Roboto Condensed';
+        padding: 0 5rem;
+        padding-right: 8rem;
+        
     }
 `;

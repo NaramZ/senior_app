@@ -1,7 +1,6 @@
 import React from 'react';
 import Aux from '../../../hoc/Aux';
 import { StyledAc } from './AcCreation.styled';
-
 const AcCreation = () => {
     return (
         <Aux>
@@ -9,12 +8,12 @@ const AcCreation = () => {
                 <ul>
                     <li>
                         <a href= '#Login'>
-                            <h4>Log in</h4>
+                            <h5>Log in</h5>
                         </a>
                     </li>
                     <li>
                         <a href= '#SignUp'>
-                            <h4>SignUp</h4>
+                            <h5>SignUp</h5>
                         </a>
                     </li>
                 </ul>
