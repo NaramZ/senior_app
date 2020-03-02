@@ -29,7 +29,7 @@ export const StyledBar = styled.nav`
         grid-column: 6/7;
         }
     :nth-child(7) {
-        grid-column: 13/14;
+        grid-column: 12/13;
         }
     }
 
