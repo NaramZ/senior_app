@@ -6,7 +6,16 @@ const PgOne = () => {
     return (
         <Aux>
             <StyledPgOne>
-                    <img src ={LandingImg}/>
+                    <ul>
+                        <div>
+                            <li>
+                                <img src ={LandingImg} alt = "First Land"/>
+                            </li>
+                        </div>
+                        <li>
+                            <h1>Your Drinking Experience</h1>
+                        </li>
+                    </ul>
             </StyledPgOne>
         </Aux>
     )
