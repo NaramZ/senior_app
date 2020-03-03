@@ -20,7 +20,7 @@ export const StyledBar = styled.nav`
     justify-self: center;
     align-self: center;
     :nth-child(1) {
-        justify-self:start;
+        justify-self:center;
         grid-column: 2/4;
         }
     :nth-child(2) {
