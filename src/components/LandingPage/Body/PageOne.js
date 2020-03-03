@@ -15,6 +15,14 @@ const PgOne = () => {
                         <li>
                             <h1>Your Drinking Experience</h1>
                         </li>
+                        <li>
+                            <hr/>
+                            <circle/>
+                            <h5>
+                                <b>Drinking</b> is like life, sometimes it's fun and sometimes it's dull, but alcohol makes you 
+                                forget the dull times ever happened.
+                            </h5>
+                        </li>
                     </ul>
             </StyledPgOne>
         </Aux>
