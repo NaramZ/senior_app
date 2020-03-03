@@ -17,11 +17,13 @@ const PgOne = () => {
                         </li>
                         <li>
                             <hr/>
-                            <circle/>
                             <h5>
                                 <b>Drinking</b> is like life, sometimes it's fun and sometimes it's dull, but alcohol makes you 
                                 forget the dull times ever happened.
                             </h5>
+                        </li>
+                        <li>
+                            <svg/>
                         </li>
                     </ul>
             </StyledPgOne>

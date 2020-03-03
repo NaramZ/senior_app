@@ -4,7 +4,7 @@ export const StyledPgOne = styled.div`
     div{
         position: absolute;
         display: inline-flex;
-        top: 10%;
+        top: 90px;
         width:83%;
         height: 60%;
         overflow:hidden;
@@ -32,7 +32,12 @@ export const StyledPgOne = styled.div`
             grid-column: 2/6;
             grid-row:17/18;
         }
-        
+        :nth-child(4){
+            z-index:2;
+            grid-column: 2/3;
+            grid-row: 17/18;
+            align-self: start;
+        }
     }
     img {
     left: -0.2rem;
@@ -60,11 +65,13 @@ export const StyledPgOne = styled.div`
         margin: 0;
     }
     hr{
-        border-spacing: 0;
         border: 1.2px solid #FCD561;
     }
-    circle{
-        
+    svg{
+        background-color: #FCD561;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
     }
 }
 
