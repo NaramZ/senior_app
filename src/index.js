@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 // import 'bootstrap-css-only/css/bootstrap.min.css';
-// import App from './containers/App';
+import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './components/LandingPage/LandingPage';
+// import App from './components/LandingPage/LandingPage';
 
 
 

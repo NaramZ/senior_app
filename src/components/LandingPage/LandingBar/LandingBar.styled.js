@@ -5,7 +5,7 @@ export const StyledBar = styled.nav`
     position: absolute;
     display: inline-flex;
     top: 5%;
-    z-index: 10;
+    z-index: 1;
 
     ul{
     display: grid;
