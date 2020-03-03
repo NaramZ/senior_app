@@ -41,6 +41,12 @@ const Navigation = () => {
                 <FiUser/>
               </button>
           </li>
+
+          <li>
+              <button>
+                <h5>2</h5>
+              </button>
+          </li>
         </ul>
     </StyledNavBar>
     </Aux>

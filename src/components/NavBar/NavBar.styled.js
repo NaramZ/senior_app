@@ -8,7 +8,7 @@ export const StyledNavBar = styled.nav`
 
     ul{
     display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(16, 1fr);
     flex-direction: space-between;
     gap: 32px;
     margin: 0;
@@ -27,7 +27,11 @@ export const StyledNavBar = styled.nav`
         }
     :nth-child(6) {
         justify-self:end;
-        grid-column: 14/15;
+        grid-column: 15/16;
+        }
+    :nth-child(7) {
+        justify-self:start;
+        grid-column: 16/17;
         }
     }
 
@@ -62,7 +66,6 @@ export const StyledNavBar = styled.nav`
     background: #FCD561;
     border: 2px solid #FCD561;
     text-align: center;
-    
     }
 
     svg{
