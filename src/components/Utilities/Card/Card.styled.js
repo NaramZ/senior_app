@@ -14,15 +14,18 @@ export const StyledCard= styled.div`
     grid-template-columns: repeat(10, 11rem);
     margin: 0;
     padding: 0;
+    
     li {
         display: inline-flex;
         z-index:1;
-        
-        :nth-child(3n+1){
-          grid-column:2/3;
+        :nth-child(3n + #{$key}){
+          grid-column:4/5;
           grid-row: 2/3;
         }
+        :not(:first-child, :nth-child(3)) {
+        margin-left: 12px;
         }
+      }
       
 
   
