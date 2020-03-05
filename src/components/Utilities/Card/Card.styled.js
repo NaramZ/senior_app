@@ -18,8 +18,8 @@ export const StyledCard= styled.div`
     li {
         display: inline-flex;
         z-index:1;
-        :nth-child(3n + #{$key}){
-          grid-column:4/5;
+        :nth-child(3n + 1){
+          grid-column: 3/4;
           grid-row: 2/3;
         }
         :not(:first-child, :nth-child(3)) {
@@ -29,6 +29,18 @@ export const StyledCard= styled.div`
       
 
   
+      .grid-loop(@columns, @total: @columns) when (@columns > 0) {
+  // loop output
+  .grid-@{columns} {
+    width: 22rem;
+  }
+  
+  // recursive call
+  .grid-loop(@columns - 1, @total);
+}
+
+// apply the mixin, for 12 columns
+  grid-loop(12);
 
     img {
     width: 100%;
