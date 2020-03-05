@@ -10,7 +10,6 @@ import './Grid.scss';
 const CardsLayout = (props) => (
     <Aux>
         <StyledCard>
-            <ul>
                 <li className = "grid-1">
                     <Card 
                         Image = {WhiskeyImg}
@@ -19,21 +18,20 @@ const CardsLayout = (props) => (
                         Category = ' · Whiskey · Drinks · 8$'
                         />
                 </li>
-                <li className = "grid-2"> 
+                <li className = "grid-3"> 
                     <Card 
                         Image = {TequilaImg}
                         ItemTitle = 'Tequila Shot'
                         Rating = '&emsp;4.8'
                         Category = ' · Tequila · Drinks · 8$'/>
                 </li>
-                <li className = "grid-3">
+                <li className = "grid-4">
                     <Card
                         Image = {MohitoImg}
                         ItemTitle = 'Mojito'
                         Rating = '&emsp;4.9'
                         Category = ' · Cocktail · Drinks · 10$'/>
                 </li>
-            </ul>
         </StyledCard>    
     </Aux>
 )
