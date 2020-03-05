@@ -5,27 +5,28 @@ import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../../assets/TequilaT.png';
 import MohitoImg from '../../../assets/mojito.jpg';
 import { StyledCard } from './Card.styled';
+import './Grid.scss';
 
 const CardsLayout = (props) => (
     <Aux>
         <StyledCard>
             <ul>
-                <li>
-                    <Card
+                <li className = "grid-1">
+                    <Card 
                         Image = {WhiskeyImg}
                         ItemTitle = 'Old Fashioned'
                         Rating = '&emsp;4.6 '
                         Category = ' · Whiskey · Drinks · 8$'
                         />
                 </li>
-                <li>
-                    <Card
+                <li className = "grid-2"> 
+                    <Card 
                         Image = {TequilaImg}
                         ItemTitle = 'Tequila Shot'
                         Rating = '&emsp;4.8'
                         Category = ' · Tequila · Drinks · 8$'/>
                 </li>
-                <li>
+                <li className = "grid-3">
                     <Card
                         Image = {MohitoImg}
                         ItemTitle = 'Mojito'
