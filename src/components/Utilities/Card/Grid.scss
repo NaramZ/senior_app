@@ -1,32 +1,52 @@
-$grid-columns: 12;
-$grid-rows:7;
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.cardTitleBox {
+  background-color: none;
+  h3 {
+    font-family: 'Roboto Condensed';
+    display: inline-block;
+    margin: 0;
+    .cardImage {
+      border-radius: 24px;
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+}
 
-@for $i from 1 through $grid-columns{
-  .grid-#{$i} {
-    grid-column-start: ($i+1);
-    grid-column-end: $i+3;
-    grid-row-start: 2 ;
+//colour map for the boxes
+$boxColour: (
+  1: #AEA1CA,
+  2: #C2A6CB,
+);
+
+
+//non dynamic styles for the boxes
+.colouredBox {
+  height: 12rem;
+  width: 24rem;
+  border-radius: 24px;
+}
+
+//set margin-left for every box except the first and 3rd
+.colouredBox:not(:first-child, :nth-child(3)) {
+  margin-left: 12px;
+}
+
+@each $key, $colour in $boxColour {
+   //create a selector and
+   //append a number with the sass interpelator
+  .colouredBox:nth-child(3n + #{$key}) {
+    //using the number, grab the colour from the appropriate map
+    background-color: $colour;
+    &:hover {
+      background-color: darken($colour, 15%);
+    }
   }
 }
 
 
-// styles
-[class^='grid-'] {
-  float: left;
-  list-style: none;
- 
-  img {
-    max-width: 24rem;
-    max-height: 14rem;
-    position: absolute;
-    display: inline-block;
-    border-radius: 24px;
-    }
-  h3{
-      font-family: 'Roboto Mono';
-      font-size: 30px;
-      font-weight: 500;
-      margin:0;
-      padding:0;
-    }
-  }
+
