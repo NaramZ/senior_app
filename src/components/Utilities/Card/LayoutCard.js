@@ -59,6 +59,30 @@ const CardsLayout = (props) => (
                             Category = ' · Cocktail · Drinks · 10$'/>
                     </div>
                 </div>
+                <div className="boxContainer-5">
+                    <div className="cardImage">
+                    <Card Image = {MohitoImg}/>
+                    </div> 
+                    <div className="cardText">
+                            <Card 
+                            ItemTitle = 'Mojito'
+                            Icon = {<FiStar/>}
+                            Rating = '&emsp;4.9'
+                            Category = ' · Cocktail · Drinks · 10$'/>
+                    </div>
+                </div>
+                <div className="boxContainer-6">
+                    <div className="cardImage">
+                    <Card Image = {MohitoImg}/>
+                    </div> 
+                    <div className="cardText">
+                            <Card 
+                            ItemTitle = 'Mojito'
+                            Icon = {<FiStar/>}
+                            Rating = '&emsp;4.9'
+                            Category = ' · Cocktail · Drinks · 10$'/>
+                    </div>
+                </div>
             </div>
         </Aux>
 )

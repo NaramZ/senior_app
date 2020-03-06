@@ -8,7 +8,7 @@ $grid-row-start: 2;
   display: grid;
   grid-template-columns: repeat($grid-column, 11rem);
   grid-template-rows: repeat($grid-row, 0.5fr);
-  gap:2rem;
+  gap:5rem;
 }
 .boxContainer- {
   display: inline-block;
