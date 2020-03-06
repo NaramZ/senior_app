@@ -1,14 +1,30 @@
 
-
-
-  .cardTitleBox {
+.boxGrid{
+  display: grid;
+  grid-template-columns: repeat(10, 12rem);
+  grid-template-rows: repeat(14, 6rem);
+}
+.boxContainer {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+  .cardText {
   background-color: none;
-  }
+  
   h3 {
     font-family: 'Roboto Condensed';
     display: inline-block;
     margin: 0;
+    padding: 0;
   }
+  p{
+    font-family: 'Roboto';
+    color:black;
+    margin:0;
+    padding:0;
+  }
+}
     .cardImage {
       img{
         max-width: 24rem;
@@ -19,9 +35,9 @@
 
 
 //set margin-left for every box except the first and 3rd
-.colouredBox:not(:first-child, :nth-child(3)) {
-  margin-left: 12px;
-}
+// .colouredBox:not(:first-child, :nth-child(3)) {
+//   margin-left: 12px;
+// }
 
 // @for $key, $colour in $grid-column {
 //    //create a selector and

@@ -10,12 +10,12 @@ import './Grid.scss';
 
 const CardsLayout = (props) => (
     <Aux>
-            <div className = "boxContainer">
-                <div className="colouredBox">
+            <div className = "boxGrid">
+                <div className="boxContainer">
                     <div className="cardImage">
                     <Card Image = {WhiskeyImg}/>
                     </div> 
-                    <div className="cardTitleBox">
+                    <div className="cardText">
                             <Card 
                             ItemTitle = 'Old Fashioned'
                             Icon = {<FiStar/>}
