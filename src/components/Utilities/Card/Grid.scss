@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .boxContainer {
   display: flex;
   flex-wrap: wrap;
@@ -44,6 +45,7 @@ $boxColour: (
     background-color: $colour;
     &:hover {
       background-color: darken($colour, 15%);
+
     }
   }
 }
