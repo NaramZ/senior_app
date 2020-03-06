@@ -1,6 +1,6 @@
 $grid-columns: 12;
 $grid-rows:7;
-
+ 
 @for $i from 1 through $grid-columns{
   .grid-#{$i} {
     grid-column-start: ($i+1);
