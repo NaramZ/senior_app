@@ -1,13 +1,33 @@
+$grid-column: 9;
+$grid-row:14;
+$grid-column-start: 2;
+$grid-column-end: 4;
+$grid-row-start: 2;
 
 .boxGrid{
   display: grid;
-  grid-template-columns: repeat(10, 12rem);
-  grid-template-rows: repeat(14, 6rem);
+  grid-template-columns: repeat($grid-column, 11rem);
+  grid-template-rows: repeat($grid-row, 0.5fr);
+  gap:2rem;
 }
-.boxContainer {
+.boxContainer- {
   display: inline-block;
   width: auto;
   height: auto;
+}
+@for $i from 1 through $grid-column {
+  .boxContainer-#{$i} {
+    grid-column-start: $grid-column-start;
+    grid-column-end: $grid-column-end;
+    $grid-column-start: $grid-column-start + 2;
+    $grid-column-end: $grid-column-end +2;
+    grid-row-start: $grid-row-start;
+    @if($grid-column-end > $grid-column ){
+    $grid-row-start: $grid-row-start+1;
+    $grid-column-start: 2;
+    $grid-column-end: 4;
+    }
+  }
 }
   .cardText {
   background-color: none;
@@ -27,17 +47,17 @@
 }
     .cardImage {
       img{
+        display: inline-block;
         max-width: 24rem;
         max-height: 14rem;
         border-radius: 24px;
       }
     }
+  
+  
 
 
-//set margin-left for every box except the first and 3rd
-// .colouredBox:not(:first-child, :nth-child(3)) {
-//   margin-left: 12px;
-// }
+
 
 // @for $key, $colour in $grid-column {
 //    //create a selector and

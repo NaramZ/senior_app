@@ -3,15 +3,15 @@ import Card from './MCard';
 import Aux from '../../../hoc/Aux';
 import { FiStar } from "react-icons/fi";
 import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
-// import TequilaImg from '../../../assets/TequilaT.png';
-// import MohitoImg from '../../../assets/mojito.jpg';
+import TequilaImg from '../../../assets/TequilaT.png';
+import MohitoImg from '../../../assets/mojito.jpg';
 // import { StyledCard } from './Card.styled';
 import './Grid.scss';
 
 const CardsLayout = (props) => (
-    <Aux>
+        <Aux>
             <div className = "boxGrid">
-                <div className="boxContainer">
+                <div className="boxContainer-1">
                     <div className="cardImage">
                     <Card Image = {WhiskeyImg}/>
                     </div> 
@@ -22,33 +22,45 @@ const CardsLayout = (props) => (
                             Rating = '&emsp;4.6 '
                             Category = ' · Whiskey · Drinks · 8$'/>
                     </div>
-                </div>     
+                </div>
+                <div className="boxContainer-2">
+                    <div className="cardImage">
+                    <Card Image = {TequilaImg}/>
+                    </div> 
+                    <div className="cardText">
+                            <Card 
+                            ItemTitle = 'Tequila Shot'
+                            Icon = {<FiStar/>}
+                            Rating = '&emsp;4.8'
+                            Category = ' · Tequila · Drinks · 8$'/>
+                    </div>
+                </div>    
+                <div className="boxContainer-3">
+                    <div className="cardImage">
+                    <Card Image = {MohitoImg}/>
+                    </div> 
+                    <div className="cardText">
+                            <Card 
+                            ItemTitle = 'Mojito'
+                            Icon = {<FiStar/>}
+                            Rating = '&emsp;4.9'
+                            Category = ' · Cocktail · Drinks · 10$'/>
+                    </div>
+                </div>    
+                <div className="boxContainer-4">
+                    <div className="cardImage">
+                    <Card Image = {MohitoImg}/>
+                    </div> 
+                    <div className="cardText">
+                            <Card 
+                            ItemTitle = 'Mojito'
+                            Icon = {<FiStar/>}
+                            Rating = '&emsp;4.9'
+                            Category = ' · Cocktail · Drinks · 10$'/>
+                    </div>
+                </div>
             </div>
-
-        {/* <div className='boxContainer'>
-                <li className = "cardTitleBox">
-                    <Card 
-                        Image = {WhiskeyImg}
-                        ItemTitle = 'Old Fashioned'
-                        Rating = '&emsp;4.6 '
-                        Category = ' · Whiskey · Drinks · 8$'
-                        />
-                </li>
-                <li className = "cardTitleBox"> 
-                    <Card 
-                        Image = {TequilaImg}
-                        ItemTitle = 'Tequila Shot'
-                        Rating = '&emsp;4.8'
-                        Category = ' · Tequila · Drinks · 8$'/>
-                </li>
-                <li className = "cardTitleBox">
-                    <Card
-                        Image = {MohitoImg}
-                        ItemTitle = 'Mojito'
-                        Rating = '&emsp;4.9'
-                        Category = ' · Cocktail · Drinks · 10$'/>
-                </li> */}
-    </Aux>
+        </Aux>
 )
 
 export default CardsLayout;
