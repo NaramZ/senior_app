@@ -5,7 +5,7 @@ import { FiStar } from "react-icons/fi";
 import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../../assets/TequilaT.png';
 import MohitoImg from '../../../assets/mojito.jpg';
-// import { StyledCard } from './Card.styled';
+
 import './Grid.scss';
 
 const CardsLayout = (props) => (
