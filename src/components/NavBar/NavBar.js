@@ -2,7 +2,6 @@ import React from 'react';
 import { StyledNavBar } from './NavBar.styled';
 import Aux from '../../hoc/Aux';
 import {FiUser} from 'react-icons/fi';
-
 const Navigation = () => {
   return (
     <Aux>
@@ -13,25 +12,25 @@ const Navigation = () => {
           </li>
 
           <li>
-            <a href="#Menu">
+            <a href="/Menu">
               <h5>Menu</h5>
             </a>
           </li>
           
           <li>
-            <a href="#Favorites">
+            <a href="/Favorites">
                 <h5>Favorites</h5>
             </a>
           </li>
           
           <li>
-            <a href="#History">
+            <a href="/History">
               <h5>History</h5>
             </a>
           </li>
           
           <li>
-            <a href="#Yourset">
+            <a href="/Yourset">
               <h5>Your Set</h5>
             </a>
           </li>

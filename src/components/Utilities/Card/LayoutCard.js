@@ -5,10 +5,11 @@ import { FiStar } from "react-icons/fi";
 import WhiskeyImg from '../../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../../assets/TequilaT.png';
 import MohitoImg from '../../../assets/mojito.jpg';
-
+import {Route} from 'react-router-dom';
 import './Grid.scss';
 
 const CardsLayout = (props) => (
+    
         <Aux>
             <div className = "boxGrid">
                 <div className="boxContainer-1">
@@ -84,6 +85,7 @@ const CardsLayout = (props) => (
                     </div>
                 </div>
             </div>
+
         </Aux>
 )
 
