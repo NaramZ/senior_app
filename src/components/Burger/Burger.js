@@ -6,13 +6,10 @@ import Aux from '../../hoc/Aux';
 const Burger = ({ open, setOpen }) => {
   return (
     <Aux>
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div/>
-    </StyledBurger>
-    
-    
-
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div/>
+      </StyledBurger>
     </Aux>
   )
 }
