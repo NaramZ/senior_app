@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hook';
 import Aux from '../hoc/Aux';
-import CardsLayout from '../components/Utilities/Card/LayoutCard';
+import CardsLayout from './MenuPage/LayoutCard';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../Global';
 import { theme } from '../theme';

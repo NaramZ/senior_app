@@ -1,8 +1,8 @@
 import React from 'react';
 import Aux from '../../hoc/Aux';
-import LandingNav from './LandingBar'
-import PgOne from './Pg1';
-import PgTwo from './Pg2';
+import LandingNav from '../../components/LandingPage/LandingBarr'
+import PgOne from '../../components/LandingPage/Pg1';
+import PgTwo from '../../components/LandingPage/Pg2';
 function App() { 
 
     return (
