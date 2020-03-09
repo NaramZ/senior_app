@@ -7,11 +7,11 @@ const PgOne = () => {
         <Aux>
             <StyledPgOne>
                     <ul>
-                        <div>
-                            <li>
+                        <li>
+                            <div>
                                 <img src ={LandingImg} alt = "First Land"/>
-                            </li>
-                        </div>
+                            </div>
+                        </li>
                         <li>
                             <h1>Your Drinking Experience</h1>
                         </li>

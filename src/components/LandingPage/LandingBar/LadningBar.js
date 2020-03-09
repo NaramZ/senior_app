@@ -9,42 +9,42 @@ const LandingNav = () => {
             <StyledBar>
                 <ul>
                     <li>
-                        <NavLink to = "#Home">
+                        <NavLink to = "/Home">
                             <h3>Poison Picker</h3>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#OurMission">
+                        <NavLink to="/OurMission">
                             <h5>Our Mission</h5>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#Pubs">
+                        <NavLink to="/Pubs">
                             <h5>Pubs</h5>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#Drinks">
+                        <NavLink to="/Drinks">
                             <h5>Drinks</h5>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#Yourset">
+                        <NavLink to="/Yourset">
                             <h5>Your Set</h5>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#Contactus">
+                        <NavLink to="/Contactus">
                             <h5>Contact Us</h5>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#Login">
+                        <NavLink to="/Login">
                             <h5>Log in</h5>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="#SignUp">
+                        <NavLink to="/SignUp">
                             <h5>
                                 <button>Sign Up</button>
                             </h5>

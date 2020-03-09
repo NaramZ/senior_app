@@ -6,6 +6,7 @@ const PageTwo = () => {
     return(
         <Aux>
             <StyledPgTwo>
+                <h3>Our Mission</h3>
             </StyledPgTwo>
         </Aux>
     )

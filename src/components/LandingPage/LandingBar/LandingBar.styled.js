@@ -9,8 +9,7 @@ export const StyledBar = styled.nav`
 
     ul{
     display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    flex-direction: space-between;
+    grid-template-columns: repeat(16, 1fr);
     gap: 32px;
     margin: 0;
     padding: 0;
@@ -24,11 +23,16 @@ export const StyledBar = styled.nav`
         grid-column: 2/4;
         }
     :nth-child(2) {
-        grid-column: 6/7;
+        grid-column: 5/7;
+        justify-self: end;
         }
+    :nth-child(6){
+        justify-self:start;
+        grid-column: 10/12;
+    }
     :nth-child(7) {
         justify-self:end;
-        grid-column: 12/13;
+        grid-column: 15/16;
         }
     }
 
