@@ -9,6 +9,7 @@ import Burger from '../components/Burger';
 import Menu from '../components/Menu';
 import Navigation from '../components/NavBar';
 import {BrowserRouter} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 function App() { 
 
   const [open, setOpen] = useState(false); //state of burger false by default
@@ -23,7 +24,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <GlobalStyles/>
           <Navigation/>
-          <MenuPage/>
+          <Route path ='/Menu' exact component = {MenuPage}/>
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
             <Menu open={open} setOpen={setOpen} />
