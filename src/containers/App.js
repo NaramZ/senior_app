@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hook';
 import Aux from '../hoc/Aux';
-import CardsLayout from './MenuPage/LayoutCard';
+import MenuPage from './MenuPage/Menu';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../Global';
 import { theme } from '../theme';
@@ -23,8 +23,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <GlobalStyles/>
           <Navigation/>
-          <CardsLayout/>
-
+          <MenuPage/>
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
             <Menu open={open} setOpen={setOpen} />

@@ -1,6 +1,5 @@
 import React from 'react';
-// import { StyledCard } from './Card.styled';
-import Aux from '../../../hoc/Aux';
+import Aux from '../../hoc/Aux';
 
 const Card = (props) => {
   return (

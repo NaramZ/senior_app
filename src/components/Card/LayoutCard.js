@@ -1,11 +1,11 @@
 import React from 'react';
-import Card from '../../components/Utilities/Card/MCard';
+import Card from './MCard';
 import Aux from '../../hoc/Aux';
 import { FiStar } from "react-icons/fi";
 import WhiskeyImg from '../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../assets/TequilaT.png';
 import MohitoImg from '../../assets/mojito.jpg';
-import '../../components/Utilities/Card/Grid.scss';
+import './Grid.scss';
 
 const CardsLayout = (props) => (
     
