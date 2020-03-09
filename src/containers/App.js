@@ -8,7 +8,7 @@ import { theme } from '../theme';
 import Burger from '../components/Burger';
 import Menu from '../components/Menu';
 import Navigation from '../components/NavBar';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 function App() { 
 
   const [open, setOpen] = useState(false); //state of burger false by default
