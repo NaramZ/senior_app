@@ -2,6 +2,7 @@ import React from 'react';
 import { StyledNavBar } from './NavBar.styled';
 import Aux from '../../hoc/Aux';
 import {FiUser} from 'react-icons/fi';
+import {NavLink} from 'react-router-dom';
 const Navigation = () => {
   return (
     <Aux>
@@ -12,27 +13,27 @@ const Navigation = () => {
           </li>
 
           <li>
-            <a href="/Menu">
+            <NavLink to = "/Menu"exact>
               <h5>Menu</h5>
-            </a>
+            </NavLink>
           </li>
           
           <li>
-            <a href="/Favorites">
+            <NavLink to="/Favorites">
                 <h5>Favorites</h5>
-            </a>
+            </NavLink>
           </li>
           
           <li>
-            <a href="/History">
+            <NavLink to ="/History">
               <h5>History</h5>
-            </a>
+            </NavLink>
           </li>
           
           <li>
-            <a href="/Yourset">
+            <NavLink to="/Yourset">
               <h5>Your Set</h5>
-            </a>
+            </NavLink>
           </li>
 
           <li>

@@ -41,12 +41,10 @@ export const StyledNavBar = styled.nav`
     color: black;
     text-decoration: none;
     text-align: center;
+    
     :hover {
             text-shadow: 0px 3px 0px #FCD561;
         }
-    :active{
-        text-shadow: 0px 3px 0px #FCD561;
-    }
 }
     h5{
         font-family: 'Roboto Light';

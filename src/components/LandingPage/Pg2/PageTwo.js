@@ -6,7 +6,6 @@ const PageTwo = () => {
     return(
         <Aux>
             <StyledPgTwo>
-                <h1>Hello there</h1>
             </StyledPgTwo>
         </Aux>
     )
