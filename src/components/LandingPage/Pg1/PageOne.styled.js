@@ -26,12 +26,7 @@ export const StyledPgOne = styled.div`
             align-self: center;
             grid-row-start: 5;
         }
-        :nth-child(4){
-            z-index:2;
-            grid-column: 2/3;
-            grid-row: 4;
-            align-self: start;
-        }
+       
     }
     div {
         display: inline-block;
@@ -67,15 +62,9 @@ export const StyledPgOne = styled.div`
         margin: 0;
     }
     hr{
-        border: 1.2px solid #FCD561;
-        margin:0;
+        border: 2px solid #FCD561;
     }
-    svg{
-        background-color: #FCD561;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-    }
+    
 }
 
 `;

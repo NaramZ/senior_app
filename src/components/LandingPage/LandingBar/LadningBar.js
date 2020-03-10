@@ -9,12 +9,12 @@ const LandingNav = () => {
             <StyledBar>
                 <ul>
                     <li>
-                        <NavLink to = "/Home">
+                        <NavLink to = "/Landing">
                             <h3>Poison Picker</h3>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/OurMission">
+                        <NavLink to="/Landing" exact>
                             <h5>Our Mission</h5>
                         </NavLink>
                     </li>

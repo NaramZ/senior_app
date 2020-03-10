@@ -4,6 +4,7 @@ import {StyledPgTwo} from './PageTwo.styled';
 import OurMissionImg from '../../../assets/LandingImage.png';
 const PageTwo = () => {
     return(
+        //HAVE TO CHANGE IMAGE
         <Aux>
             <StyledPgTwo>
                     <ul>

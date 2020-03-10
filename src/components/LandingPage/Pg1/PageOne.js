@@ -2,6 +2,7 @@ import React from 'react';
 import Aux from '../../../hoc/Aux';
 import LandingImg from '../../../assets/LandingImage.png';
 import {StyledPgOne} from './PageOne.styled';
+
 const PgOne = () => {
     return (
         <Aux>
@@ -21,9 +22,6 @@ const PgOne = () => {
                                 <b>Drinking</b> is like life, sometimes it's fun and sometimes it's dull, but alcohol makes you 
                                 forget the dull times ever happened.
                             </h5>
-                        </li>
-                        <li>
-                            <svg/>
                         </li>
                     </ul>
             </StyledPgOne>

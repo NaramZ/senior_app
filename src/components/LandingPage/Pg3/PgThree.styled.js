@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const StyledPgTwo= styled.div`
+export const StyledPgThree= styled.div`
 
 ul{
     display: grid;
@@ -11,8 +11,8 @@ ul{
     li {
     display: inline-block;
         :first-child{
-            grid-column: 1/12;
-            grid-row: 4; /*create a fade effect that basically starts from row 4-row 5*/
+            grid-column: 2/3;
+            grid-row: 4;
         }
         :nth-child(2) {
         z-index:1;
@@ -61,4 +61,5 @@ ul{
         margin: 0 0 16px;
     }
 }
+
 `;
