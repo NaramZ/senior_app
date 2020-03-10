@@ -11,7 +11,6 @@ function App() {
   return (
     <Aux>
       <BrowserRouter>
-          <Route path = '/' component = {MenuPage}/>
           <Route path ='/Menu' component = {MenuPage}/>
           <Route path ='/Landing' exact component = {LandingPage}/>
       </BrowserRouter>
