@@ -11,13 +11,23 @@ function PgThree() {
                     <h1>Drinks</h1>
                 </li>
                 <li>
+                    <hr/>
                     <h5>Choose for yourself the Drinks that you want</h5>
                 </li>
+                
                 <li>
                     <div>
-                        <h2>Mohito</h2>
                         <img src = {DrinkImg} />
                     </div>
+                </li>
+                <li>
+                    <h2>Mohito</h2>
+                </li>
+                <li>
+                    <h2>Tequila</h2>
+                </li>
+                <li>
+                    <h2>Whiskey</h2>
                 </li>
             </ul>
         </StyledPgThree>
