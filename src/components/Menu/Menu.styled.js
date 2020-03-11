@@ -27,9 +27,8 @@ export const StyledMenu = styled.nav`
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: ${({ theme }) => theme.primaryDark};
-    text-decoration: none;
+    text-decoration: none ;
     transition: color 0.3s linear;
-    
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 1rem;
       text-align: center;
