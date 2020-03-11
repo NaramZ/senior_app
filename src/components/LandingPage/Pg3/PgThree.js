@@ -17,7 +17,7 @@ function PgThree() {
                 
                 <li>
                     <div>
-                        <img src = {DrinkImg} />
+                        <img src = {DrinkImg} alt= "firstimg" />
                     </div>
                 </li>
                 <li>
@@ -26,9 +26,7 @@ function PgThree() {
                 <li>
                     <h2>Tequila</h2>
                 </li>
-                <li>
-                    <h2>Whiskey</h2>
-                </li>
+               
             </ul>
         </StyledPgThree>
     </Aux>
