@@ -8,9 +8,10 @@ $grid-column-end: 4;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(11rem, 12rem)); 
 }
+
+// Card Layout:
 .boxContainer- {
   display: inline-block;
-
 }
 @for $i from 1 through $grid-column {
   .boxContainer-#{$i} {
@@ -25,12 +26,12 @@ $grid-column-end: 4;
     }
   }
 }
-  .navContainer- {
+.navContainerMenu- {
     display: inline-block;
   }
 @for $i from 1 through $grid-column {
-  .navContainer-#{$i} {
-    grid-column-start: #{$i};
+  .navContainerMenu-#{$i} {
+    grid-column-start: $i;
     align-self: center;
     justify-self: center;
     margin: 2.8rem;
@@ -38,22 +39,6 @@ $grid-column-end: 4;
   }
 }
 
-  .cardText {
-  background-color: none;
-  
-  h3 {
-    font-family: 'Roboto Condensed';
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  p{
-    font-family: 'Roboto';
-    color:black;
-    margin:0;
-    padding:0;
-  }
-}
 .cardImage {
   img{
     display: inline-block;
@@ -66,5 +51,42 @@ $grid-column-end: 4;
       box-shadow: 0 0 10px #FCD561;
   }
 }
+
+
+// Landing Page Layout
+
+
+.navContainerLanding- {
+  display: inline-block;
+  
+}
+@for $i from 1 through $grid-column {
+.navContainerLanding-#{$i} {
+  grid-column-start: $i;
+  align-self: center;
+  justify-self: center;
+  @if( $i >  9 ){
+    justify-self: start;
+    }
+  }
+}
+
+.LandingContainer-{
+  display: inline-block;
+}
+@for $i from 1 through $grid-column {
+  .LandingContainer-#{$i} {
+    @if ($i == 1){
+      grid-column-start: $i;
+      grid-column-end: $grid-column;
+      div {
+        height: 20px;
+        width: 80px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
   
   
