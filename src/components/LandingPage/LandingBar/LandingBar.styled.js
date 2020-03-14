@@ -36,40 +36,7 @@ export const StyledBar = styled.nav`
         }
     }
 
-    a {
-    display: inline-block;
-    flex-direction: space-between;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-}
-    h5{
-        font-family: 'Roboto Light';
-        display: inline-block;
-        margin: 0;
-        :hover {
-            text-shadow: 0px 3px 0px #FCD561;
-        }
-    }
-
-    h3 {
-        display: inline-block;
-        margin: 0;
-        font-family: 'Roboto Condensed';
-        :hover {
-            text-shadow: 0px 3px 0px #FCD561;
-        }
-    }
-    button {
-    font-family: 'Roboto Light';
-    display: inline-block; 
-    border-radius: 24px;
-    background: none;
-    border: 2px solid #FCD561;
-    text-align: center;
-    :hover {
-        background: #FCD561;
-    }
-    }
+   
+    
 }
 `;

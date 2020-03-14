@@ -11,9 +11,6 @@ function App() {
         <Aux>
             <LandingNav/>
             <PgOne/>
-            <PgTwo/>
-            <PgThree/>
-            <PgFour/>
         </Aux>
     )
 }

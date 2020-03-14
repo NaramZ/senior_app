@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 export const StyledPgOne = styled.div`
 
-    ul{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 32px;
-    margin: 0;
-    padding: 0;
     li {
     display: inline-block;
         :first-child{
@@ -65,6 +58,5 @@ export const StyledPgOne = styled.div`
         border: 2px solid #FCD561;
     }
     
-}
 
 `;

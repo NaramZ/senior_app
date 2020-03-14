@@ -1,0 +1,22 @@
+$grid-column: 11;
+$grid-row:14;
+$grid-column-start: 2;
+$grid-column-end: 4;
+
+
+.boxGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 12rem)); 
+}
+
+.boxContainer- {
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+}
+
+@for $i from 1 through $grid-column {
+    .boxContainer-#{$i} {
+        grid-column-start: 2;        
+    }
+}
