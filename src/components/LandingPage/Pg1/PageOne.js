@@ -1,12 +1,10 @@
 import React from 'react';
 import Aux from '../../../hoc/Aux';
 import LandingImg from '../../../assets/LandingImage.png';
-import {StyledPgOne} from './PageOne.styled';
 import '../../../Grid.scss';
 const PgOne = () => {
     return (
         <Aux>
-            <StyledPgOne>
                     <div className = "LandingGrid">
                         <div className = "LandingContainer-1">
                             <img src ={LandingImg} alt = "First Land"/>
@@ -23,7 +21,6 @@ const PgOne = () => {
                             </h5>
                         </div>
                     </div>
-            </StyledPgOne>
         </Aux>
     )
 }
