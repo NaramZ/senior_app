@@ -7,12 +7,13 @@ const PgOne = () => {
     return (
         <Aux>
             <StyledPgOne>
-                    <div className = "boxGrid">
+                    <div className = "LandingGrid">
                         <div className = "LandingContainer-1">
                             <img src ={LandingImg} alt = "First Land"/>
                         </div>
                         <div className = "LandingContainer-2">
                             <h1>Your Drinking Experience</h1>
+                            
                         </div>
                         <div className = "LandingContainer-3">
                             <hr/>

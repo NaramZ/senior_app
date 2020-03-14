@@ -50,9 +50,10 @@ a {
   color: black;
   text-decoration: none;
   text-align: center;
-  decoration
   :hover {
-    text-shadow: 0px 3px 0px #FCD561;
+      color:inherit; 
+      cursor:pointer; 
+      text-shadow: 0px 3px 0px #FCD561;
   }
 }
 

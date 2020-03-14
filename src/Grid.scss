@@ -1,4 +1,4 @@
-$grid-column: 11;
+$grid-column: 10;
 $grid-row:14;
 $grid-column-start: 2;
 $grid-column-end: 4;
@@ -6,7 +6,8 @@ $grid-column-end: 4;
 
 .boxGrid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 12rem)); 
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 12rem));
+  
 }
 
 // Card Layout:
@@ -55,6 +56,11 @@ $grid-column-end: 4;
 
 // Landing Page Layout
 
+.LandingGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 12rem));
+  grid-auto-rows: 11rem;
+}
 
 .navContainerLanding- {
   display: inline-block;
@@ -65,6 +71,7 @@ $grid-column-end: 4;
   grid-column-start: $i;
   align-self: center;
   justify-self: center;
+  margin: 2.8rem 0;
   @if( $i >  9 ){
     justify-self: start;
     }
@@ -77,14 +84,29 @@ $grid-column-end: 4;
 @for $i from 1 through $grid-column {
   .LandingContainer-#{$i} {
     @if ($i == 1){
-      grid-column-start: $i;
-      grid-column-end: $grid-column;
-      div {
-        height: 20px;
-        width: 80px;
+        grid-column-start: 2;
+        grid-column-end: $grid-column;
         overflow: hidden;
-      }
+        border-radius: 24px;
+        z-index: -1;
+        grid-row: 1 / 4;
+        img {
+          top: -150rem;
+        }
     }
+    @if ($i == 2){
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row: 2/3;
+      
+    }
+    @if ($i == 3){
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row: 4/5;
+      
+    }
+    
   }
 }
 
