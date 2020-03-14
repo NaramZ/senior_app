@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   /* Text */
+
 h5{
   font-family: 'Roboto Light';
   display: inline-block;
@@ -37,6 +38,12 @@ h1 {
       text-shadow: 10px 10px 0px rgba(251, 109, 58, 0.6);
   }
 }
+h2{
+        font-size: 2.5em;
+        letter-spacing: 8px;
+        margin:0;
+        font-family: "Roboto Condensed";
+  }
 p{
     font-family: 'Roboto';
     color:black;

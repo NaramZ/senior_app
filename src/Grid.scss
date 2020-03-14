@@ -54,13 +54,16 @@ $grid-column-end: 4;
 }
 
 
-// Landing Page Layout
+// Landing Page Grid
 
 .LandingGrid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(11rem, 12rem));
   grid-auto-rows: 11rem;
 }
+
+
+//Landing Page NavBar
 
 .navContainerLanding- {
   display: inline-block;
@@ -78,11 +81,14 @@ $grid-column-end: 4;
   }
 }
 
-.LandingContainer-{
+
+//Landing Page One
+
+.LandingContainerOne-{
   display: inline-block;
 }
 @for $i from 1 through $grid-column {
-  .LandingContainer-#{$i} {
+  .LandingContainerOne-#{$i} {
     @if ($i == 1){
         grid-column-start: 2;
         grid-column-end: $grid-column;
@@ -90,9 +96,7 @@ $grid-column-end: 4;
         border-radius: 24px;
         z-index: -1;
         grid-row: 1 / 4;
-        img {
-          top: -150rem;
-        }
+        
     }
     @if ($i == 2){
       grid-column-start: 2;
@@ -109,6 +113,80 @@ $grid-column-end: 4;
     
   }
 }
+
+
+// Landing Page 2
+
+.LandingContainerTwo-{
+  display: inline-block;
+}
+
+@for $i from 1 through $grid-column {
+  .LandingContainerTwo-#{$i} {
+    @if ($i == 1){
+        grid-column-start: 2;
+        grid-column-end: $grid-column;
+        overflow: hidden;
+        border-radius: 24px;
+        z-index: -1;
+        grid-row: 2 / 6;
+    }
+    @if ($i == 2){
+      grid-column: 5/ span 3;
+      grid-row-start: 1;
+      
+    }
+    @if ($i == 3){
+      grid-column: 4/ span 4;
+      grid-row-start: 1;
+      text-align: center;
+      margin-top: 6rem;
+    }
+    
+  }
+}
+
+//Landing Page 3 
+
+.LandingContainerThree-{
+  display: inline-block;
+}
+
+@for $i from 1 through $grid-column {
+  .LandingContainerThree-#{$i} {
+    @if ($i == 1){
+        grid-column: 2 / span 2;
+        grid-row: 2;
+       
+    }
+    @if ($i == 2){
+      grid-column: 2/ span 2;
+      grid-row-start: 2;
+      margin-top: 6rem;
+      
+    }
+    @if ($i == 3){
+        grid-column: 5 / span 2;
+        z-index: -1;
+        overflow: hidden;
+        grid-row: 2 / 5;
+    }
+    @if ($i == 4){
+      grid-column: 8/ 9;
+      grid-row: 3;
+      align-self: center;
+
+  }
+  @if ($i == 5){
+    grid-column: 10/ 11;
+    grid-row: 3;
+    align-self: center;
+}
+    
+  }
+}
+
+
 
   
   

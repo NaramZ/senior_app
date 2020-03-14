@@ -2,32 +2,31 @@ import React from 'react';
 import Aux from './../../../hoc/Aux';
 import {StyledPgThree} from './PgThree.styled';
 import DrinkImg from '../../../assets/drink.jpg'
+import '../../../Grid.scss';
 function PgThree() {
     return (
     <Aux>
         <StyledPgThree>
-            <ul>
-                <li>
+            <div className = "LandingGrid">
+                <div className = "LandingContainerThree-1">
                     <h1>Drinks</h1>
-                </li>
-                <li>
+                </div>
+                <div className = "LandingContainerThree-2">
                     <hr/>
                     <h5>Choose for yourself the Drinks that you want</h5>
-                </li>
+                </div>
                 
-                <li>
-                    <div>
+                <div className = "LandingContainerThree-3">
                         <img src = {DrinkImg} alt= "firstimg" />
-                    </div>
-                </li>
-                <li>
+                </div>
+                <div className = "LandingContainerThree-4">
                     <h2>Mohito</h2>
-                </li>
-                <li>
+                </div>
+                <div className = "LandingContainerThree-5">
                     <h2>Tequila</h2>
-                </li>
+                </div>
                
-            </ul>
+            </div>
         </StyledPgThree>
     </Aux>
     )
