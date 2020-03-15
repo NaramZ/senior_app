@@ -13,6 +13,7 @@ function App() {
             <PgOne/>
             <PgTwo/>
             <PgThree/>
+            <PgFour/>
         </Aux>
     )
 }

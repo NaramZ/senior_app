@@ -18,20 +18,14 @@ const Navigation = () => {
           </div>
           
           <div className= 'navContainerMenu-5'>
-            <NavLink to="/Favorites">
-                <h5>Favorites</h5>
+            <NavLink to="/YourSet">
+                <h5>Your Set</h5>
             </NavLink>
           </div>
           
           <div className= 'navContainerMenu-6'>
             <NavLink to ="/History">
               <h5>History</h5>
-            </NavLink>
-          </div>
-          
-          <div className= 'navContainerMenu-7'>
-            <NavLink to="/Yourset">
-              <h5>Your Set</h5>
             </NavLink>
           </div>
 

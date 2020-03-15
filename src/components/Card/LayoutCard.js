@@ -7,16 +7,17 @@ import TequilaImg from '../../assets/TequilaT.png';
 import MohitoImg from '../../assets/mojito.jpg';
 import '../../Grid.scss';
 
-const CardsLayout = (props) => (
+const CardsLayout = (props) => {
     
+    return (
         <Aux>
             <div className = "boxGrid">
                 <div className="boxContainer-1">
                     <div className="cardImage">
                     <Card Image = {WhiskeyImg}/>
-                    </div> 
+                    </div>
                     <div className="cardText">
-                            <Card 
+                            <Card
                             ItemTitle = 'Old Fashioned'
                             Icon = {<FiStar/>}
                             Rating = '&emsp;4.6 '
@@ -86,6 +87,7 @@ const CardsLayout = (props) => (
             </div>
 
         </Aux>
-)
+    )
+}
 
 export default CardsLayout;
