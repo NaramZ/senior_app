@@ -7,17 +7,17 @@ const LandingNav = () => {
         <Aux>
                 <div className = "boxGrid">
                     <div className= 'navContainerLanding-2'>
-                        <NavLink to = "/Landing">
+                        <NavLink to = "/">
                             <h3>Poison Picker</h3>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-4'>
-                        <NavLink to="/Landing" exact>
+                        <NavLink to = "/OurMission" exact>
                             <h5>Our Mission</h5>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-5'>
-                        <NavLink to="/Pubs">
+                        <NavLink to = "/Pubs">
                             <h5>Pubs</h5>
                         </NavLink>
                     </div>
