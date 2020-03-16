@@ -95,6 +95,10 @@ $grid-column-end: 4;
         border-radius: 24px;
         z-index: -1;
         grid-row: 1 / 4;
+        img{
+          position: relative;
+          bottom: 20rem;
+        }
         
     }
     @if ($i == 2){
