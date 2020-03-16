@@ -43,9 +43,9 @@ const LandingNav = () => {
                     </div>
                     <div className= 'navContainerLanding-10'>
                         <NavLink to="/SignUp">
-                            <h5>
-                                <button>Sign Up</button>
-                            </h5>
+                            <button>
+                                <h5>Sign Up</h5>
+                            </button>
                         </NavLink>
                     </div>
                 </div>
