@@ -75,7 +75,7 @@ $grid-column-end: 4;
   justify-self: center;
   margin: 2.8rem 0;
   @if( $i >  9 ){
-    justify-self: start;
+    justify-self: start ;
     }
   }
 }
