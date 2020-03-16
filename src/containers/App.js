@@ -6,7 +6,6 @@ import {Route} from 'react-router-dom';
 import LandingPage from './LandingPage/LandingPage';
 import {GlobalStyles} from '../Global';
 function App() { 
-
   
   return (
     <Aux>
