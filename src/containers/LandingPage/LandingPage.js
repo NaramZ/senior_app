@@ -10,6 +10,9 @@ function App() {
     return (
         <Aux>
             <LandingNav/>
+            <PgOne/>
+            <PgTwo/>
+            <PgThree/>
             <PgFour/>
         </Aux>
     )

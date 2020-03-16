@@ -10,33 +10,60 @@ function PgFour() {
     return (
     <Aux>
         <StyledPgFour>
-            <div>
-                <div>
-                    <h1><b>Your Set</b></h1>
+            <div className = "LandingGrid">
+                <div className="LandingContainerFour-1">
+                    <h1>Your Set</h1>
                 </div>
-                <div>
+                <div className="LandingContainerFour-2">
                     <hr/>
                     <h5>Your own Personal set of drinks across all Pubs at your reach at any time</h5>
                 </div>
-                <div>
-                    <div> {/*Resolution: 320x320px */}
-                        <img src = {MaiTai} alt = 'MaiTai'/>
-                        <h2><b>Mai Tai</b></h2>
-                        <h5><b>Ingredients:</b> Alco</h5>
+                <div className="LandingContainerFour-3">
+                    <div className="DivTopLeft">
+                        <div>
+                            <img src = {MaiTai} alt = 'MaiTai'/>
+                            <h2>Mai Tai</h2>
+                            <h5><b>Ingredients:</b> 
+                                <li>
+                                    Rum
+                                </li>
+                                <li>
+                                    More Rum
+                                </li>
+                            </h5>
+                        </div>
                     </div>
                 </div>
-                <div>
-                     <div> {/*Resolution: 320x650px */}
-                        <img src = {MohitoLanding} alt = "Mohito Land"/>
-                        <h2><b>Mohito</b></h2>
-                        <h5><b>Ingredients:</b> White Rum </h5>
+                <div className="LandingContainerFour-4">
+                    <div className="DivTopRight">
+                        <div>
+                            <img src = {MohitoLanding} alt = "Mohito Land"/>
+                            <h2>Mohito</h2>
+                            <h5><b>Ingredients:</b> 
+                                <li>
+                                     Rum
+                                </li>
+                                <li>
+                                    More Rum
+                                </li>
+                            </h5>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <img src = {OldFashioned} alt = "old Fashioned" />
-                        <h2><b>Old Fashioned</b></h2>
-                        <h5><b>Ingredients:</b> Whiskey </h5>
+                <div className="LandingContainerFour-5">
+                    <div className="DivBottomLeft">
+                        <div>
+                            <img src = {OldFashioned} alt = "Old Fashioned"/>
+                            <h2>Old Fashioned</h2>
+                            <h5><b>Ingredients:</b>
+                                <li>
+                                     Whiskey
+                                </li>
+                                <li>
+                                    Burbon
+                                </li>
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>
