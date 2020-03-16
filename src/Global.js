@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   /* Text */
 
 h5{
-  font-family: 'Roboto Light';
+  font-family: 'Roboto';
   display: inline-block;
   margin: 0;
    

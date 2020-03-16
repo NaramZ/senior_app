@@ -4,6 +4,8 @@ import {StyledPgFour} from './PgFour.styled';
 import MohitoLanding from '../../../assets/MohitoLanding.png';
 import MaiTai from '../../../assets/MaiTai.png';
 import OldFashioned from '../../../assets/OldFashioned.png';
+import '../../../Grid.scss';
+
 function PgFour() {
     return (
     <Aux>
