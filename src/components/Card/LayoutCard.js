@@ -6,14 +6,17 @@ import WhiskeyImg from '../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../assets/TequilaT.png';
 import MohitoImg from '../../assets/mojito.jpg';
 import '../../Grid.scss';
+import {StyledCard} from './LayoutCard.styled'
+import { bool, func } from 'prop-types';
 
-const CardsLayout = (props) => {
+const CardsLayout = ({ openCard, setOpenCard }) => {
     
     return (
         <Aux>
+            <StyledCard>
             <div className = "boxGrid">
                 <div className="boxContainer-1">
-                    <div className="cardImage">
+                    <div className="cardImage" openCard = {openCard} onClick={() => setOpenCard(!openCard)}>
                     <Card Image = {WhiskeyImg}/>
                     </div>
                     <div className="cardText">
@@ -24,7 +27,7 @@ const CardsLayout = (props) => {
                             Category = ' · Whiskey · Drinks · 8$'/>
                     </div>
                 </div>
-                <div className="boxContainer-2">
+                <div className="boxContainer-2" openCard = {openCard} onClick={() => setOpenCard(!openCard)}>
                     <div className="cardImage">
                     <Card Image = {TequilaImg}/>
                     </div> 
@@ -85,9 +88,13 @@ const CardsLayout = (props) => {
                     </div>
                 </div>
             </div>
-
+        </StyledCard>
         </Aux>
     )
 }
+CardsLayout.propTypes = {
+    openCard: bool.isRequired,
+    setOpenCard: func.isRequired,
+};
 
 export default CardsLayout;

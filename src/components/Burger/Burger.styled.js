@@ -19,7 +19,6 @@ export const StyledBurger = styled.button`
     }
   &:focus {
     outline: none;
-    
   }
 
   

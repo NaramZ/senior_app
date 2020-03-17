@@ -10,8 +10,10 @@ $grid-column-end: 4;
 }
 
 // Card Layout:
+
 .boxContainer- {
   display: inline-block;
+  
 }
 @for $i from 1 through $grid-column {
   .boxContainer-#{$i} {
@@ -291,10 +293,10 @@ $grid-column-end: 4;
   }
 }
 
-//Expanding Card
+// //Expanding Card
 
-.ExpandingContainer{
-  display: inline-block;
-  grid-column: 2/auto;
-  grid-row: 1/3;
-}
+// .ExpandingContainer{
+//   display: inline-block;
+//   grid-column: 2/auto;
+//   grid-row: 1/3;
+// }

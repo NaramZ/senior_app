@@ -11,11 +11,11 @@ import MohitoImg from '../../assets/mojito.jpg';
 import '../../Grid.scss';
 
 
-const ExpCard = ({ open, props }) => {
+const ExpCard = ({ openCard}) => {
     return (
         <Aux >
-            <div className= "LandingGrid">
-                    <StyledExpanding className= 'ExpandingContainer' open={open}>
+            <div>
+                    <StyledExpanding openCard={openCard}>
                         <div className = "DivContainer">
                             <img src = {WhiskeyImg} alt = 'Whiskey'/>
                             <h3>Old Fashioned</h3>
@@ -49,6 +49,9 @@ const ExpCard = ({ open, props }) => {
             </div>
         </Aux>
     )
+}
+ExpCard.propTypes = {
+    openCard: bool.isRequired,
 }
 
 export default ExpCard;
