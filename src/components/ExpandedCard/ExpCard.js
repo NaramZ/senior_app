@@ -27,7 +27,7 @@ const ExpCard = ({ open, props }) => {
                                 </p>
                             </div>
                             <div className="IngSec">
-                                <ol> <h5><b>Ingridients: </b></h5>
+                                <ol> <h5><b>Ingredients: </b></h5>
                                 <hr/>
                                     <p>
                                         <li>Whiskey</li>
