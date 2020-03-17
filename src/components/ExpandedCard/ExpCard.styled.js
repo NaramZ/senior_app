@@ -3,8 +3,7 @@ export const StyledExpanding = styled.div`
 
     /* transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'}; */
     transition: transform 0.3s ease-in-out;
-    display: ${({ openCard }) => openCard ? 'block': 'none'};
-    position: inherit;
+    display: ${({ openCard }) => openCard ? 'inherit': 'none'};
     
     .DivContainer{
         display: inline-block;

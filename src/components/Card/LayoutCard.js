@@ -15,8 +15,8 @@ const CardsLayout = ({ openCard, setOpenCard }) => {
         <Aux>
             <StyledCard>
             <div className = "boxGrid">
-                <div className="boxContainer-1">
-                    <div className="cardImage" openCard = {openCard} onClick={() => setOpenCard(!openCard)}>
+                <div className="boxContainer-1" openCard = {openCard} onClick={() => setOpenCard(!openCard)}>
+                    <div className="cardImage">
                     <Card Image = {WhiskeyImg}/>
                     </div>
                     <div className="cardText">
