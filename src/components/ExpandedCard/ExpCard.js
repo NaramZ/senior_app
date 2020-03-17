@@ -14,7 +14,7 @@ import '../../Grid.scss';
 const ExpCard = ({ open, props }) => {
     return (
         <Aux >
-            <div className= "boxGrid">
+            <div className= "LandingGrid">
                     <StyledExpanding className= 'ExpandingContainer' open={open}>
                         <div className = "DivContainer">
                             <img src = {WhiskeyImg} alt = 'Whiskey'/>
