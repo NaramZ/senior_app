@@ -4,6 +4,7 @@ import { bool } from 'prop-types';
 import Aux from '../../hoc/Aux';
 import {StyledExpanding} from './ExpCard.styled';
 import { FiStar } from "react-icons/fi";
+import { MdFavoriteBorder } from "react-icons/md";
 import WhiskeyImg from '../../assets/WhiskeyW.jpg';
 import TequilaImg from '../../assets/TequilaT.png';
 import MohitoImg from '../../assets/mojito.jpg';
@@ -28,20 +29,20 @@ const ExpCard = ({ open, props }) => {
                             <div className="IngSec">
                                 <ol> <h5><b>Ingridients: </b></h5>
                                 <hr/>
-                                    <li>
-                                        <p>Whiskey</p>
-                                    </li>
-                                    <li>
-                                        <p>Muddling Sugar</p>
-                                    </li>
-                                    <li>
-                                        <p>Citrus Rind</p>
-                                    </li>
+                                    <p>
+                                        <li>Whiskey</li>
+                                    </p>
+                                    <p>
+                                        <li>Muddling Sugar</li>
+                                    </p>
+                                    <p>
+                                        <li>Citrus Rind</li>
+                                    </p>
                                 </ol>
                             </div>
                             <div>   
                                 <button className="Addbutton">Add +</button>
-                                <button className="Favbutton">Favorite</button>
+                                <button className="Favbutton">Favorite <MdFavoriteBorder/></button>
                             </div>
                         </div>
                     </StyledExpanding>

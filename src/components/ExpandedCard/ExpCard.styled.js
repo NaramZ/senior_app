@@ -17,7 +17,7 @@ export const StyledExpanding = styled.div`
         max-width: 50%;
         max-height: 60%;
         border-radius: 0 24px;
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.034)
+        box-shadow: 10px 10px 10px rgba(251, 109, 58, 0.1)
     }
     h3{
         display: inline;
@@ -53,19 +53,33 @@ export const StyledExpanding = styled.div`
         right: 80px;
         bottom: 0;
         margin: 20px;
+
+        :active{
+            color: #FB6D3A
+        }
+        :hover{
+            background: none;
+        }
+        
     }
 
     .IngSec{
         position: absolute;
-        top: 11rem;
-        width: 11rem;
+        top: 12rem;
+        width: 12rem;
         height: 8rem;
+        left: -1rem;
         hr{
         width: inherit;
+        margin: 7px 0 7px 0;
         }
         li{
-
+        list-style: disc;
+        list-style-position: inside;
         }
+        p{
+        }
+      
     }
     
 
