@@ -13,7 +13,7 @@ function App() {
       <GlobalStyles/>
           <Route path ='/Menu' component = {MenuPage}/>
           <Route path ='/Landing' exact component = {LandingPage}/>
-      </BrowserRouter>
+      </BrowserRouter> 
     </Aux>
   );
 }
