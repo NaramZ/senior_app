@@ -51,8 +51,8 @@ export const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryColor};
-    border-radius: 10px;
+    background: ${({ theme, open }) => open ? theme.primaryLight : theme.primaryDark};
+    border-radius: 24px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
@@ -65,14 +65,10 @@ export const StyledBurger = styled.button`
     
 
     :nth-child(2) {
-      /* opacity: ${({ open }) => open ? '0' : '1'}; */
-      transform: ${({ open }) => open ? 'rotate(-45deg) translateX(1px) translateY(0)' : 'rotate(0) translateX(0) translateY(0)'};
-      /* transform: ${({ open }) => open ? 'translateY(2px)' : 'translateX(0)'}; */
+      transform: ${({ open }) => open ? 'rotate(-45deg) translateY(4px) translateX(-10px)' : 'rotate(0) translateY(0) translateX(10px)'};
     }
 
-    :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
-    }
+   
   }
 `;
 
