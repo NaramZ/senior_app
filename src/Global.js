@@ -84,6 +84,7 @@ li{
   
 hr{
   border: 1.5px solid #FCD561;
+  border-radius: 24px;
 }
 
 `

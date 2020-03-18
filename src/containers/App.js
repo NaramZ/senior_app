@@ -5,6 +5,8 @@ import {BrowserRouter} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import LandingPage from './LandingPage/LandingPage';
 import {GlobalStyles} from '../Global';
+import LogInPage from './LogInPage/LogInPage';
+import SignUpPage from './LogInPage/SignUpPage';
 function App() { 
   
   return (
@@ -13,6 +15,8 @@ function App() {
       <GlobalStyles/>
           <Route path ='/Menu' component = {MenuPage}/>
           <Route path ='/Landing' exact component = {LandingPage}/>
+          <Route path ='/LogIn' exact component = {LogInPage}/>
+          <Route path ='/SignUp' exact component = {SignUpPage}/>
       </BrowserRouter> 
     </Aux>
   );

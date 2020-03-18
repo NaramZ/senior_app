@@ -3,7 +3,7 @@ export const StyledExpanding = styled.div`
 
     /* transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'}; */
     transition: transform 0.3s ease-in-out;
-    /* display: ${({ openCard }) => openCard ? 'inherit': 'none'}; */
+    display: ${({ openCard }) => openCard ? 'inherit': 'none'};
     
     
     .DivContainer{
@@ -16,20 +16,7 @@ export const StyledExpanding = styled.div`
         padding: 20px;
         box-shadow: 10px 10px 5px rgba(251, 109, 58, 0.1)
     }
-    .transform {
-     -webkit-transition: all 2s ease;  
-    -moz-transition: all 2s ease;  
-    -o-transition: all 2s ease;  
-    -ms-transition: all 2s ease;  
-    transition: all 2s ease;
     
-}
-
-    .transform-active {
-    background-color: #45CEE0;
-    height: 200px;
-    width: 200px;
-}
     img{
         display: inline-block;
         position: relative;
