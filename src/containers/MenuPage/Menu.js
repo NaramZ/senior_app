@@ -21,14 +21,15 @@ const MenuPage = () => {
         <Aux>
             <ThemeProvider theme={theme}>
                 <Navigation/>
-                <div ref={node}>
+                {/* <div ref={node}>
                     <Burger open={open} setOpen={setOpen} />
                     <Menu open={open} setOpen={setOpen} />
                 </div>
                 <div ref = {nodeExp}>
                     <ExpCard openCard = {openCard} setOpenCard={setOpenCard}/>
                     <MenuCards openCard = {openCard} setOpenCard={setOpenCard}/>
-                </div>
+                </div> */}
+                <ExpCard/>
             </ThemeProvider>
         </Aux>
     );

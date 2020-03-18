@@ -1,13 +1,9 @@
 import React from 'react';
-import Card from '../Card/MCard';
 import { bool } from 'prop-types';
 import Aux from '../../hoc/Aux';
 import {StyledExpanding} from './ExpCard.styled';
-import { FiStar } from "react-icons/fi";
 import { MdFavoriteBorder } from "react-icons/md";
 import WhiskeyImg from '../../assets/WhiskeyW.jpg';
-import TequilaImg from '../../assets/TequilaT.png';
-import MohitoImg from '../../assets/mojito.jpg';
 import '../../Grid.scss';
 
 
@@ -16,7 +12,7 @@ const ExpCard = ({ openCard}) => {
         <Aux >
             <div>
                     <StyledExpanding openCard={openCard}>
-                        <div className = "DivContainer">
+                        <div className = "DivContainer transform">
                             <img src = {WhiskeyImg} alt = 'Whiskey'/>
                             <h3>Old Fashioned</h3>
                             <h2>6$</h2>
@@ -27,7 +23,7 @@ const ExpCard = ({ openCard}) => {
                                 </p>
                             </div>
                             <div className="IngSec">
-                                <ol> <h5><b>Ingredients: </b></h5>
+                                <ol> <h5>Ingredients: </h5>
                                 <hr/>
                                     <p>
                                         <li>Whiskey</li>
@@ -41,8 +37,14 @@ const ExpCard = ({ openCard}) => {
                                 </ol>
                             </div>
                             <div>   
-                                <button className="Addbutton">Add +</button>
-                                <button className="Favbutton">Favorite <MdFavoriteBorder/></button>
+                                <button className="Addbutton">
+                                    <p>
+                                    Add +
+                                    </p>
+                                </button>
+                                <button className="Favbutton">
+                                <p>Favorite <MdFavoriteBorder/></p>
+                                    </button>
                             </div>
                         </div>
                     </StyledExpanding>
