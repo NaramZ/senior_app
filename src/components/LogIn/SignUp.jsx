@@ -10,11 +10,14 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
+
+
 function Copyright() {
   return (
+    
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit">
         Poison Picker
       </Link>{' '}
       {new Date().getFullYear()}
@@ -23,10 +26,13 @@ function Copyright() {
   );
 }
 
+
+
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white,
+
     },
   },
   paper: {
@@ -35,6 +41,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
+  
   avatar: {
     margin: theme.spacing(1),
     backgroundColor: '#FCD561',
@@ -82,7 +89,16 @@ export default function SignUp() {
             label="Last Name"
             name="last name"
             autoComplete="last name"
-            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="phone number"
+            label="Phone Number"
+            name="phone number"
+            autoComplete="phone number"
           />
           <TextField
             variant="outlined"
@@ -93,7 +109,6 @@ export default function SignUp() {
             label="Email Address"
             name="email"
             autoComplete="email"
-            autoFocus
           />
           <TextField
             variant="outlined"

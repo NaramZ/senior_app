@@ -9,7 +9,6 @@ const LogInPage = () => {
     return(
         <Aux>
             <LogIn/>
-            <ParticlesBg type="cobweb"  bg={true}/>
         </Aux>
 
 
