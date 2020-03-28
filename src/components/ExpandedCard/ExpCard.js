@@ -9,7 +9,7 @@ import '../../Grid.scss';
 
 const ExpCard = ({ openCard}) => {
     return (
-        <Aux >
+        <Aux>
             <div>
                     <StyledExpanding openCard={openCard}>
                         <div className = "DivContainer transform">
