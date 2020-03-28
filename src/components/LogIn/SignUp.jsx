@@ -3,7 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
+import {NavLink} from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -14,14 +14,23 @@ import Container from '@material-ui/core/Container';
 
 function Copyright() {
   return (
-    
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit">
+      <NavLink to = "/Landing" exact>
         Poison Picker
-      </Link>{' '}
+      </NavLink>{' '}
       {new Date().getFullYear()}
       {'.'}
+    </Typography>
+  );
+}
+function LogIn() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Already have an account? '} 
+      <NavLink to = "/Login" exact>
+        Log In
+      </NavLink>
     </Typography>
   );
 }
@@ -32,9 +41,10 @@ const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white,
-
+    
     },
   },
+  
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
@@ -65,7 +75,7 @@ export default function SignUp() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h2" variant="h5">
           Sign Up
         </Typography>
         <form className={classes.form} noValidate>
@@ -125,15 +135,18 @@ export default function SignUp() {
           <Button
             type="submit"
             fullWidth
-            variant="contained"
-            color="primary"
+            variant="outlined"
+            color= 'primary'
             className={classes.submit}
           >
             Sign Up
           </Button>
         </form>
       </div>
-      <Box mt={8}>
+      <Box mt={2}>
+        <LogIn />
+      </Box>
+      <Box mt={4}>
         <Copyright />
       </Box>
     </Container>

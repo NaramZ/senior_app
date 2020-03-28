@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+import {NavLink} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -17,9 +17,9 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <NavLink to = "/Landing" exact>
         Poison Picker
-      </Link>{' '}
+      </NavLink>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -61,7 +61,7 @@ export default function LogIn() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h2" variant="h5">
           Log in
         </Typography>
         <form className={classes.form} noValidate>
@@ -94,7 +94,7 @@ export default function LogIn() {
           <Button
             type="submit"
             fullWidth
-            variant="contained"
+            variant="outlined"
             color="primary"
             className={classes.submit}
           >
@@ -102,14 +102,15 @@ export default function LogIn() {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <NavLink to = "/Landing" exact>
                 Forgot password?
-              </Link>
+              </NavLink>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
+              {"Don't have an account? "} 
+              <NavLink to = "/SignUp" exact>
+                {"Sign Up"}
+              </NavLink>
             </Grid>
           </Grid>
         </form>
