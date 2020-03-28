@@ -16,15 +16,14 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import AddIcon from '@material-ui/icons/Add';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-
 
 const useStyles = makeStyles((theme) => ({
 
     root: {
         maxWidth: "24rem",
-        fontFamily: 'Roboto',
+        fontFamily: 'Roboto Condensed',
       },
+      
       media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
@@ -43,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(-180deg)',
   },
   
- 
   
 }));
 const theme = createMuiTheme({
@@ -52,7 +50,35 @@ const theme = createMuiTheme({
             main: '#FCD561'
         }
     },
-    
+    overrides: {
+        MuiIconButton:{
+            root:{
+            padding: '0',
+            
+        },
+    },
+        MuiCollapse:{
+            root:{
+                transition:{
+                collapsedHeight:'20px',
+                }
+            }
+        },
+        MuiCardActions:{
+            root:{
+                display: 'inline-block',
+                marginLeft: '190px',
+                padding: '0',
+            },
+            
+        },
+      MuiCardHeader: {
+        root: {
+          padding: '16px 0 16px 16px',
+          display: "inline-block",
+        },
+      },
+    },
   });
 
 export default function RecipeReviewCard() {
@@ -70,16 +96,15 @@ export default function RecipeReviewCard() {
                 <div className="boxContainer-1">
                 <Card className={classes.root} >
                 
-                <CardMedia
+                <CardMedia 
                 className={classes.media}
                 image={WhiskeyImg}
                 title="Old Fashioned"
                 />
-                <CardHeader disableSpacing 
+                <CardHeader disableSpacing
                     title="Old Fashioned"
                 />
-                <CardActions disableSpacing>
-                    
+                <CardActions>
                     <IconButton
                         className={clsx(classes.expand, {
                         [classes.expandOpen]: expanded,
@@ -92,28 +117,23 @@ export default function RecipeReviewCard() {
                     </IconButton>
                 </CardActions>
                         <Collapse in={expanded} timeout="auto" unmountOnExit> 
-                            <CardContent >
-                                <Typography paragraph>Old Fashioned:</Typography>
-                                <Typography variant="h2" alignRight  color="primary">6$:</Typography>
+                            <CardContent>
+                                
                             <Typography paragraph>
                                     The old fashioned is a cocktail traditionally 
                                     served in an old fashioned glass (also known as rocks glass), 
                                     which predated the cocktail.
                                 </Typography>
-                            <Typography className="IngSec">
-                                <ol> <h5>Ingredients: </h5>
-                                <hr/>
-                                    <p>
+                                <Typography variant="h4" alignRight  color="primary">6$:</Typography>
+                            <Typography variant="h5">Ingredients:</Typography>
+                                    <hr/>
                                         <li>Whiskey</li>
-                                    </p>
                                     <p>
                                         <li>Muddling Sugar</li>
                                     </p>
                                     <p>
                                         <li>Citrus Rind</li>
                                     </p>
-                                </ol>
-                            </Typography>
                             <div>   
                                 <IconButton aria-label="add to favorites">
                                 <FavoriteIcon />
