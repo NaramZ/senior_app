@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
+import WebFont from 'webfontloader';
 
+WebFont.load({
+  google: {
+    families: ['Roboto:300', 'sans-serif', 'Roboto Condensed:400','sans-serif' ]
+  }
+});
 ReactDOM.render(
   <React.StrictMode>
     <App />

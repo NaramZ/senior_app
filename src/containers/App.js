@@ -1,5 +1,6 @@
 import React from 'react';
 import Aux from '../hoc/Aux';
+import './App.css';
 import MenuPage from './MenuPage/Menu';
 import {BrowserRouter} from 'react-router-dom';
 import {Route} from 'react-router-dom';

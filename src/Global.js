@@ -15,9 +15,10 @@ export const GlobalStyles = createGlobalStyle`
   /* Text */
 
 h5{
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   display: inline-block;
   margin: 0;
+  font-size: 1em;
    
 }
 
@@ -45,7 +46,7 @@ h2{
         font-family: "Roboto Condensed";
   }
 p{
-    font-family: 'Roboto';
+    font-family: 'Roboto 300', sans-serif;
     color:black;
     margin:0;
     padding:0;
@@ -67,7 +68,7 @@ a {
   /* Functional Items */
 
 button {
-  font-family: 'Roboto Light';
+  font-family: 'Roboto', sans-serif;
   display: inline-block; 
   border-radius: 24px;
   background: none;
