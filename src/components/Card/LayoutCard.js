@@ -40,10 +40,18 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
     duration: theme.transitions.duration.shortest,
+
     }),
   },
   expandOpen: {
     transform: 'rotate(-90deg)',
+
+  },
+  changeColor:{
+    },
+  changeColorOpen:{
+    color: "#FB6D3A",
+    
   },
 }));
 
@@ -51,7 +59,10 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             main: '#FCD561'
-        }
+        },
+        secondary:{
+            main: '#FB6D3A'
+        },
     },
     overrides: {
         MuiIconButton:{
@@ -93,11 +104,14 @@ const theme = createMuiTheme({
 const MenuCard = ({ itineraries, activities }) => {
   const classes = useStyles();
   const [expandedId, setExpandedId] = React.useState(-1);
-
-  const MenuPerCard = [{ _id: "1" }, { _id: "2" }, { _id: "3" } , { _id: "4" }, { _id: "5" }, { _id: "6" }, { _id: "7" }, { _id: "8" }, { _id: "9" }, { _id: "10" }, { _id: "11" }];
+  const [ChangeId, setChangeId] = React.useState(-1);
+  const MenuPerCard = [{ _id: "1" },{ _id: "2" } ];
 
   const handleExpandClick = i => {
     setExpandedId(expandedId === i ? -1 : i);
+  };
+  const handleColorClick = i => {
+    setChangeId(ChangeId === i ? -1 : i);
   };
   const node = useRef();
 
@@ -147,8 +161,11 @@ const MenuCard = ({ itineraries, activities }) => {
                                 </ListItem>
                                 </List>
                             <Typography align="right" variant="h4" color = "primary">6$</Typography>
-                            <div>   
-                                <IconButton 
+                                <IconButton className={clsx(classes.changeColor, {
+                                    [classes.changeColorOpen]: ChangeId === i,
+                                    })}
+                                    onClick={() => handleColorClick(i)}
+                                    aria-expanded={ChangeId === i}
                                     aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
@@ -158,7 +175,6 @@ const MenuCard = ({ itineraries, activities }) => {
                                     >
                                 <AddIcon />
                                 </IconButton>
-                            </div>
                             </CardContent>
                         </Collapse>
                     
