@@ -10,11 +10,8 @@ import Menu from '../../components/Menu';
 const MenuPage = () => {
 
     const [open, setOpen] = useState(false); //state of burger false by default
-    const [openCard, setOpenCard] = useState(false); //state of burger false by default
     const node = useRef(); //refrence to open burger
-    const nodeExp = useRef();
     useOnClickOutside(node, () => setOpen(false)) //react hooks, when click outside menu anywhere it closes menu
-    useOnClickOutside(nodeExp, () => setOpenCard(false)) //react hooks, when click outside menu anywhere it closes menu
 
     return(
         <Aux>
@@ -23,8 +20,8 @@ const MenuPage = () => {
                 <div ref={node}>
                     <Burger open={open} setOpen={setOpen} />
                     <Menu open={open} setOpen={setOpen} />
-                </div>
-                    <MenuCards openCard = {openCard} setOpenCard={setOpenCard}/>
+                </div >
+                    <MenuCards/>
             </ThemeProvider>
         </Aux>
     );

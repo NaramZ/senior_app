@@ -1,4 +1,4 @@
-$grid-column: 16;
+$grid-column: 11;
 $grid-row:14;
 $grid-column-start: 2;
 $grid-column-end: 4;
@@ -11,7 +11,7 @@ $grid-column-end: 4;
 
 // Card Layout:
 
-.boxContainer-  {
+.boxContainer-{
   display: inline-block;
   
 }
@@ -22,7 +22,7 @@ $grid-column-end: 4;
     $grid-column-start: $grid-column-start + 3;
     $grid-column-end: $grid-column-end + 3;
     margin-bottom: 1rem;
-    @if($grid-column-end > $grid-column ){
+    @if($grid-column-end >= $grid-column ){
     $grid-column-start: 2;
     $grid-column-end: 4;
     }

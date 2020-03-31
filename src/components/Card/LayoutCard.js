@@ -94,7 +94,7 @@ const MenuCard = ({ itineraries, activities }) => {
   const classes = useStyles();
   const [expandedId, setExpandedId] = React.useState(-1);
 
-  const MenuPerCard = [{ _id: "1" }, { _id: "2" }, { _id: "3" }];
+  const MenuPerCard = [{ _id: "1" }, { _id: "2" }, { _id: "3" } , { _id: "4" }, { _id: "5" }, { _id: "6" }, { _id: "7" }, { _id: "8" }, { _id: "9" }, { _id: "10" }, { _id: "11" }];
 
   const handleExpandClick = i => {
     setExpandedId(expandedId === i ? -1 : i);
