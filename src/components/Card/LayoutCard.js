@@ -110,12 +110,10 @@ const MenuCard = ({ itineraries, activities }) => {
             {MenuPerCard.map((itinerary, i) => (
                 <div className={classNames('boxContainer-', i+1 ).replace(' ', "")}>
                 <Card className={classes.root} key={itinerary._id}>
-                
                 <CardMedia
                 className={classes.media}
                 image={WhiskeyImg}
                 title="Old Fashioned"
-                
                 />
                 <CardHeader disableSpacing
                     title="Old Fashioned"
