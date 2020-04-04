@@ -7,7 +7,6 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
 import Burger from '../../components/Burger';
 import Menu from '../../components/Menu';
-import axios from 'axios';
 
 const MenuPage = () => {
 
@@ -15,17 +14,7 @@ const MenuPage = () => {
     const node = useRef(); //refrence to open burger
     useOnClickOutside(node, () => setOpen(false)) //react hooks, when click outside menu anywhere it closes menu
 
-    const [data, setData] = useState({product: []  })
-
-    useEffect(() => {
-        const fetchData = async () => {
-          const result = await axios(
-            "http://localhost:3000/products",
-          );
-          setData(result.data);
-        };
-        fetchData();
-      }, []);
+    
 
 
     return(
@@ -36,7 +25,7 @@ const MenuPage = () => {
                     <Burger open={open} setOpen={setOpen} />
                     <Menu open={open} setOpen={setOpen} />
                 </div >
-                    <MenuCards data = {data}/>
+                    <MenuCards/>
             </ThemeProvider>
         </Aux>
     );

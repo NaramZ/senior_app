@@ -20,6 +20,8 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import axios from 'axios';
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -93,7 +95,7 @@ const theme = createMuiTheme({
 // ----------------------------------------
 
 
-const MenuCard = ({ itineraries, activities, data }) => {
+const MenuCard = ({ itineraries, activities }) => {
 
   const classes = useStyles();
   const [expandedId, setExpandedId] = useState(-1);
@@ -108,14 +110,22 @@ const MenuCard = ({ itineraries, activities, data }) => {
 
   useOnClickOutside(node, () => setExpandedId(false))
 
+  const [data, setData] = useState({product: []  })
 
+  useEffect(() => {
+    fetch('http://localhost:3000/products')
+    .then(res => res.json())
+    .then((data) => {
+      setData({ product: data })
+    })}, [])
+;
  
 
   return (
     <Fragment>
         <MuiThemeProvider theme ={theme}>
             <div className = "boxGrid">
-            {data.map(product => (
+            {data.product.map(product => (
                 <div className={classNames('boxContainer-', product.id ).replace(' ', "")}>
                 <Card className={classes.root} key={product.id}>
                 <CardMedia
@@ -147,9 +157,7 @@ const MenuCard = ({ itineraries, activities, data }) => {
                             <List aria-label="ingredients">
                                 <hr/>
                                 <ListItem>
-                                    <ListItemText>{product.ingreditents}</ListItemText>
-                                    <ListItemText>{product.ingreditents}</ListItemText>
-                                    <ListItemText>{product.ingreditents}</ListItemText>
+                                {product.ingreditents}
                                 </ListItem>
                                 </List>
                             <Typography align="right" variant="h4" color = "primary">6$</Typography>
