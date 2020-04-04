@@ -1,4 +1,4 @@
-import React, { useRef, Fragment } from 'react';
+import React, { useRef, Fragment, useEffect, useState } from 'react';
 import { useOnClickOutside } from '../../hook';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,6 +20,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+
 const useStyles = makeStyles((theme) => ({
 
     root: {
@@ -72,13 +73,6 @@ const theme = createMuiTheme({
                 }
               }
     },
-        MuiCollapse:{
-            root:{
-                transition:{
-                collapsedHeight:'20px',
-                }
-            }
-        },
         MuiCardActions:{
             root:{
                 display: 'inline-block',
@@ -99,14 +93,11 @@ const theme = createMuiTheme({
 // ----------------------------------------
 
 
+const MenuCard = ({ itineraries, activities, data }) => {
 
-
-const MenuCard = ({ itineraries, activities }) => {
   const classes = useStyles();
-  const [expandedId, setExpandedId] = React.useState(-1);
-  const [ChangeId, setChangeId] = React.useState(-1);
-  const MenuPerCard = [{ _id: "1" },{ _id: "2" } ];
-
+  const [expandedId, setExpandedId] = useState(-1);
+  const [ChangeId, setChangeId] = useState(-1);
   const handleExpandClick = i => {
     setExpandedId(expandedId === i ? -1 : i);
   };
@@ -117,55 +108,56 @@ const MenuCard = ({ itineraries, activities }) => {
 
   useOnClickOutside(node, () => setExpandedId(false))
 
+
+ 
+
   return (
     <Fragment>
         <MuiThemeProvider theme ={theme}>
             <div className = "boxGrid">
-            {MenuPerCard.map((itinerary, i) => (
-                <div className={classNames('boxContainer-', i+1 ).replace(' ', "")}>
-                <Card className={classes.root} key={itinerary._id}>
+            {data.map(product => (
+                <div className={classNames('boxContainer-', product.id ).replace(' ', "")}>
+                <Card className={classes.root} key={product.id}>
                 <CardMedia
                 className={classes.media}
                 image={WhiskeyImg}
-                title="Old Fashioned"
+                title={product.title}
                 />
-                <CardHeader disableSpacing
-                    title="Old Fashioned"
+                <CardHeader
+                    title={product.title}
                 />
                 <CardActions >
                     <IconButton 
                         className={clsx(classes.expand, {
-                        [classes.expandOpen]: expandedId === i,
+                        [classes.expandOpen]: expandedId === product.id,
                         })}
-                        onClick={() => handleExpandClick(i)}
-                        aria-expanded={expandedId === i}
+                        onClick={() => handleExpandClick(product.id)}
+                        aria-expanded={expandedId === product.id}
                         aria-label="show more"
                     >
                         <ExpandMoreIcon />
                     </IconButton>
                 </CardActions>
-                        <Collapse in={expandedId === i} timeout="auto" unmountOnExit> 
+                        <Collapse in={expandedId === product.id} timeout="auto" unmountOnExit> 
                             <CardContent>
                             <Typography paragraph>
-                                    The old fashioned is a cocktail traditionally 
-                                    served in an old fashioned glass (also known as rocks glass), 
-                                    which predated the cocktail.
+                                    {product.description}
                             </Typography>
                             <Typography variant="h5">Ingredients:</Typography>
                             <List aria-label="ingredients">
                                 <hr/>
                                 <ListItem>
-                                    <ListItemText primary="White Rum" />
-                                    <ListItemText primary="Whisky" />
-                                    <ListItemText primary="Sugar" />
+                                    <ListItemText>{product.ingreditents}</ListItemText>
+                                    <ListItemText>{product.ingreditents}</ListItemText>
+                                    <ListItemText>{product.ingreditents}</ListItemText>
                                 </ListItem>
                                 </List>
                             <Typography align="right" variant="h4" color = "primary">6$</Typography>
                                 <IconButton className={clsx(classes.changeColor, {
-                                    [classes.changeColorOpen]: ChangeId === i,
+                                    [classes.changeColorOpen]: ChangeId === product.idi,
                                     })}
-                                    onClick={() => handleColorClick(i)}
-                                    aria-expanded={ChangeId === i}
+                                    onClick={() => handleColorClick(product.id)}
+                                    aria-expanded={ChangeId === product.id}
                                     aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
