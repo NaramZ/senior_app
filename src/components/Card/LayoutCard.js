@@ -2,7 +2,6 @@ import React, { useRef, Fragment, useEffect, useState } from 'react';
 import { useOnClickOutside } from '../../hook';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
-import WhiskeyImg from '../../assets/WhiskeyW.jpg';
 import Card from '@material-ui/core/Card';
 import '../../Grid.scss';
 import Typography from '@material-ui/core/Typography';
@@ -20,7 +19,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import axios from 'axios';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -130,7 +128,7 @@ const MenuCard = ({ itineraries, activities }) => {
                 <Card className={classes.root} key={product.id}>
                 <CardMedia
                 className={classes.media}
-                image={WhiskeyImg}
+                image={product.image_link}
                 title={product.title}
                 />
                 <CardHeader
@@ -157,12 +155,12 @@ const MenuCard = ({ itineraries, activities }) => {
                             <List aria-label="ingredients">
                                 <hr/>
                                 <ListItem>
-                                {product.ingreditents}
+                                <ListItemText>{product.ingredients}</ListItemText>
                                 </ListItem>
                                 </List>
-                            <Typography align="right" variant="h4" color = "primary">6$</Typography>
+                            <Typography align="right" variant="h4" color = "primary">${product.price}</Typography>
                                 <IconButton className={clsx(classes.changeColor, {
-                                    [classes.changeColorOpen]: ChangeId === product.idi,
+                                    [classes.changeColorOpen]: ChangeId === product.id,
                                     })}
                                     onClick={() => handleColorClick(product.id)}
                                     aria-expanded={ChangeId === product.id}
