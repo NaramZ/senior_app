@@ -19,8 +19,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-
-
+import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
 
     root: {
@@ -108,22 +107,57 @@ const MenuCard = ({ itineraries, activities }) => {
 
   useOnClickOutside(node, () => setExpandedId(false))
 
-  const [data, setData] = useState({product: []  })
+  const [product, setProduct] = useState([]);
+  const [newProduct, setNewProduct] = useState('')
+  const [showAll, setShowAll] = useState(true)
 
-  useEffect(() => {
-    fetch('http://localhost:3000/products')
-    .then(res => res.json())
-    .then((data) => {
-      setData({ product: data })
-    })}, [])
-;
- 
+
+  const hook = () => {
+    console.log('effect')
+    axios
+      .get('http://localhost:3000/products')
+      .then(response => {
+        console.log('promise fulfilled')
+        setProduct(response.data)
+      })
+  }
+  
+  useEffect(hook, []);
+
+ const addProduct = (event)  => {
+    event.preventDefault()
+    const productObject = {
+      content: newProduct,
+      date: new Date(),
+      important: Math.random() > 0.5,
+    }
+    axios    
+    .post('http://localhost:3000/products', productObject)    
+    .then(response => {      
+      setProduct(product.concat(response.data))      
+      setNewProduct('')
+    })}
+
+    const Product = ({ product, price }) => {
+      const label = product.price
+        ? 'make not important' : 'make important'
+    }
+  
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/products')
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //     setData({ product: data })
+  //   })}, []);
+
+  
+
 
   return (
     <Fragment>
         <MuiThemeProvider theme ={theme}>
             <div className = "boxGrid">
-            {data.product.map(product => (
+            {product.map(product => (
                 <div className={classNames('boxContainer-', product.id ).replace(' ', "")}>
                 <Card className={classes.root} key={product.id}>
                 <CardMedia
@@ -155,7 +189,9 @@ const MenuCard = ({ itineraries, activities }) => {
                             <List aria-label="ingredients">
                                 <hr/>
                                 <ListItem>
-                                <ListItemText>{product.ingredients}</ListItemText>
+                                <ListItemText>{product.ingredients[0]}</ListItemText>
+                                <ListItemText>{product.ingredients[1]}</ListItemText>
+                                <ListItemText>{product.ingredients[2]}</ListItemText>
                                 </ListItem>
                                 </List>
                             <Typography align="right" variant="h4" color = "primary">${product.price}</Typography>
@@ -165,7 +201,7 @@ const MenuCard = ({ itineraries, activities }) => {
                                     onClick={() => handleColorClick(product.id)}
                                     aria-expanded={ChangeId === product.id}
                                     aria-label="add to favorites">
-                                    <FavoriteIcon />
+                                    <FavoriteIcon onClick={() => handleExpandClick(product.id)} />
                                 </IconButton>
 
                                 <IconButton
