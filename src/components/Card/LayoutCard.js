@@ -20,6 +20,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import axios from 'axios';
+import productService from '../Products/Products';
+
 const useStyles = makeStyles((theme) => ({
 
     root: {
@@ -112,17 +114,14 @@ const MenuCard = ({ itineraries, activities }) => {
   const [showAll, setShowAll] = useState(true)
 
 
-  const hook = () => {
-    console.log('effect')
-    axios
-      .get('http://localhost:3000/products')
-      .then(response => {
-        console.log('promise fulfilled')
-        setProduct(response.data)
-      })
-  }
   
-  useEffect(hook, []);
+  useEffect(() => {
+    productService      
+    .getAll()      
+    .then(initialProduct => {        
+      setProduct(initialProduct)      
+    })  
+  }, [])
 
  const addProduct = (event)  => {
     event.preventDefault()
@@ -140,16 +139,8 @@ const MenuCard = ({ itineraries, activities }) => {
 
     const Product = ({ product, price }) => {
       const label = product.price
-        ? 'make not important' : 'make important'
+        ? 'make not price' : 'make price'
     }
-  
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/products')
-  //   .then(res => res.json())
-  //   .then((data) => {
-  //     setData({ product: data })
-  //   })}, []);
-
   
 
 
