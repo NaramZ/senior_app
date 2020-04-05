@@ -192,7 +192,7 @@ const MenuCard = ({ itineraries, activities }) => {
                                     onClick={() => handleColorClick(product.id)}
                                     aria-expanded={ChangeId === product.id}
                                     aria-label="add to favorites">
-                                    <FavoriteIcon onClick={() => handleExpandClick(product.id)} />
+                                    <FavoriteIcon  />
                                 </IconButton>
 
                                 <IconButton
