@@ -141,8 +141,6 @@ const MenuCard = ({ itineraries, activities }) => {
       const label = product.price
         ? 'make not price' : 'make price'
     }
-  
-
 
   return (
     <Fragment>
