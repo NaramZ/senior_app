@@ -21,9 +21,7 @@ import ProductService from '../Products/Products';
 import {CardTheme, BottomActionButtons} from './MaterialTheme';
 import useStyles from './MaterialCardStyles';
 
-
 // ----------------------------------------
-
 
 const MenuCard = ({ itineraries, activities }) => {
 
@@ -57,10 +55,14 @@ const MenuCard = ({ itineraries, activities }) => {
   }, [])
 
  const addProduct = (event)  => {
-    event.preventDefault()
     const productObject = {
-      content: newProduct,
+      title: newProduct,
+      price: newProduct,
+      ingredients: [],
+      image_link: newProduct,
+      description: newProduct,
       date: new Date().toISOString(),
+
     }
     ProductService
       .create(productObject)
@@ -124,9 +126,13 @@ const MenuCard = ({ itineraries, activities }) => {
                             </IconButton>
                             <IconButton 
                             aria-label="add to tab"
-                            onClick={() => addProduct({
-                              title: "Hello There"
-                            })}
+                            onClick={() => addProduct(
+                              product.title,
+                              product.price,
+                              product.ingredients,
+                              product.image_link,
+                              product.description,
+                            )}
                             >
                               <AddIcon />
                             </IconButton>
