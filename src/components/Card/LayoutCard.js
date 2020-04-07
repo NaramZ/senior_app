@@ -17,7 +17,8 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ProductService from '../Products/Products';
+import ProductService from '../Services/Products';
+import OrderService from '../Services/Order';
 import {CardTheme, BottomActionButtons} from './MaterialTheme';
 import useStyles from './MaterialCardStyles';
 
@@ -40,12 +41,15 @@ const MenuCard = ({ itineraries, activities }) => {
     setChangeId(ChangeId === i ? -1 : i);
   };
 
+
 //Handle Getting Info from Server
   const [product, setProduct] = useState([]);
-  const [newProduct, setNewProduct] = useState('')
-  const [showAll, setShowAll] = useState(true)
+  const [newProduct, setNewProduct] = useState('');
+  const [showAll, setShowAll] = useState(true);
+  const [order, setOrder] = useState([]);
+  const [newOrder, setNewOrder] = useState('');
 
-
+  //product service
   useEffect(() => {
     ProductService      
     .getAll()      
@@ -54,7 +58,38 @@ const MenuCard = ({ itineraries, activities }) => {
     })  
   }, [])
 
- const addProduct = (event)  => {
+  //order service
+  useEffect(() => {
+    OrderService      
+    .getAll()
+    .then(initialOrder => {        
+      setOrder(initialOrder)      
+    })  
+  }, [])
+
+const addToOrder = () => {
+  const orderObject = {
+    productId: product[1],
+   
+  }
+  OrderService
+      .create(orderObject)
+        .then(returnedOrder => {
+          setOrder(order.concat(returnedOrder))
+          setNewOrder('')
+      })
+}
+
+const updateOrder = id => {
+  const order = order.find(n=>id === id)
+  const changedOrder = {...order}
+
+  OrderService
+    .update(id, changedOrder).then(returnedOrder => {
+      setOrder(order.map(order => order.id !== id ? order : returnedOrder))
+    })
+}
+ const addProduct = ()  => {
     const productObject = {
       title: newProduct,
       price: newProduct,
@@ -62,7 +97,6 @@ const MenuCard = ({ itineraries, activities }) => {
       image_link: newProduct,
       description: newProduct,
       date: new Date().toISOString(),
-
     }
     ProductService
       .create(productObject)
@@ -125,14 +159,10 @@ const MenuCard = ({ itineraries, activities }) => {
                               <FavoriteIcon/>
                             </IconButton>
                             <IconButton 
-                            aria-label="add to tab"
-                            onClick={() => addProduct(
-                              product.title,
-                              product.price,
-                              product.ingredients,
-                              product.image_link,
-                              product.description,
-                            )}
+                            aria-label="Add To Order"
+                            onClick={() => addToOrder(
+                            
+                              )}
                             >
                               <AddIcon />
                             </IconButton>
