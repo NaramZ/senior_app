@@ -1,7 +1,6 @@
 import React, { useRef, Fragment, useEffect, useState } from 'react';
 import { useOnClickOutside } from '../../hook';
 import classNames from 'classnames';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import '../../Grid.scss';
 import Typography from '@material-ui/core/Typography';
@@ -15,81 +14,15 @@ import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import AddIcon from '@material-ui/icons/Add';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider} from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import axios from 'axios';
 import productService from '../Products/Products';
+import CardTheme from './MaterialTheme';
+import useStyles from './MaterialCardStyles';
 
-const useStyles = makeStyles((theme) => ({
-
-    root: {
-        maxWidth: "24rem",
-        fontFamily: 'Roboto Condensed',
-        justifyContent: "center",
-        flexWrap: "wrap",
-      },
-      media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
-      },
-      paper:{
-          borderRadius: "24px",
-      },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(-90deg)',
-
-  },
-  changeColor:{
-    },
-  changeColorOpen:{
-    color: "#FB6D3A",
-    
-  },
-}));
-
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: '#FCD561'
-        },
-        secondary:{
-            main: '#FB6D3A'
-        },
-    },
-    overrides: {
-        MuiIconButton:{
-            root: {
-                "&:last-child": {
-                  padding: '0'
-                }
-              }
-    },
-        MuiCardActions:{
-            root:{
-                display: 'inline-block',
-                marginLeft: '190px',
-                padding: '0',
-                
-            },
-        },
-      MuiCardHeader: {
-        root: {
-          padding: '16px 0 16px 16px',
-          display: "inline-block",
-        },
-      },
-    },
-  });
 
 // ----------------------------------------
 
@@ -144,7 +77,7 @@ const MenuCard = ({ itineraries, activities }) => {
 
   return (
     <Fragment>
-        <MuiThemeProvider theme ={theme}>
+        <MuiThemeProvider theme ={CardTheme}>
             <div className = "boxGrid">
             {product.map(product => (
                 <div className={classNames('boxContainer-', product.id ).replace(' ', "")}>
