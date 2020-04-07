@@ -35,4 +35,24 @@ const CardTheme = createMuiTheme({
     },
   });
 
-  export default CardTheme;
+  const BottomActionButtons = createMuiTheme({
+    overrides: {
+      MuiIconButton:{
+        root: {
+          marginLeft: '250px',
+            "&:last-child": {
+              padding: '0',
+            }
+          }
+},
+    MuiCardActions:{
+        root:{
+            display: 'inline-block',
+            padding: '0',
+            
+        },
+    },
+  }
+  });
+
+  export {CardTheme, BottomActionButtons};
