@@ -69,8 +69,7 @@ const MenuCard = ({ itineraries, activities }) => {
 
 const addToOrder = () => {
   const orderObject = {
-    productId: product[1],
-   
+    productId: product[product.id],
   }
   OrderService
       .create(orderObject)
@@ -80,15 +79,16 @@ const addToOrder = () => {
       })
 }
 
-const updateOrder = id => {
-  const order = order.find(n=>id === id)
-  const changedOrder = {...order}
+// const updateOrder = id => {
+//   const order = order.find(n=>id === id)
+//   const changedOrder = {...order}
 
-  OrderService
-    .update(id, changedOrder).then(returnedOrder => {
-      setOrder(order.map(order => order.id !== id ? order : returnedOrder))
-    })
-}
+//   OrderService
+//     .update(id, changedOrder).then(returnedOrder => {
+//       setOrder(order.map(order => order.id !== id ? order : returnedOrder))
+//     })
+// }
+
  const addProduct = ()  => {
     const productObject = {
       title: newProduct,
