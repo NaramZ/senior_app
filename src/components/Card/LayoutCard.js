@@ -67,27 +67,29 @@ const MenuCard = ({ itineraries, activities }) => {
     })  
   }, [])
 
-const addToOrder = () => {
-  const orderObject = {
-    productId: product[product.id],
-  }
-  OrderService
-      .create(orderObject)
-        .then(returnedOrder => {
-          setOrder(order.concat(returnedOrder))
+  const addToOrder = (id)  => {
+    const orderObject = {
+      productId: [],
+      image_link: newOrder,
+      description: newOrder,
+    }
+    OrderService
+      .update(orderObject)
+        .then(returnedObject => {
+          setOrder(order.concat(returnedObject))
           setNewOrder('')
       })
+  }
+
+const updateOrder = id => {
+  const order = newOrder.find(n=>id === id)
+  const changedOrder = {...order}
+
+  OrderService
+    .update(id, changedOrder).then(returnedOrder => {
+      setOrder(order.map(order => order.id !== id ? order : returnedOrder))
+    })
 }
-
-// const updateOrder = id => {
-//   const order = order.find(n=>id === id)
-//   const changedOrder = {...order}
-
-//   OrderService
-//     .update(id, changedOrder).then(returnedOrder => {
-//       setOrder(order.map(order => order.id !== id ? order : returnedOrder))
-//     })
-// }
 
  const addProduct = ()  => {
     const productObject = {
@@ -161,8 +163,8 @@ const addToOrder = () => {
                             <IconButton 
                             aria-label="Add To Order"
                             onClick={() => addToOrder(
-                            
-                              )}
+                              order.productId = product.id
+                            )}
                             >
                               <AddIcon />
                             </IconButton>
