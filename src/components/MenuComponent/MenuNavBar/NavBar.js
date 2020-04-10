@@ -1,11 +1,15 @@
 import React from 'react';
-import Aux from '../../hoc/Aux';
-import {FiUser} from 'react-icons/fi';
+import Aux from '../../../hoc/Aux';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import {NavLink} from 'react-router-dom';
-import '../../Grid.scss';
+import '../../../Grid.scss';
+import IconButton from '@material-ui/core/IconButton';
+import { MuiThemeProvider} from '@material-ui/core/styles';
+import {GlobalColor} from '../../../MaterialTheme';
 const Navigation = () => {
   return (
     <Aux>
+      <MuiThemeProvider theme = {GlobalColor}>
       <div className = "boxGrid">
           <div className= 'navContainerMenu-2'>
               <h3>Naram</h3>
@@ -30,11 +34,12 @@ const Navigation = () => {
           </div>
 
           <div className= 'navContainerMenu-9'>
-              <button>
-                <FiUser/>
-              </button>
+              <IconButton color = "primary" size="medium">
+                <AccountCircle fontSize="large"/>
+              </IconButton>
           </div>
         </div>
+      </MuiThemeProvider>
     </Aux>
   )
 }

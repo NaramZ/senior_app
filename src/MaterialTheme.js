@@ -1,15 +1,26 @@
 import {createMuiTheme } from '@material-ui/core/styles';
 
 
-const CardTheme = createMuiTheme({
+const GlobalColor = createMuiTheme({
     palette: {
         primary: {
             main: '#FCD561'
         },
         secondary:{
             main: '#FB6D3A'
+        }
+      }
+    });
+
+    const CardTheme = createMuiTheme({
+      palette: {
+        primary: {
+            main: '#FCD561'
         },
-    },
+        secondary:{
+            main: '#FB6D3A'
+        }
+      },
     overrides: {
         MuiIconButton:{
             root: {
@@ -17,7 +28,7 @@ const CardTheme = createMuiTheme({
                   padding: '0'
                 }
               }
-    },
+          },
         MuiCardActions:{
             root:{
                 display: 'inline-block',
@@ -25,7 +36,7 @@ const CardTheme = createMuiTheme({
                 padding: '0',
                 
             },
-        },
+          },
       MuiCardHeader: {
         root: {
           padding: '16px 0 16px 16px',
@@ -55,4 +66,4 @@ const CardTheme = createMuiTheme({
   }
   });
 
-  export {CardTheme, BottomActionButtons};
+  export {GlobalColor, BottomActionButtons, CardTheme};

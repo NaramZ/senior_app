@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Card from '@material-ui/core/Card';
-import '../../Grid.scss';
+import '../../../Grid.scss';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -17,9 +17,9 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ProductService from '../Services/Products';
-import OrderService from '../Services/Order';
-import {CardTheme, BottomActionButtons} from './MaterialTheme';
+import ProductService from '../../Services/Products';
+import OrderService from '../../Services/Order';
+import {BottomActionButtons, CardTheme} from '../../../MaterialTheme';
 import useStyles from './MaterialCardStyles';
 
 // ----------------------------------------
@@ -44,8 +44,7 @@ const MenuCard = ({ itineraries, activities }) => {
 
 //Handle Getting Info from Server
   const [product, setProduct] = useState([]);
-  const [newProduct, setNewProduct] = useState('');
-  const [showAll, setShowAll] = useState(true);
+  // const [newProduct, setNewProduct] = useState('');
   const [order, setOrder] = useState([]);
   const [newOrder, setNewOrder] = useState('');
 
@@ -81,32 +80,32 @@ const MenuCard = ({ itineraries, activities }) => {
       })
   }
 
-const updateOrder = id => {
-  const order = newOrder.find(n=>id === id)
-  const changedOrder = {...order}
+// const updateOrder = id => {
+//   const order = newOrder.find(n=>id === id)
+//   const changedOrder = {...order}
 
-  OrderService
-    .update(id, changedOrder).then(returnedOrder => {
-      setOrder(order.map(order => order.id !== id ? order : returnedOrder))
-    })
-}
+//   OrderService
+//     .update(id, changedOrder).then(returnedOrder => {
+//       setOrder(order.map(order => order.id !== id ? order : returnedOrder))
+//     })
+// }
 
- const addProduct = ()  => {
-    const productObject = {
-      title: newProduct,
-      price: newProduct,
-      ingredients: [],
-      image_link: newProduct,
-      description: newProduct,
-      date: new Date().toISOString(),
-    }
-    ProductService
-      .create(productObject)
-        .then(returnedProduct => {
-          setProduct(product.concat(returnedProduct))
-          setNewProduct('')
-      })
-  }
+//  const addProduct = ()  => {
+//     const productObject = {
+//       title: newProduct,
+//       price: newProduct,
+//       ingredients: [],
+//       image_link: newProduct,
+//       description: newProduct,
+//       date: new Date().toISOString(),
+//     }
+//     ProductService
+//       .create(productObject)
+//         .then(returnedProduct => {
+//           setProduct(product.concat(returnedProduct))
+//           setNewProduct('')
+//       })
+//   }
 
     // const Product = ({ product, price }) => {
     //   const label = product.price
@@ -115,7 +114,7 @@ const updateOrder = id => {
 
   return (
     <Fragment>
-        <MuiThemeProvider theme ={CardTheme}>
+        <MuiThemeProvider theme = {CardTheme}>
             <div className = "boxGrid">
               {product.map(product => (
                 <div className={classNames('boxContainer-', product.id ).replace(' ', "")}>
@@ -137,6 +136,7 @@ const updateOrder = id => {
                       <ExpandMoreIcon />
                     </IconButton>
                   </CardActions>
+                  
                   <Collapse in={expandedId === product.id} timeout="auto" unmountOnExit> 
                       <CardContent>
                         <Typography paragraph>{product.description}</Typography>
@@ -173,7 +173,9 @@ const updateOrder = id => {
                       </CardContent>
                   </Collapse>
                 </Card>
+                
               </div>
+              
             )
           )        
         }

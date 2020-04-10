@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../../hook';
 import Aux from '../../hoc/Aux';
-import MenuCards from '../../components/Card/LayoutCard';
-import Navigation from '../../components/MenuNavBar';
+import MenuCards from '../../components/MenuComponent/Card/LayoutCard';
+import Navigation from '../../components/MenuComponent/MenuNavBar/NavBar';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
 import Burger from '../../components/Burger';

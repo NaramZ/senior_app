@@ -2,9 +2,13 @@ import React from 'react';
 import Aux from '../../../hoc/Aux';
 import {NavLink} from 'react-router-dom';
 import '../../../Grid.scss';
+import Button from '@material-ui/core/Button';
+import { MuiThemeProvider} from '@material-ui/core/styles';
+import {GlobalColor} from '../../../MaterialTheme';
 const LandingNav = () => {
     return (
         <Aux>
+            <MuiThemeProvider theme ={GlobalColor}>
                 <div className = "boxGrid">
                     <div className= 'navContainerLanding-2'>
                         <NavLink to = "/">
@@ -43,15 +47,15 @@ const LandingNav = () => {
                     </div>
                     <div className= 'navContainerLanding-10'>
                         <NavLink to="/SignUp">
-                            <button>
+                            <Button variant = "outlined" color = "secondary">
                                 <h5>Sign Up</h5>
-                            </button>
+                            </Button>
                         </NavLink>
                     </div>
                 </div>
                 
                 
-                
+            </MuiThemeProvider>
         </Aux>
     )
 }
