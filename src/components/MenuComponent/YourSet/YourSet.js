@@ -4,7 +4,7 @@ import FavoritesService from '../../Services/Favorites';
 import Card from '../Card/LayoutCard';
 
 const YourSet = () => {
-  const [Favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     FavoritesService      
@@ -22,6 +22,13 @@ const YourSet = () => {
             </div>
             <div className = "YourSetContainer-2">
                 <h4>Everything that you like</h4>
+            </div>
+            <div>
+            {favorites.map(favorites => (
+                favorites.id
+                    )
+                )
+            }
             </div>
         </div>
     </Fragment>
