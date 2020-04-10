@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { Fragment, useState, useRef } from 'react';
 import { useOnClickOutside } from '../../hook';
-import Aux from '../../hoc/Aux';
 import MenuCards from '../../components/MenuComponent/Card/LayoutCard';
 import Navigation from '../../components/MenuComponent/MenuNavBar/NavBar';
 import { ThemeProvider } from 'styled-components';
@@ -18,7 +17,7 @@ const MenuPage = () => {
 
 
     return(
-        <Aux>
+        <Fragment>
             <ThemeProvider theme={theme}>
                 <Navigation/>
                 <div ref={node}>
@@ -27,7 +26,7 @@ const MenuPage = () => {
                 </div >
                     <MenuCards/>
             </ThemeProvider>
-        </Aux>
+        </Fragment>
     );
 }
 

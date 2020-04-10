@@ -1,11 +1,10 @@
-import React from 'react';
-import Aux from './../../../hoc/Aux';
+import React, {Fragment} from 'react';
 import {StyledPgThree} from './PgThree.styled';
 import DrinkImg from '../../../assets/drink.jpg'
 import '../../../Grid.scss';
 function PgThree() {
     return (
-    <Aux>
+    <Fragment>
         <StyledPgThree>
             <div className = "LandingGrid">
                 <div className = "LandingContainerThree-1">
@@ -28,7 +27,7 @@ function PgThree() {
                
             </div>
         </StyledPgThree>
-    </Aux>
+    </Fragment>
     )
 };
 

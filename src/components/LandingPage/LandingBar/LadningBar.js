@@ -1,5 +1,4 @@
-import React from 'react';
-import Aux from '../../../hoc/Aux';
+import React, {Fragment} from 'react';
 import {NavLink} from 'react-router-dom';
 import '../../../Grid.scss';
 import Button from '@material-ui/core/Button';
@@ -7,7 +6,7 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import {GlobalColor} from '../../../MaterialTheme';
 const LandingNav = () => {
     return (
-        <Aux>
+        <Fragment>
             <MuiThemeProvider theme ={GlobalColor}>
                 <div className = "boxGrid">
                     <div className= 'navContainerLanding-2'>
@@ -56,7 +55,7 @@ const LandingNav = () => {
                 
                 
             </MuiThemeProvider>
-        </Aux>
+        </Fragment>
     )
 }
 

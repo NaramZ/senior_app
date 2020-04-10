@@ -1,10 +1,9 @@
-import React from 'react';
-import Aux from '../../hoc/Aux';
+import React, {Fragment} from 'react';
 
 const Card = (props) => {
   return (
             
-    <Aux>
+    <Fragment>
             <img src = {props.Image} alt = {props.Alt} />
             <h3>{props.ItemTitle}</h3>
             <p>
@@ -12,7 +11,7 @@ const Card = (props) => {
               {props.Rating}
               {props.Category}
             </p>
-    </Aux>
+    </Fragment>
             
                   
   )

@@ -1,5 +1,4 @@
-import React from 'react';
-import Aux from './../../../hoc/Aux';
+import React, {Fragment} from 'react';
 import {StyledPgFour} from './PgFour.styled';
 import MohitoLanding from '../../../assets/MohitoLanding.png';
 import MaiTai from '../../../assets/MaiTai.png';
@@ -8,7 +7,7 @@ import '../../../Grid.scss';
 
 function PgFour() {
     return (
-    <Aux>
+    <Fragment>
         <StyledPgFour>
             <div className = "LandingGrid">
                 <div className="LandingContainerFour-1">
@@ -68,7 +67,7 @@ function PgFour() {
                 </div>
             </div>
         </StyledPgFour>
-    </Aux>
+    </Fragment>
     )
 };
 

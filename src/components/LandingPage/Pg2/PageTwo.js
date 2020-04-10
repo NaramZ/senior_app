@@ -1,10 +1,9 @@
-import React from 'react';
-import Aux from '../../../hoc/Aux';
+import React, {Fragment} from 'react';
 import OurMissionImg from '../../../assets/LandingImage.png';
 const PageTwo = () => {
     return(
         //HAVE TO CHANGE IMAGE
-        <Aux>
+        <Fragment>
                     <div className = "LandingGrid">
                         <div className = "LandingContainerTwo-1">
                             <img src ={OurMissionImg} alt = "First Land"/>
@@ -21,7 +20,7 @@ const PageTwo = () => {
                             </h5>
                         </div>
                         </div>
-        </Aux>
+        </Fragment>
     )
 
 }

@@ -1,5 +1,4 @@
-import React from 'react';
-import Aux from '../../../hoc/Aux';
+import React, {Fragment} from 'react';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import {NavLink} from 'react-router-dom';
 import '../../../Grid.scss';
@@ -8,7 +7,7 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import {GlobalColor} from '../../../MaterialTheme';
 const Navigation = () => {
   return (
-    <Aux>
+    <Fragment>
       <MuiThemeProvider theme = {GlobalColor}>
       <div className = "boxGrid">
           <div className= 'navContainerMenu-2'>
@@ -40,7 +39,7 @@ const Navigation = () => {
           </div>
         </div>
       </MuiThemeProvider>
-    </Aux>
+    </Fragment>
   )
 }
 

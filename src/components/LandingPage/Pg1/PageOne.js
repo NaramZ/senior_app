@@ -1,11 +1,10 @@
-import React from 'react';
-import Aux from '../../../hoc/Aux';
+import React, {Fragment} from 'react';
 import LandingImg from '../../../assets/LandingImage.png';
 import '../../../Grid.scss';
 
 const PgOne = () => {
     return (
-        <Aux>
+        <Fragment>
                     <div className = "LandingGrid">
                         <div className = "LandingContainerOne-1">
                             <img src ={LandingImg} alt = "First Land"/>
@@ -22,7 +21,7 @@ const PgOne = () => {
                             </h5>
                         </div>
                     </div>
-        </Aux>
+        </Fragment>
     )
 }
 
