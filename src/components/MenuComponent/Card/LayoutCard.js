@@ -48,7 +48,7 @@ const MenuCard = ({ itineraries, activities }) => {
   const [order, setOrder] = useState([]);
   const [newOrder, setNewOrder] = useState('');
 
-  //product service
+  //product service getting the info
   useEffect(() => {
     ProductService      
     .getAll()      
