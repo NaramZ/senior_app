@@ -15,13 +15,13 @@ function PgFour() {
                 </div>
                 <div className="LandingContainerFour-2">
                     <hr/>
-                    <h5>Your own Personal set of drinks across all Pubs at your reach at any time</h5>
+                    <h6>Your own Personal set of drinks across all Pubs at your reach at any time</h6>
                 </div>
                 <div className="LandingContainerFour-3">
                     <div className="DivTopLeft">
                         <div>
                             <img src = {MaiTai} alt = 'MaiTai'/>
-                            <h2>Mai Tai</h2>
+                            <h3>Mai Tai</h3>
                             <h5><b>Ingredients:</b> 
                                 <li>
                                     Rum
@@ -37,7 +37,7 @@ function PgFour() {
                     <div className="DivTopRight">
                         <div>
                             <img src = {MohitoLanding} alt = "Mohito Land"/>
-                            <h2>Mohito</h2>
+                            <h3>Mohito</h3>
                             <h5><b>Ingredients:</b> 
                                 <li>
                                      Rum
@@ -53,7 +53,7 @@ function PgFour() {
                     <div className="DivBottomLeft">
                         <div>
                             <img src = {OldFashioned} alt = "Old Fashioned"/>
-                            <h2>Old Fashioned</h2>
+                            <h3>Old Fashioned</h3>
                             <h5><b>Ingredients:</b>
                                 <li>
                                      Whiskey

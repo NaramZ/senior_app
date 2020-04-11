@@ -12,17 +12,17 @@ function PgThree() {
                 </div>
                 <div className = "LandingContainerThree-2">
                     <hr/>
-                    <h5>Choose for yourself the Drinks that you want</h5>
+                    <h6>Choose for yourself the Drinks that you want</h6>
                 </div>
                 
                 <div className = "LandingContainerThree-3">
                         <img src = {DrinkImg} alt= "firstimg" />
                 </div>
                 <div className = "LandingContainerThree-4">
-                    <h2>Mohito</h2>
+                    <h3>Mohito</h3>
                 </div>
                 <div className = "LandingContainerThree-5">
-                    <h2>Tequila</h2>
+                    <h3>Tequila</h3>
                 </div>
                
             </div>

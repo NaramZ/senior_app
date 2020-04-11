@@ -15,10 +15,10 @@ const PgOne = () => {
                         </div>
                         <div className = "LandingContainerOne-3">
                             <hr/>
-                            <h4>
+                            <h6>
                                 <b>Drinking</b> is like life, sometimes it's fun and sometimes it's dull, but alcohol makes you 
                                 forget the dull times ever happened.
-                            </h4>
+                            </h6>
                         </div>
                     </div>
         </Fragment>

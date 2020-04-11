@@ -11,43 +11,39 @@ const LandingNav = () => {
                 <div className = "boxGrid">
                     <div className= 'navContainerLanding-2'>
                         <NavLink to = "/">
-                            <h3>Poison Picker</h3>
+                            <h6>Poison Picker</h6>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-4'>
                         <NavLink to = "/OurMission" exact>
-                            <h4>Our Mission</h4>
+                            <h6>Our Mission</h6>
                         </NavLink>
                     </div>
+                    
                     <div className= 'navContainerLanding-5'>
-                        <NavLink to = "/Pubs">
-                            <h4>Pubs</h4>
+                        <NavLink to="/Drinks">
+                            <h6>Drinks</h6>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-6'>
-                        <NavLink to="/Drinks">
-                            <h4>Drinks</h4>
+                        <NavLink to="/Yourset">
+                            <h6>Your Set</h6>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-7'>
-                        <NavLink to="/Yourset">
-                            <h4>Your Set</h4>
-                        </NavLink>
-                    </div>
-                    <div className= 'navContainerLanding-8'>
                         <NavLink to="/Contactus">
-                            <h4>Contact Us</h4>
+                            <h6>Contact Us</h6>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-9'>
                         <NavLink to="/Login">
-                            <h4>Log in</h4>
+                            <h6>Log in</h6>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-10'>
                         <NavLink to="/SignUp">
                             <Button variant = "outlined" color = "secondary">
-                                <h4>Sign Up</h4>
+                                <h6>Sign Up</h6>
                             </Button>
                         </NavLink>
                     </div>

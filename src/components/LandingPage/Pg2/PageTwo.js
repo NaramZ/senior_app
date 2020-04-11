@@ -14,10 +14,10 @@ const PageTwo = () => {
                         </div>
                         <div className = "LandingContainerTwo-3">
                             <hr/>
-                            <h5>
+                            <h6>
                                 We believe in bringing you a better Drinking experience, one that no one but you controls. Why wait for others
                                 when at a click of a button you can get whatever you desire?
-                            </h5>
+                            </h6>
                         </div>
                         </div>
         </Fragment>

@@ -13,6 +13,4 @@ li{
     text-align: left;
     line-height: 1.8rem;
 }
-
-    
 `;

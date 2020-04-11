@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
 h1 {
   display: inline-block;
   margin: 0;
-  font-size: 4em;
+  font-size: 96px;
   letter-spacing: 8px;
   font-family: 'Roboto Condensed';
   :hover {
@@ -28,6 +28,7 @@ h1 {
 h2{
         margin:0;
         font-family: "Roboto Light";
+        font-size: 60px;
 }
 
 h3 {
@@ -35,6 +36,8 @@ h3 {
     display: inline-block;
     margin: 0;
     padding: 0;
+    font-size: 48px;
+
 }
 
 h4{
@@ -42,12 +45,22 @@ h4{
   display: inline-block;
   margin: 0;
   padding: 0;
+  font-size: 34px;
+
 }
 
 h5{
   font-family: 'Roboto Regular';
   display: inline-block;
   margin: 0;
+  font-size: 24px;
+}
+
+h6{
+  font-family: 'Roboto Regular';
+  display: inline-block;
+  margin: 0;
+  font-size: 20px;
 }
 
 
