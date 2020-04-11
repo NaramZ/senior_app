@@ -11,21 +11,21 @@ const Navigation = () => {
       <MuiThemeProvider theme = {GlobalColor}>
       <div className = "boxGrid">
           <div className= 'navContainerMenu-2'>
-              <h3>Naram</h3>
+              <h6>Naram</h6>
           </div>
           <div className= 'navContainerMenu-4'>
             <NavLink to = "/Menu"exact>
-              <h5>Menu</h5>
+              <h6>Menu</h6>
             </NavLink>
           </div>
           <div className= 'navContainerMenu-5'>
             <NavLink to ='YourSet'>
-                <h5>Your Set</h5>
+                <h6>Your Set</h6>
             </NavLink>
           </div>
           <div className= 'navContainerMenu-6'>
             <NavLink to ="/History">
-              <h5>History</h5>
+              <h6>History</h6>
             </NavLink>
           </div>
           <div className= 'navContainerMenu-9'>

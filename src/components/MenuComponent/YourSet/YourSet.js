@@ -18,10 +18,10 @@ const YourSet = () => {
     <Fragment>
         <div className = "boxGrid">
             <div className = "YourSetContainer-1">
-                <h1>Your Set:</h1>
+                <h3>Your Set:</h3>
             </div>
             <div className = "YourSetContainer-2">
-                <h4>Everything that you like</h4>
+                <h6>Everything that you like</h6>
             </div>
             <div>
             {favorites.map(favorites => (
