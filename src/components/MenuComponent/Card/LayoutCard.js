@@ -24,6 +24,18 @@ import useStyles from './MaterialCardStyles';
 
 // ----------------------------------------
 
+// const OrderControls = (productId, productArray) => {
+//   if (productArray has prouctId) {
+//     return <div>
+//       <icon button plus></icon>
+//       <icon button minus></icon>
+//       add up all productid from array
+//       </div>
+//   } else {
+//     <icon button plus></icon>
+//   }
+// }
+
 const MenuCard = ({ itineraries, activities }) => {
 
 //Handle Styles
@@ -45,8 +57,8 @@ const MenuCard = ({ itineraries, activities }) => {
 //Handle Getting Info from Server
   const [product, setProduct] = useState([]);
   // const [newProduct, setNewProduct] = useState('');
-  const [order, setOrder] = useState([]);
-  const [newOrder, setNewOrder] = useState('');
+  const [order, setOrder] = useState({productId: []});
+  const [newOrder, setNewOrder] = useState(-1);
 
   //product service getting the info
   useEffect(() => {
@@ -57,38 +69,50 @@ const MenuCard = ({ itineraries, activities }) => {
     })  
   }, [])
 
-  //order service
   useEffect(() => {
-    OrderService      
-    .getAll()
-    .then(initialOrder => {        
-      setOrder(initialOrder)      
-    })  
+    OrderService.getOrderByOrderId(2)
+    .then(response => {
+      console.log(response)
+    })
   }, [])
 
+  //order service
+  // useEffect(() => {
+  //   OrderService      
+  //   .getAll()
+  //   .then(initialOrder => {        
+  //     console.log('initial order', initialOrder)
+  //     setOrder(initialOrder)
+  //   })  
+  // }, [])
+
   const addToOrder = (id)  => {
+    console.log(order)
+    // TODO (Naram): look into refactoring
     const orderObject = {
-      productId: [],
-      image_link: newOrder,
-      description: newOrder,
+      ...order,
+      productId: order.productId.concat(id)
     }
     OrderService
-      .update(orderObject)
+      .create(orderObject)
         .then(returnedObject => {
-          setOrder(order.concat(returnedObject))
-          setNewOrder('')
+          setOrder(returnedObject)
+          setNewOrder(returnedObject.id)
       })
   }
 
-// const updateOrder = id => {
-//   const order = newOrder.find(n=>id === id)
-//   const changedOrder = {...order}
+const updateOrder = (id) => {
+  const updatedOrder = {
+    ...order,
+      productId: order.productId.concat(id)
+  }
 
-//   OrderService
-//     .update(id, changedOrder).then(returnedOrder => {
-//       setOrder(order.map(order => order.id !== id ? order : returnedOrder))
-//     })
-// }
+  OrderService
+    .update(order.id, updatedOrder).then(returnedOrder => {
+      setOrder(updatedOrder)
+      console.log(returnedOrder)
+    })
+}
 
 //  const addProduct = ()  => {
 //     const productObject = {
@@ -160,28 +184,34 @@ const MenuCard = ({ itineraries, activities }) => {
                               aria-label="add to favorites">
                               <FavoriteIcon/>
                             </IconButton>
-                            <IconButton 
-                            aria-label="Add To Order"
-                            onClick={() => addToOrder(
-                              order.productId = product.id
-                            )}
-                            >
-                              <AddIcon />
+                            <IconButton
+                              aria-label="Add To Order"
+                              onClick={() => {
+                                if (newOrder === -1) {
+                                  addToOrder(product.id)
+                                } else {
+                                  updateOrder(product.id)
+                                }
+                              }
+                            }
+                                >
+                                  {/* <OrderControls productId={product.id} productArray={order.productId}/> */}
+                            < AddIcon />
                             </IconButton>
                           </CardActions>
                         </MuiThemeProvider>
                       </CardContent>
-                  </Collapse>
-                </Card>
-                
-              </div>
-              
-            )
-          )        
-        }
-      </div>
-    </MuiThemeProvider>
-</Fragment>
+                    </Collapse>
+                  </Card>
+
+                </div>
+
+              )
+              )
+          }
+        </div>
+      </MuiThemeProvider>
+    </Fragment >
   );
 };
 
