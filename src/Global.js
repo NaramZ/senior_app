@@ -14,40 +14,45 @@ export const GlobalStyles = createGlobalStyle`
   
   /* Text */
 
-h5{
-  font-family: 'Roboto';
+h1 {
   display: inline-block;
   margin: 0;
-  font-size: 1em;
-   
-}
-
-h3 {
-    font-family: 'Roboto Condensed';
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-
-h1 {
   font-size: 4em;
   letter-spacing: 8px;
-  display: inline-block;
-  margin: 0;
   font-family: 'Roboto Condensed';
   :hover {
       text-shadow: 10px 10px 0px rgba(251, 109, 58, 0.6);
   }
 }
+
 h2{
-        font-size: 2.5em;
-        letter-spacing: 8px;
         margin:0;
-        font-family: "Roboto Condensed";
-  }
+        font-family: "Roboto Light";
+}
+
+h3 {
+    font-family: 'Roboto Regular';
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+  font-family: 'Roboto Regular';
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+h5{
+  font-family: 'Roboto Regular';
+  display: inline-block;
+  margin: 0;
+}
+
+
 p{
-    font-family: 'Roboto 300', sans-serif;
-    color:black;
+    font-family: 'Roboto Regular';
     margin:0;
     padding:0;
   }
@@ -57,18 +62,20 @@ a {
   flex-direction: space-between;
   color: black;
   text-decoration: none;
-  text-align: center;
+
   :hover {
       color:inherit; 
       cursor:pointer; 
-      text-shadow: 0px 3px 0px #FCD561;
+      text-shadow: 5px 5px 0px rgba(251, 109, 58, 0.4);
+
+
   }
 }
 
   /* Functional Items */
 
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Medium';
   display: inline-block; 
   border-radius: 24px;
   background: none;

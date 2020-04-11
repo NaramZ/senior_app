@@ -16,38 +16,38 @@ const LandingNav = () => {
                     </div>
                     <div className= 'navContainerLanding-4'>
                         <NavLink to = "/OurMission" exact>
-                            <h5>Our Mission</h5>
+                            <h4>Our Mission</h4>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-5'>
                         <NavLink to = "/Pubs">
-                            <h5>Pubs</h5>
+                            <h4>Pubs</h4>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-6'>
                         <NavLink to="/Drinks">
-                            <h5>Drinks</h5>
+                            <h4>Drinks</h4>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-7'>
                         <NavLink to="/Yourset">
-                            <h5>Your Set</h5>
+                            <h4>Your Set</h4>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-8'>
                         <NavLink to="/Contactus">
-                            <h5>Contact Us</h5>
+                            <h4>Contact Us</h4>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-9'>
                         <NavLink to="/Login">
-                            <h5>Log in</h5>
+                            <h4>Log in</h4>
                         </NavLink>
                     </div>
                     <div className= 'navContainerLanding-10'>
                         <NavLink to="/SignUp">
                             <Button variant = "outlined" color = "secondary">
-                                <h5>Sign Up</h5>
+                                <h4>Sign Up</h4>
                             </Button>
                         </NavLink>
                     </div>
