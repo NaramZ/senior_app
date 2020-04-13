@@ -8,51 +8,34 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 const Menu = ({ open }) => {
-  const [product, setProduct] = useState();
   const [order, setOrder] = useState({productId: []});
-  // const [newOrder, setNewOrder] = useState(-1);
+  const [product, setProduct] = useState([]);
 
 
  
 
   useEffect(() => {
-    OrderService.getOrderProductsByOrderId(2)
+    OrderService.getOrderByOrderId(2)
     .then(response => {
       setOrder(response)
     })
   }, [])
 
   useEffect(() => {
-    ProductService
-    .getAll()      
-    .then(response => {  
-      setProduct(response)      
-      console.log(response)      
-    })  }, [])
-
-  useEffect(() => {
-    ProductService      
-    .getAll()      
-    .then(initialProduct => {        
-      setProduct(initialProduct)      
-    })  
-  }, [])
-
-
-
-
-  // const updateOrder = (id) => {
-  //   const updatedOrder = {
-  //     ...order,
-  //       productId: order.productId.concat(id)
-  //   }
-
-  //   OrderService
-  //     .update(order.id, updatedOrder).then(returnedOrder => {
-  //       setOrder(updatedOrder)
-  //       console.log(returnedOrder)
-  //     })
-  // }
+    order.productId.map(order => (
+      ProductService
+      .getOrderByOrderId([order])  
+      .then(response => {  
+        setProduct(response)      
+        console.log(order)      
+      }
+      )
+    )
+    )
+  }
+  )
+    
+    
 
   return (
     <Fragment>
@@ -68,6 +51,7 @@ const Menu = ({ open }) => {
             </ListItem>
           </List>
         ))}
+          
       </StyledMenu>
     </Fragment>
   )

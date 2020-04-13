@@ -28,11 +28,5 @@ const orderUrl = 'http://localhost:3000/Order';
     const request = axios.get(orderUrl + "?userId=" + userId)
     return request.then(response => response.data)
   }
-
-  // Checkout
-  const getOrderProductsByOrderId = (orderId) => {
-    const request = axios.get(`${orderUrl}/${orderId}`)
-    return request.then(response => response.data)
-  }
   
-  export default { getAll, create, update, getOrderByOrderId, getOrderByUserId, getOrderProductsByOrderId }
+  export default { getAll, create, update, getOrderByOrderId, getOrderByUserId }
