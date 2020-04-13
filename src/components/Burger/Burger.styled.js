@@ -58,13 +58,16 @@ export const StyledBurger = styled.button`
     
 
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)': 'rotate(0)'};
-
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
     }
-    
 
     :nth-child(2) {
-      transform: ${({ open }) => open ? 'rotate(-45deg) translateY(4px) translateX(-10px)' : 'rotate(0) translateY(0) translateX(10px)'};
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
 
    

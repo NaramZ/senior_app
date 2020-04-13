@@ -5,7 +5,7 @@ import Navigation from '../../components/MenuComponent/MenuNavBar/NavBar';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
 import Burger from '../../components/Burger';
-import Menu from '../../components/Menu';
+import CheckoutMenu from '../../components/Checkout';
 import YourSet from '../../components/MenuComponent/YourSet/YourSet';
 
 const MenuPage = () => {
@@ -23,7 +23,7 @@ const MenuPage = () => {
                 <Navigation/>
                 <div ref={node}>
                     <Burger open={open} setOpen={setOpen} />
-                    <Menu open={open} setOpen={setOpen} />
+                    <CheckoutMenu open={open} setOpen={setOpen} />
                 </div>
                 <MenuCards/>
                 <YourSet/>

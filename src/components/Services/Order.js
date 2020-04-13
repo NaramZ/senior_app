@@ -1,31 +1,38 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3000/Order';
+const orderUrl = 'http://localhost:3000/Order';
+// const productUrl = "http://localhost:3000/Products";
 
-const getAll = () => {
-    const request = axios.get(baseUrl)
+  const getAll = () => {
+    const request = axios.get(orderUrl)
     return request.then(response => response.data)
   }
   
   const create = newObject => {
-    const request = axios.post(baseUrl, newObject)
+    const request = axios.post(orderUrl, newObject)
     return request.then(response => response.data)
   }
   
   const update = (id, newObject) => {
-    const request = axios.put(`${baseUrl}/${id}`, newObject)
+    const request = axios.put(`${orderUrl}/${id}`, newObject)
     return request.then(response => response.data)
   }
 
   // Store Page
   const getOrderByOrderId = (orderId) => {
-    const request = axios.get(`${baseUrl}/${orderId}`)
+    const request = axios.get(`${orderUrl}/${orderId}`)
     return request.then(response => response.data)
   }
 
   // History
   const getOrderByUserId = (userId) => {
-    const request = axios.get(baseUrl + "?userId=" + userId)
+    const request = axios.get(orderUrl + "?userId=" + userId)
+    return request.then(response => response.data)
+  }
+
+  // Checkout
+  const getOrderProductsByOrderId = (orderId) => {
+    const request = axios.get(`${orderUrl}/${orderId}`)
     return request.then(response => response.data)
   }
   
-  export default { getAll, create, update, getOrderByOrderId, getOrderByUserId }
+  export default { getAll, create, update, getOrderByOrderId, getOrderByUserId, getOrderProductsByOrderId }

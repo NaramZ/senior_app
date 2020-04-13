@@ -1,7 +1,7 @@
 import React, {Fragment,useEffect, useState } from 'react';
 import '../../../Grid.scss';
 import FavoritesService from '../../Services/Favorites';
-import Card from '../Card/LayoutCard';
+// import Card from '../Card/LayoutCard';
 
 const YourSet = () => {
   const [favorites, setFavorites] = useState([]);

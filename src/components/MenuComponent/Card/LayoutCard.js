@@ -61,6 +61,7 @@ const MenuCard = ({ itineraries, activities }) => {
   const [newOrder, setNewOrder] = useState(-1);
 
   //product service getting the info
+
   useEffect(() => {
     ProductService      
     .getAll()      
@@ -149,7 +150,7 @@ const updateOrder = (id) => {
                   title={product.title}
                   />
                   <CardHeader title={product.title}/>
-                  <CardActions >
+                  <CardActions>
                     <IconButton 
                         className={clsx(classes.expand, {
                         [classes.expandOpen]: expandedId === product.id,
