@@ -19,7 +19,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ProductService from '../../Services/Products';
 import OrderService from '../../Services/Order';
-import {BottomActionButtons, CardTheme} from '../../../MaterialTheme';
+import {CardTheme} from '../../../MaterialTheme';
 import useStyles from './MaterialCardStyles';
 
 // ----------------------------------------
@@ -115,22 +115,22 @@ const updateOrder = (id) => {
     })
 }
 
-//  const addProduct = ()  => {
-//     const productObject = {
-//       title: newProduct,
-//       price: newProduct,
-//       ingredients: [],
-//       image_link: newProduct,
-//       description: newProduct,
-//       date: new Date().toISOString(),
-//     }
-//     ProductService
-//       .create(productObject)
-//         .then(returnedProduct => {
-//           setProduct(product.concat(returnedProduct))
-//           setNewProduct('')
-//       })
-//   }
+  //  const addProduct = ()  => {
+  //     const productObject = {
+  //       title: newProduct,
+  //       price: newProduct,
+  //       ingredients: [],
+  //       image_link: newProduct,
+  //       description: newProduct,
+  //       date: new Date().toISOString(),
+  //     }
+  //     ProductService
+  //       .create(productObject)
+  //         .then(returnedProduct => {
+  //           setProduct(product.concat(returnedProduct))
+  //           setNewProduct('')
+  //       })
+  //   }
 
     // const Product = ({ product, price }) => {
     //   const label = product.price
@@ -174,8 +174,7 @@ const updateOrder = (id) => {
                               <ListItemText>{product.ingredients[2]}</ListItemText>
                               </ListItem>
                           </List>
-                        <Typography align="right" variant="h4" color = "primary">${product.price}</Typography>
-                        <MuiThemeProvider theme ={BottomActionButtons}>
+                        <Typography color = "primary" align="right" variant="h4" >${product.price}</Typography>
                           <CardActions>
                             <IconButton className={clsx(classes.changeColor, {
                               [classes.changeColorOpen]: ChangeId === product.id,
@@ -196,11 +195,10 @@ const updateOrder = (id) => {
                               }
                             }
                                 >
-                                  {/* <OrderControls productId={product.id} productArray={order.productId}/> */}
+                                {/* <OrderControls productId={product.id} productArray={order.productId}/> */}
                             < AddIcon />
                             </IconButton>
                           </CardActions>
-                        </MuiThemeProvider>
                       </CardContent>
                     </Collapse>
                   </Card>
