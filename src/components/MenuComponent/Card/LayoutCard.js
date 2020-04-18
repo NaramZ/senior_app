@@ -22,6 +22,7 @@ import OrderService from '../../Services/Order';
 import {CardTheme} from '../../../MaterialTheme';
 import useStyles from './MaterialCardStyles';
 
+
 // ----------------------------------------
 
 // const OrderControls = (productId, productArray) => {
@@ -36,23 +37,18 @@ import useStyles from './MaterialCardStyles';
 //   }
 // }
 
-const MenuCard = ({ itineraries, activities }) => {
-
+const MenuCard = (props) => {
 //Handle Styles
   const classes = useStyles();
-
 //Handle Expanding Card
   const [expandedId, setExpandedId] = useState(-1);
   const [ChangeId, setChangeId] = useState(-1);
-
   const handleExpandClick = i => {
     setExpandedId(expandedId === i ? -1 : i);
   };
-
   const handleColorClick = i => {
     setChangeId(ChangeId === i ? -1 : i);
   };
-
 
 //Handle Getting Info from Server
   const [product, setProduct] = useState([]);
@@ -61,7 +57,6 @@ const MenuCard = ({ itineraries, activities }) => {
   const [newOrder, setNewOrder] = useState(-1);
 
   //product service getting the info
-
   useEffect(() => {
     ProductService      
     .getAll()      
@@ -89,7 +84,7 @@ const MenuCard = ({ itineraries, activities }) => {
 
   const addToOrder = (id)  => {
     console.log(order)
-    // TODO (Naram): look into refactoring
+    // TODO: look into refactoring
     const orderObject = {
       ...order,
       productId: order.productId.concat(id)
@@ -107,7 +102,6 @@ const updateOrder = (id) => {
     ...order,
       productId: order.productId.concat(id)
   }
-
   OrderService
     .update(order.id, updatedOrder).then(returnedOrder => {
       setOrder(updatedOrder)
@@ -151,7 +145,7 @@ const updateOrder = (id) => {
                   />
                   <CardHeader title={product.title}/>
                   <CardActions>
-                    <IconButton 
+                    <IconButton
                         className={clsx(classes.expand, {
                         [classes.expandOpen]: expandedId === product.id,
                         })}
@@ -161,7 +155,6 @@ const updateOrder = (id) => {
                       <ExpandMoreIcon />
                     </IconButton>
                   </CardActions>
-                  
                   <Collapse in={expandedId === product.id} timeout="auto" unmountOnExit> 
                       <CardContent>
                         <Typography paragraph>{product.description}</Typography>
@@ -204,7 +197,6 @@ const updateOrder = (id) => {
                   </Card>
 
                 </div>
-
               )
               )
           }

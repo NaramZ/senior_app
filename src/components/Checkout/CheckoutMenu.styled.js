@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-export const StyledMenu = styled.nav`
+import {createMuiTheme } from '@material-ui/core/styles';
+
+const StyledMenu = styled.nav`
 
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   display: flex;
@@ -33,3 +35,16 @@ export const StyledMenu = styled.nav`
     }
   }
 `;
+
+const CheckoutTheme = createMuiTheme({
+  overrides: {
+    MuiListItem:{
+      root: {
+          color: "white"
+          }
+        }
+      
+}
+});
+
+export  {CheckoutTheme, StyledMenu};

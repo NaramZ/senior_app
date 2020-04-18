@@ -1,18 +1,8 @@
-import React, {Fragment,useEffect, useState } from 'react';
+import React, {Fragment} from 'react';
 import '../../../Grid.scss';
-import FavoritesService from '../../Services/Favorites';
-// import Card from '../Card/LayoutCard';
-
+import RenderSet from './SetYourSet';
 const YourSet = () => {
-  const [favorites, setFavorites] = useState([]);
 
-  useEffect(() => {
-    FavoritesService      
-    .getAll()      
-    .then(initialFavorites => {        
-      setFavorites(initialFavorites)      
-    })  
-  }, [])
 
     return(
     <Fragment>
@@ -23,13 +13,7 @@ const YourSet = () => {
             <div className = "YourSetContainer-2">
                 <h6>Everything that you like</h6>
             </div>
-            <div>
-            {favorites.map(favorites => (
-                favorites.id
-                    )
-                )
-            }
-            </div>
+            <RenderSet/>
         </div>
     </Fragment>
     )

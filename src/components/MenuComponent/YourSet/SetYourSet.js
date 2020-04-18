@@ -1,25 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import {OrderServices, ProductServices} from '../Services/Information';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import { MuiThemeProvider} from '@material-ui/core/styles';
-import {CheckoutTheme} from './CheckoutMenu.styled';
-
-
+import {OrderServices, ProductServices} from '../../Services/Information';
 
 const ProductMap = ({ product }) => {
     // console.log("fish", product) THIS IS ALSO RENDERING EVERYIME I OPEN THE TAB
     if (product.length > 0) {
       return (
         product.map(productp => (
-          <MuiThemeProvider theme = {CheckoutTheme}>
-          <List>
-            <ListItem>
-              <ListItemText>{productp.title}</ListItemText>
-            </ListItem>
-          </List>
-          </MuiThemeProvider>
+              <div>{productp.title}{console.log("ayy bro", product.title)}</div>
         ))
       )
     } else {
@@ -27,7 +14,7 @@ const ProductMap = ({ product }) => {
     }
   }
   
-  const Order = () => {
+  const Favorites = () => {
 
     const [product, setProduct] = useState([]);
 
@@ -37,7 +24,7 @@ const ProductMap = ({ product }) => {
         .then(response => {
           response.productId.map(orderid => (
             ProductServices
-              .getOrderByOrderId([orderid])
+              .getProductsByProductId([orderid])
               .then(response => {
                 console.log("product response", response);
                 // const newProduct = product.concat(response)
@@ -58,4 +45,4 @@ const ProductMap = ({ product }) => {
       </Fragment>
     )
     }
-export default Order; 
+export default Favorites; 
