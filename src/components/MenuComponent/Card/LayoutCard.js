@@ -37,7 +37,7 @@ import useStyles from './MaterialCardStyles';
 //   }
 // }
 
-const MenuCard = (props) => {
+const MenuCard = () => {
 //Handle Styles
   const classes = useStyles();
 //Handle Expanding Card
@@ -65,12 +65,12 @@ const MenuCard = (props) => {
     })  
   }, [])
 
-  useEffect(() => {
-    OrderService.getOrderByOrderId(2)
-    .then(response => {
-      console.log(response)
-    })
-  }, [])
+  // useEffect(() => {
+  //   OrderService.getOrderByOrderId(1)
+  //   .then(response => {
+  //     console.log(response)
+  //   })
+  // }, [])
 
   //order service
   // useEffect(() => {

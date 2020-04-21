@@ -40,7 +40,6 @@ const ProductMap = ({ product }) => {
             ProductServices
               .getProductsByProductId([orderid])
               .then(response => {
-                console.log("product response", response);
                 // const newProduct = product.concat(response)
                 newArray.push(response)
               }

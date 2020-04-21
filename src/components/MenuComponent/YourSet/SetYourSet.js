@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import OrderServices from '../../Services/OrderServices';
 import ProductServices from '../../Services/ProductServices';
+import FavoriteServices from '../../Services/FavoriteServices';
+
 
 const ProductMap = ({ product }) => {
     // console.log("fish", product) THIS IS ALSO RENDERING EVERYIME I OPEN THE TAB
@@ -21,14 +22,14 @@ const ProductMap = ({ product }) => {
 
     useEffect(() => {
       const newArray = []
-      OrderServices.getOrderByOrderId(1)
+      FavoriteServices.getFavoritesByUserId(1)
         .then(response => {
-          response.productId.map(orderid => (
+          console.log("favoritesByUserId", response)
+          response[0].productId.map(productId => (
             ProductServices
-              .getProductsByProductId([orderid])
+              .getProductsByProductId(productId)
               .then(response => {
-                console.log("product response", response);
-                // const newProduct = product.concat(response)
+                console.log("productsByProductId", response);
                 newArray.push(response)
               }
               ).then(
