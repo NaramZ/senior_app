@@ -17,13 +17,13 @@ const FavoritesMap = ({ product }) => {
   }
 }
 
-const Favorites = ({userId}) => {
+const Favorites = () => {
 
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const newArray = []
-    FavoriteServices.getFavoritesByUserId(userId)
+    FavoriteServices.getFavoritesByUserId(1)
       .then(response => {
         response[0].productId.map(productId => (
           ProductServices
@@ -36,7 +36,7 @@ const Favorites = ({userId}) => {
             )
         ))
       })
-  }, [userId]) //TODO: Fix multiple Hello there calls
+  }, []) //TODO: Fix multiple Hello there calls
 
   return (
     <Fragment>

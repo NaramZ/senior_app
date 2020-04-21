@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
 import Burger from '../../components/Burger';
 import CheckoutMenu from '../../components/Checkout';
-import YourSet from '../../components/MenuComponent/YourSet/YourSet';
 
 const MenuPage = () => {
 
@@ -23,7 +22,6 @@ const MenuPage = () => {
                     <CheckoutMenu open={open} setOpen={setOpen} />
                 </div>
                 <MenuCards/>
-                <YourSet />
             </ThemeProvider>
         </Fragment>
     );
