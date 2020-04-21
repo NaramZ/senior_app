@@ -59,7 +59,7 @@ const MenuCard = (props) => {
   //product service getting the info
   useEffect(() => {
     ProductService      
-    .getAll()      
+    .getAllProducts()      
     .then(initialProduct => {        
       setProduct(initialProduct)      
     })  

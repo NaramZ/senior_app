@@ -38,7 +38,7 @@ const ProductMap = ({ product }) => {
         .then(response => {
           response.productId.map(orderid => (
             ProductServices
-              .getOrderByOrderId([orderid])
+              .getProductsByProductId([orderid])
               .then(response => {
                 console.log("product response", response);
                 // const newProduct = product.concat(response)
