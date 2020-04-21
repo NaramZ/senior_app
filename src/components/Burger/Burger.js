@@ -7,7 +7,7 @@ const Burger = ({ open, setOpen }) => {
   return (
     <Fragment>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
+        <div/>
         <div/>
         <div/>
       </StyledBurger>

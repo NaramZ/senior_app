@@ -90,7 +90,7 @@ const MenuCard = () => {
       productId: order.productId.concat(id)
     }
     OrderService
-      .create(orderObject)
+      .createOrders(orderObject)
         .then(returnedObject => {
           setOrder(returnedObject)
           setNewOrder(returnedObject.id)
@@ -103,7 +103,7 @@ const updateOrder = (id) => {
       productId: order.productId.concat(id)
   }
   OrderService
-    .update(order.id, updatedOrder).then(returnedOrder => {
+    .updateOrders(order.id, updatedOrder).then(returnedOrder => {
       setOrder(updatedOrder)
       console.log(returnedOrder)
     })

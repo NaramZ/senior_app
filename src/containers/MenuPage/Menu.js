@@ -14,9 +14,6 @@ const MenuPage = () => {
     const node = useRef(); //refrence to open burger
     useOnClickOutside(node, () => setOpen(false)) //react hooks, when click outside menu anywhere it closes menu
 
-    
-
-
     return(
         <Fragment>
             <ThemeProvider theme={theme}>
@@ -26,7 +23,7 @@ const MenuPage = () => {
                     <CheckoutMenu open={open} setOpen={setOpen} />
                 </div>
                 <MenuCards/>
-                <YourSet/>
+                <YourSet />
             </ThemeProvider>
         </Fragment>
     );

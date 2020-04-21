@@ -1,8 +1,9 @@
 import React, {Fragment} from 'react';
 import '../../../Grid.scss';
-import RenderSet from './SetYourSet';
-const YourSet = () => {
+import Favorites from './SetYourSet';
 
+
+const YourSet = () => {
 
     return(
     <Fragment>
@@ -13,7 +14,7 @@ const YourSet = () => {
             <div className = "YourSetContainer-2">
                 <h6>Everything that you like</h6>
             </div>
-            <RenderSet/>
+            <Favorites />
         </div>
     </Fragment>
     )

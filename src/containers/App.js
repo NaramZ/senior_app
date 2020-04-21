@@ -7,8 +7,11 @@ import LandingPage from './LandingPage/LandingPage';
 import {GlobalStyles} from '../Global';
 import LogInPage from './LogInPage/LogInPage';
 import SignUpPage from './LogInPage/SignUpPage';
+
 function App() { 
-  
+  //add use state which has the user object which we will use to pass to other components, initialize to -1 when not logged in, then when
+  //loged in we replace it with the user stuff
+
   return (
     <Fragment>
       <BrowserRouter>

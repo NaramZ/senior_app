@@ -3,48 +3,45 @@ import ProductServices from '../../Services/ProductServices';
 import FavoriteServices from '../../Services/FavoriteServices';
 
 
-const ProductMap = ({ product }) => {
-    // console.log("fish", product) THIS IS ALSO RENDERING EVERYIME I OPEN THE TAB
-    if (product.length > 0) {
-      return (
-        product.map(productp => (
-              <div>{productp.title}{console.log("ayy bro", product.title)}</div>
-        ))
-      )
-    } else {
-      return (<div/>)
-    }
-  }
-  
-  const Favorites = () => {
-
-    const [product, setProduct] = useState([]);
-
-    useEffect(() => {
-      const newArray = []
-      FavoriteServices.getFavoritesByUserId(1)
-        .then(response => {
-          console.log("favoritesByUserId", response)
-          response[0].productId.map(productId => (
-            ProductServices
-              .getProductsByProductId(productId)
-              .then(response => {
-                console.log("productsByProductId", response);
-                newArray.push(response)
-              }
-              ).then(
-                setProduct(newArray)
-              )
-          ))
-        })
-    }, []) //TODO: Fix multiple Hello there calls
-
+const FavoritesMap = ({ product }) => {
+    console.log("product length", Object.keys(product).length)
+    console.log('productMap', product)
+  if (product.length > 0) {
     return (
-      <Fragment>
-        <Fragment>
-        <ProductMap product={product} />
-        </Fragment>
-      </Fragment>
+      product.map(productp => (
+        <div>{productp.title}</div>
+      ))
     )
-    }
+  } else {
+    return (<div />)
+  }
+}
+
+const Favorites = ({userId}) => {
+
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const newArray = []
+    FavoriteServices.getFavoritesByUserId(userId)
+      .then(response => {
+        response[0].productId.map(productId => (
+          ProductServices
+            .getProductsByProductId(productId)
+            .then(response => {
+              newArray.push(response)
+            }
+            ).then(
+              setFavorites(newArray)
+            )
+        ))
+      })
+  }, [userId]) //TODO: Fix multiple Hello there calls
+
+  return (
+    <Fragment>
+      <FavoritesMap product={favorites}/>
+    </Fragment>
+  )
+}
 export default Favorites; 
