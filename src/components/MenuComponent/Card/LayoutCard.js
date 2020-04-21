@@ -17,8 +17,8 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ProductService from '../../Services/Products';
-import OrderService from '../../Services/Order';
+import ProductService from '../../Services/ProductServices';
+import OrderService from '../../Services/OrderServices';
 import {CardTheme} from '../../../MaterialTheme';
 import useStyles from './MaterialCardStyles';
 

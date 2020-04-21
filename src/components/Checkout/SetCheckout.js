@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import {OrderServices, ProductServices} from '../Services/Information';
+import OrderServices from '../Services/OrderServices';
+import ProductServices from '../Services/ProductServices';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';

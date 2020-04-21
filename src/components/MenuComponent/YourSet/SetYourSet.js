@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import {OrderServices, ProductServices} from '../../Services/Information';
+import OrderServices from '../../Services/OrderServices';
+import ProductServices from '../../Services/ProductServices';
 
 const ProductMap = ({ product }) => {
     // console.log("fish", product) THIS IS ALSO RENDERING EVERYIME I OPEN THE TAB
