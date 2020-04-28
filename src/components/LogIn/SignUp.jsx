@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,7 +9,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import SignUpServices from '../Services/SingUpServices'
 
 
 function Copyright() {
@@ -34,6 +34,7 @@ function LogIn() {
     </Typography>
   );
 }
+
 
 
 
@@ -68,6 +69,34 @@ const useStyles = makeStyles(theme => ({
 export default function SignUp() {
   const classes = useStyles();
 
+  const [name, setName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
+const handleSignUp = (event) =>{
+  event.preventDefault()
+  console.log("name", name)
+  console.log("last name", lastName)
+  console.log("email", email)
+  console.log("password", password)
+  console.log("phone number", phoneNumber)
+  const signUpObject = {
+    name : name,
+    lastName : lastName,
+    phone: phoneNumber,
+    email: email,
+    password: password,
+    favorites: []
+  }
+  SignUpServices
+  .createUser(signUpObject)
+  .then (returnedObject => {
+    console.log("Sign up succ", returnedObject)
+  })
+}
+
   return (
     <Container className="main" component="main" maxWidth="xs">
       <CssBaseline />
@@ -78,8 +107,9 @@ export default function SignUp() {
         <Typography component="h2" variant="h5">
           Sign Up
         </Typography>
-        <form className={classes.form} noValidate>
-        <TextField
+        <form className={classes.form} onSubmit={handleSignUp}>
+          <TextField
+            onChange = {(event) => setName(event.target.value)}
             variant="outlined"
             margin="normal"
             required
@@ -91,26 +121,29 @@ export default function SignUp() {
             autoFocus
           />
           <TextField
+            onChange = {(event) => setLastName(event.target.value)}
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            id="last name"
+            id="lastName"
             label="Last Name"
             name="last name"
             autoComplete="last name"
           />
           <TextField
+            onChange = {(event) => setPhoneNumber(event.target.value)}
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            id="phone number"
+            id="phoneNumber"
             label="Phone Number"
             name="phone number"
             autoComplete="phone number"
           />
           <TextField
+            onChange = {(event) => setEmail(event.target.value)}
             variant="outlined"
             margin="normal"
             required
@@ -121,6 +154,7 @@ export default function SignUp() {
             autoComplete="email"
           />
           <TextField
+            onChange = {(event) => setPassword(event.target.value)}
             variant="outlined"
             margin="normal"
             required
