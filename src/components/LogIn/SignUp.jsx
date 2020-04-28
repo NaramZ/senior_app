@@ -141,6 +141,7 @@ const handleSignUp = (event) =>{
             label="Phone Number"
             name="phone number"
             autoComplete="phone number"
+            
           />
           <TextField
             onChange = {(event) => setEmail(event.target.value)}

@@ -3,10 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import {NavLink} from 'react-router-dom';
-import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -54,23 +51,6 @@ const useStyles = makeStyles(theme => ({
 export default function LogIn() {
   const classes = useStyles();
 
-  // const [email, setEmail] = useState('')
-  // const [password, setPassword] = useState('')
-
-  // const handleLogIn = (event) =>{
-  //   event.preventDefault()
-  //   console.log("email", email)
-  //   console.log("password", password)
-  //   const logInObject = {
-  //     email: email,
-  //     password: password
-  //   }
-  //   UserServices
-  //   .getUser(logInObject)
-  //   .then (returnedObject => {
-  //     console.log("Log in succ", returnedObject)
-  //   })
-  // }
 
   return (
     <Container className="main" component="main" maxWidth="xs">
@@ -80,7 +60,7 @@ export default function LogIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h2" variant="h5">
-          Log in
+          Forgot Password
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -94,46 +74,22 @@ export default function LogIn() {
             autoComplete="email"
             autoFocus
           />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="outlined"
-            color="primary"
-            className={classes.submit}
-          >
-            Log In
+            
+            <Button
+                type="submit"
+                fullWidth
+                variant="outlined"
+                color="primary"
+                className={classes.submit}
+            
+            >
+          <NavLink to = "/NewPassword" exact >
+            Send Code
+          </NavLink>
           </Button>
-          <Grid container>
-            <Grid item xs>
-              <NavLink to = "/ForgetPassword" exact>
-                Forgot password?
-              </NavLink>
-            </Grid>
-            <Grid item>
-              {"Don't have an account? "} 
-              <NavLink to = "/SignUp" exact>
-                {"Sign Up"}
-              </NavLink>
-            </Grid>
-          </Grid>
         </form>
       </div>
-      <Box mt={8}>
+      <Box mt={2}>
         <Copyright />
       </Box>
     </Container>
