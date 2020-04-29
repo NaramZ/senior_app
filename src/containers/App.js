@@ -26,7 +26,6 @@ function App() {
           <Route path ='/SignUp' exact component = {SignUpPage}/>
           <Route path ='/ForgetPassword' exact component = {ForgetPasswordPage}/>
           <Route path ='/NewPassword' exact component = {NewPassPage}/>
-
       </BrowserRouter> 
     </Fragment>
   );

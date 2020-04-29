@@ -24,7 +24,7 @@ function Copyright() {
     </Typography>
   );
 }
-function LogIn() {
+function LogInLink() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Already have an account? '} 
@@ -169,9 +169,9 @@ const handleSignUp = (event) =>{
           
           <Button
             type="submit"
+            color= 'primary'
             fullWidth
             variant="outlined"
-            color= 'primary'
             className={classes.submit}
           >
             Sign Up
@@ -179,7 +179,7 @@ const handleSignUp = (event) =>{
         </form>
       </div>
       <Box mt={2}>
-        <LogIn />
+        <LogInLink/>
       </Box>
       <Box mt={4}>
         <Copyright />

@@ -83,19 +83,18 @@ export default function LogIn() {
             type="password"
             id="password"
           />
+          <NavLink to = "/LogIn" exact>
           <Button
             type="submit"
             fullWidth
             variant="outlined"
             color="primary"
             className={classes.submit}
-            onClick = {
-            <NavLink to = "/Menu" exact>
-            {"Menu"}
-          </NavLink>}
+            
           >
             Change Password
           </Button>
+          </NavLink>
         </form>
       </div>
       <Box mt={2}>

@@ -109,15 +109,17 @@ export default function LogIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+          <NavLink to = "/Menu" exact>
           <Button
             type="submit"
             fullWidth
             variant="outlined"
-            color="primary"
+            color= "primary"
             className={classes.submit}
           >
             Log In
           </Button>
+          </NavLink>
           <Grid container>
             <Grid item xs>
               <NavLink to = "/ForgetPassword" exact>

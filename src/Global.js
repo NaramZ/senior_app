@@ -71,7 +71,6 @@ p{
   }
 
 a {
-  display: inline-block;
   flex-direction: space-between;
   color: black;
   text-decoration: none;

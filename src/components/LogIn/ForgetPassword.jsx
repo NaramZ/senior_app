@@ -74,6 +74,7 @@ export default function LogIn() {
             autoComplete="email"
             autoFocus
           />
+          <NavLink to = "/NewPassword" exact >
             
             <Button
                 type="submit"
@@ -83,10 +84,10 @@ export default function LogIn() {
                 className={classes.submit}
             
             >
-          <NavLink to = "/NewPassword" exact >
             Send Code
-          </NavLink>
           </Button>
+        </NavLink>
+
         </form>
       </div>
       <Box mt={2}>
