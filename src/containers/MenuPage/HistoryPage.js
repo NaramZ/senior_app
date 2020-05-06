@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef } from 'react';
 import { useOnClickOutside } from '../../hook';
-import YourSet from '../../components/MenuComponent/YourSet/YourSet';
+import History from '../../components/MenuComponent/History/OrderHistory';
 import Navigation from '../../components/MenuComponent/MenuNavBar/NavBar';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme';
@@ -21,7 +21,7 @@ const MenuPage = () => {
                     <Burger open={open} setOpen={setOpen} />
                     <CheckoutMenu open={open} setOpen={setOpen} />
                 </div>
-                <YourSet/>
+                <History/>
             </ThemeProvider>
         </Fragment>
     );

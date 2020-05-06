@@ -1,4 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import ProductServices from '../../Services/ProductServices';
+import HistoryServices from '../../Services/HistoryServices';
 import classNames from 'classnames';
 import Card from '@material-ui/core/Card';
 import '../../../Grid.scss';
@@ -17,28 +19,13 @@ import { MuiThemeProvider} from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ProductService from '../../Services/ProductServices';
-import OrderService from '../../Services/OrderServices';
 import {CardTheme} from '../../../MaterialTheme';
-import useStyles from './MaterialCardStyles';
+import useStyles from '../Card/MaterialCardStyles';
+import OrderService from '../../Services/OrderServices';
 
 
-// ----------------------------------------
-
-// const OrderControls = (productId, productArray) => {
-//   if (productArray has prouctId) {
-//     return <div>
-//       <icon button plus></icon>
-//       <icon button minus></icon>
-//       add up all productid from array
-//       </div>
-//   } else {
-//     <icon button plus></icon>
-//   }
-// }
-
-const MenuCard = () => {
-//Handle Styles
+const History = () => {
+  //Handle Styles
   const classes = useStyles();
 //Handle Expanding Card
   const [expandedId, setExpandedId] = useState(-1);
@@ -49,39 +36,27 @@ const MenuCard = () => {
   const handleColorClick = i => {
     setChangeId(ChangeId === i ? -1 : i);
   };
-
-//Handle Getting Info from Server
-  const [product, setProduct] = useState([]);
-  // const [newProduct, setNewProduct] = useState('');
   const [order, setOrder] = useState({productId: []});
   const [newOrder, setNewOrder] = useState(-1);
+  const [history, setHistory] = useState([]);
 
-  //product service getting the info
   useEffect(() => {
-    ProductService      
-    .getAllProducts()      
-    .then(initialProduct => {        
-      setProduct(initialProduct)      
-    })  
-  }, [])
-
-  // useEffect(() => {
-  //   OrderService.getOrderByOrderId(1)
-  //   .then(response => {
-  //     console.log(response)
-  //   })
-  // }, [])
-
-  //order service
-  // useEffect(() => {
-  //   OrderService      
-  //   .getAll()
-  //   .then(initialOrder => {        
-  //     console.log('initial order', initialOrder)
-  //     setOrder(initialOrder)
-  //   })  
-  // }, [])
-
+    const newArray = []
+    HistoryServices.getHistoryByUserId(1)
+      .then(response => {
+        response[0].productId.map(productId => (
+          ProductServices
+            .getProductsByProductId(productId)
+            .then(response => {
+              newArray.push(response)
+            }
+            ).then(
+              setHistory(newArray)
+            )
+        ))
+      })
+  }, []) //TODO: Fix multiple Hello there calls
+  
   const addToOrder = (id)  => {
     console.log(order)
     // TODO: look into refactoring
@@ -108,73 +83,50 @@ const updateOrder = (id) => {
       console.log(returnedOrder)
     })
 }
-//FOR WHEN WE ADD ADMINISTRATION THIS IS HOW WE ADD PRODUCTS
-
-  //  const addProduct = ()  => {
-  //     const productObject = {
-  //       title: newProduct,
-  //       price: newProduct,
-  //       ingredients: [],
-  //       image_link: newProduct,
-  //       description: newProduct,
-  //       date: new Date().toISOString(),
-  //     }
-  //     ProductService
-  //       .create(productObject)
-  //         .then(returnedProduct => {
-  //           setProduct(product.concat(returnedProduct))
-  //           setNewProduct('')
-  //       })
-  //   }
-
-    // const Product = ({ product, price }) => {
-    //   const label = product.price
-    //     ? 'make not price' : 'make price'
-    // }
 
   return (
-    <Fragment>
+      <Fragment>
         <MuiThemeProvider theme = {CardTheme}>
             <div className = "boxGrid">
-              {product.map(product => (
-                <div className={classNames('boxContainer-', product.id ).replace(' ', "")}>
-                <Card className={classes.root} key={product.id}>
+              {history.map(history => (
+                <div className={classNames('boxContainer-', history.id ).replace(' ', "")}>
+                <Card className={classes.root} key={history.id}>
                   <CardMedia
                   className={classes.media}
-                  image={product.image_link}
-                  title={product.title}
+                  image={history.image_link}
+                  title={history.title}
                   />
-                  <CardHeader title={product.title}/>
+                  <CardHeader title={history.title}/>
                   <CardActions>
                     <IconButton
                         className={clsx(classes.expand, {
-                        [classes.expandOpen]: expandedId === product.id,
+                        [classes.expandOpen]: expandedId === history.id,
                         })}
-                        onClick={() => handleExpandClick(product.id)}
-                        aria-expanded={expandedId === product.id}
+                        onClick={() => handleExpandClick(history.id)}
+                        aria-expanded={expandedId === history.id}
                         aria-label="show more">
                       <ExpandMoreIcon />
                     </IconButton>
                   </CardActions>
-                  <Collapse in={expandedId === product.id} timeout="auto" unmountOnExit> 
+                  <Collapse in={expandedId === history.id} timeout="auto" unmountOnExit> 
                       <CardContent>
-                        <Typography paragraph>{product.description}</Typography>
+                        <Typography paragraph>{history.description}</Typography>
                         <Typography variant="h5">Ingredients:</Typography>
                           <List aria-label="ingredients">
                             <hr/>
                             <ListItem>
-                              <ListItemText>{product.ingredients[0]}</ListItemText>
-                              <ListItemText>{product.ingredients[1]}</ListItemText>
-                              <ListItemText>{product.ingredients[2]}</ListItemText>
+                              <ListItemText>{history.ingredients[0]}</ListItemText>
+                              <ListItemText>{history.ingredients[1]}</ListItemText>
+                              <ListItemText>{history.ingredients[2]}</ListItemText>
                               </ListItem>
                           </List>
-                        <Typography color = "primary" align="right" variant="h4" >${product.price}</Typography>
+                        <Typography color = "primary" align="right" variant="h4" >${history.price}</Typography>
                           <CardActions>
                             <IconButton className={clsx(classes.changeColor, {
-                              [classes.changeColorOpen]: ChangeId === product.id,
+                              [classes.changeColorOpen]: ChangeId === history.id,
                               })}
-                              onClick={() => handleColorClick(product.id)}
-                              aria-expanded={ChangeId === product.id}
+                              onClick={() => handleColorClick(history.id)}
+                              aria-expanded={ChangeId === history.id}
                               aria-label="add to favorites">
                               <FavoriteIcon/>
                             </IconButton>
@@ -182,9 +134,9 @@ const updateOrder = (id) => {
                               aria-label="Add To Order"
                               onClick={() => {
                                 if (newOrder === -1) {
-                                  addToOrder(product.id)
+                                  addToOrder(history.id)
                                 } else {
-                                  updateOrder(product.id)
+                                  updateOrder(history.id)
                                 }
                               }
                             }
@@ -204,7 +156,6 @@ const updateOrder = (id) => {
         </div>
       </MuiThemeProvider>
     </Fragment >
-  );
-};
-
-export default MenuCard;
+  )
+}
+export default History; 

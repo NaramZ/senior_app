@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
-import OurMissionImg from '../../../assets/LandingImage.png';
+import OurMissionImg from '../../../assets/OurMission.jpg';
+import '../../../Grid.scss';
 const PageTwo = () => {
     return(
         //HAVE TO CHANGE IMAGE

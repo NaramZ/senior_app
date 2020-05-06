@@ -14,8 +14,9 @@ const YourSet = () => {
             <div className = "YourSetContainer-2">
                 <h6>Everything that you like</h6>
             </div>
-            <Favorites />
         </div>
+
+            <Favorites />
     </Fragment>
     )
 }

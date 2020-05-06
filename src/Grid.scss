@@ -135,9 +135,8 @@ $grid-column-end: 4;
 @for $i from 1 through $grid-column {
   .LandingContainerTwo-#{$i} {
     @if ($i == 1){
-        grid-column-start: 2;
+        grid-column-start: 4;
         grid-column-end: $grid-column;
-        overflow: hidden;
         border-radius: 24px;
         z-index: -1;
         grid-row: 3 / 6;
@@ -271,6 +270,7 @@ $grid-column-end: 4;
           }
         }
       }
+      
       @if ($i == 5){
         grid-column: 1 / span 4;
         margin-left: 5rem;

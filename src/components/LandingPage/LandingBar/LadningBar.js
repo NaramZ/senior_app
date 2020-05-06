@@ -10,30 +10,20 @@ const LandingNav = () => {
             <MuiThemeProvider theme ={GlobalColor}>
                 <div className = "boxGrid">
                     <div className= 'navContainerLanding-2'>
-                        <NavLink to = "/">
                             <h6>Poison Picker</h6>
-                        </NavLink>
                     </div>
                     <div className= 'navContainerLanding-4'>
-                        <NavLink to = "/OurMission" exact>
                             <h6>Our Mission</h6>
-                        </NavLink>
                     </div>
                     
                     <div className= 'navContainerLanding-5'>
-                        <NavLink to="/Drinks">
                             <h6>Drinks</h6>
-                        </NavLink>
                     </div>
                     <div className= 'navContainerLanding-6'>
-                        <NavLink to="/Yourset">
                             <h6>Your Set</h6>
-                        </NavLink>
                     </div>
                     <div className= 'navContainerLanding-7'>
-                        <NavLink to="/Contactus">
                             <h6>Contact Us</h6>
-                        </NavLink>
                     </div>
                     <div className= 'navContainerLanding-9'>
                         <NavLink to="/Login">
