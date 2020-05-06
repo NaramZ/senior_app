@@ -21,7 +21,7 @@ function App() {
       <GlobalStyles/>
           <Route path ='/Menu' component = {MenuPage}/>
           <Route path ='/YourSet' component = {YourSetPage}/>
-          <Route path ='/History' exact component = {History}/>=
+          <Route path ='/History' exact component = {History}/>
           <Route path ='/Landing' exact component = {LandingPage}/>
           <Route path ='/LogIn' exact component = {LogInPage}/>
           <Route path ='/SignUp' exact component = {SignUpPage}/>
